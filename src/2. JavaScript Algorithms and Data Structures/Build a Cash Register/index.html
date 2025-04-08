@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cash Register Manager</h1>
+
+      <div class="input-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" value="19.50" disabled />
+      </div>
+
+      <div class="input-group">
+        <label for="cash">Cash Received:</label>
+        <input
+          type="number"
+          id="cash"
+          step="0.01"
+          placeholder="Enter cash amount"
+        />
+      </div>
+
+      <button id="purchase-btn">Purchase</button>
+
+      <div id="change-due"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
