@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Customer Satisfaction Survey</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve our services
+        </p>
+      </header>
+
+      <form id="survey-form">
+        <label id="name-label" for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label id="email-label" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label id="number-label" for="number"
+          >Age <span>(optional)</span></label
+        >
+        <input
+          type="number"
+          id="number"
+          name="age"
+          min="13"
+          max="120"
+          placeholder="Age"
+        />
+
+        <label for="dropdown"
+          >Which option best describes your current role?</label
+        >
+        <select id="dropdown" name="role" required>
+          <option value="" disabled selected>Select current role</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full Time Job</option>
+          <option value="freelancer">Freelancer</option>
+          <option value="other">Other</option>
+        </select>
+
+        <fieldset style="border: none; margin: 15px 0; padding: 0">
+          <legend>Would you recommend our service to a friend?</legend>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="recommend" value="definitely" checked />
+              Definitely
+            </label>
+            <label>
+              <input type="radio" name="recommend" value="maybe" /> Maybe
+            </label>
+            <label>
+              <input type="radio" name="recommend" value="not-sure" /> Not sure
+            </label>
+          </div>
+        </fieldset>
+
+        <label for="favorite-feature"
+          >What is your favorite feature of our service?</label
+        >
+        <select id="favorite-feature" name="favoriteFeature" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="quality">Quality</option>
+          <option value="customer-service">Customer Service</option>
+          <option value="pricing">Pricing</option>
+        </select>
+
+        <fieldset style="border: none; margin: 15px 0; padding: 0">
+          <legend>
+            What would you like to see improved? (Check all that apply)
+          </legend>
+          <div class="checkbox-group">
+            <label>
+              <input
+                type="checkbox"
+                value="frontend-projects"
+                name="improvements"
+              />
+              Frontend Projects
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="backend-projects"
+                name="improvements"
+              />
+              Backend Projects
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="data-visualization"
+                name="improvements"
+              />
+              Data Visualization
+            </label>
+          </div>
+        </fieldset>
+
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Enter your comment here..."
+        ></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
