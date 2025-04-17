@@ -6,3 +6,6 @@
 
 <img src="img/certification/responsive-web-design-certification.png" alt="freecodecamp responsive web design certification">
 <figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/responsive-web-design">Verify this certification</a> <-</figcaption>
+
+<h1>🔵 JavaScript Algorithms and Data Structures</h1>
+<p>In progress... (80%)</p>
