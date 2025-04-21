@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Build an RPG Creature Search App</title>
+  </head>
+  <body>
+    <div class="search-container">
+      <input id="search-input" placeholder="Insert name or id..." required />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div id="creature-name" class="stat-item"></div>
+    <div id="creature-id"></div>
+
+    <div class="stats-grid">
+      <div id="weight" class="stat-item" data-label="Weight"></div>
+      <div id="height" class="stat-item" data-label="Height"></div>
+      <div id="types" class="stat-item" data-label="Types"></div>
+      <div id="hp" class="stat-item" data-label="HP"></div>
+      <div id="attack" class="stat-item" data-label="Attack"></div>
+      <div id="defense" class="stat-item" data-label="Defense"></div>
+      <div
+        id="special-attack"
+        class="stat-item"
+        data-label="Special Attack"
+      ></div>
+      <div
+        id="special-defense"
+        class="stat-item"
+        data-label="Special Defense"
+      ></div>
+      <div id="speed" class="stat-item" data-label="Speed"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
