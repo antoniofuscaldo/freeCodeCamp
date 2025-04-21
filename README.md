@@ -8,4 +8,6 @@
 <figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/responsive-web-design">Verify this certification</a> <-</figcaption>
 
 <h1>🔵 JavaScript Algorithms and Data Structures</h1>
-<p>In progress... (100%)</p>
+
+<img src="img/certification/javaScript-algorithms-and-data-structures-certification.png" alt="freecodecamp responsive web design certification">
+<figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/javascript-algorithms-and-data-structures-v8">Verify this certification</a> <-</figcaption>
