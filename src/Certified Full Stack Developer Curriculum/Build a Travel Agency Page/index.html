@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency Page</title>
+    <meta name="description" content="This is a travel agency page" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        color: #3498db;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 2rem 0;
+      }
+
+      ul li a {
+        text-decoration: none;
+        background: #3498db;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      ul li a:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .itineraries-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      figure {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        max-width: 350px;
+      }
+
+      figure:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      figcaption {
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding: 40px;
+        }
+        figure {
+          flex: 1 1 calc(33% - 2rem);
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+        ul li a {
+          padding: 0.8rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Travel to Italy</h1>
+    <p>
+      Italy, officially the Italian Republic, is a country in Southern and
+      Western Europe.[c] It consists of a peninsula that extends into the
+      Mediterranean Sea, with the Alps on its northern land border, as well as
+      nearly 800 islands, notably Sicily and Sardinia.
+    </p>
+    <h2>Packages</h2>
+    <p>
+      Italy's capital and largest city is Rome; other major urban areas include
+      Milan, Naples, Turin, Palermo, Bologna, Florence, Genoa, and Venice.
+    </p>
+    <ul>
+      <li>
+        <a href="https://www.freecodecamp.org/learn" target="_blank"
+          >Group Travels</a
+        >
+      </li>
+      <li>
+        <a href="https://www.freecodecamp.org/learn" target="_blank"
+          >Private Tours</a
+        >
+      </li>
+    </ul>
+    <h2>Top Itineraries</h2>
+    <div class="itineraries-container">
+      <figure>
+        <a href="https://www.freecodecamp.org/learn" target="_blank"
+          ><img
+            src="https://cdn.freecodecamp.org/curriculum/labs/colosseo.jpg"
+            alt="Colosseum"
+        /></a>
+        <figcaption>Colosseum</figcaption>
+      </figure>
+      <figure>
+        <a href="https://www.freecodecamp.org/learn" target="_blank"
+          ><img
+            src="https://cdn.freecodecamp.org/curriculum/labs/alps.jpg"
+            alt="Alps"
+          />
+        </a>
+        <figcaption>Alps</figcaption>
+      </figure>
+      <figure>
+        <a href="https://www.freecodecamp.org/learn" target="_blank"
+          ><img
+            src="https://cdn.freecodecamp.org/curriculum/labs/sea.jpg"
+            alt="Sea"
+          />
+        </a>
+        <figcaption>Sea</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>
