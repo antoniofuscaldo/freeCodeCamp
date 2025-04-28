@@ -14,7 +14,8 @@
 
 <h1>🔵 Front End Development Libraries</h1>
 
-<p><i>In progress... (100%)</i></p>
+<img src="img/certification/front-end-development-libraries-certification.png" alt="freecodecamp responsive web design certification">
+<figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/front-end-development-libraries">Verify this certification</a> <-</figcaption>
 
 <h1>🔵 Certified Full Stack Developer Curriculum</h1>
 
