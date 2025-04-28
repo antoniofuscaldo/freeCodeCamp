@@ -1,0 +1,90 @@
+/* Stile generale */
+body {
+  background: linear-gradient(135deg, #240046 0%, #7b2cbf 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+h1 {
+  color: white !important;
+}
+
+#drum-machine {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Display */
+#display {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 2px solid #e0aaff;
+  transition: all 0.2s;
+}
+
+/* Pulsanti drum pad */
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  margin: 10px !important;
+  border-radius: 15px !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s, box-shadow 0.2s, background-color 0.2s !important;
+  border: 2px solid white !important;
+}
+
+.drum-pad:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.drum-pad:active,
+.drum-pad.active {
+  transform: scale(0.95);
+  background-color: #e0aaff !important;
+}
+
+/* Responsive per mobile */
+@media (max-width: 576px) {
+  .drum-pad {
+    width: 80px;
+    height: 80px;
+    margin: 8px !important;
+    font-size: 1.2rem !important;
+  }
+
+  #display {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Animazione display */
+@keyframes display-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.display-animation {
+  animation: display-pop 0.15s ease-in-out;
+}

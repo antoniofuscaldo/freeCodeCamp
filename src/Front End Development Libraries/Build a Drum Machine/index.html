@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build a Drum Machine</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Start -->
+    <div class="container" id="drum-machine">
+      <h1 class="text-center">A Drum Machine</h1>
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="text-center" id="display">Click a button to play!</div>
+        </div>
+      </div>
+      <div class="align-items-center text-center">
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('Q')"
+        >
+          Q <audio src="./assets/Q.mp3" class="clip" id="Q"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('W')"
+        >
+          W <audio src="./assets/W.mp3" class="clip" id="W"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('E')"
+        >
+          E <audio src="./assets/E.mp3" class="clip" id="E"></audio>
+        </button>
+      </div>
+      <br />
+      <div class="text-center">
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('A')"
+        >
+          A <audio src="./assets/A.mp3" class="clip" id="A"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('S')"
+        >
+          S <audio src="./assets/S.mp3" class="clip" id="S"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('D')"
+        >
+          D <audio src="./assets/D.mp3" class="clip" id="D"></audio>
+        </button>
+      </div>
+      <br />
+      <div class="text-center">
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('Z')"
+        >
+          Z <audio src="./assets/Z.mp3" class="clip" id="Z"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('X')"
+        >
+          X <audio src="./assets/X.mp3" class="clip" id="X"></audio>
+        </button>
+        <button
+          class="drum-pad btn col-3 btn-primary"
+          id="drum-0"
+          onclick="play('C')"
+        >
+          C <audio src="./assets/C.mp3" class="clip" id="C"></audio>
+        </button>
+      </div>
+    </div>
+    <!-- Stop -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <!-- freeCodeCamp Test Script -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
