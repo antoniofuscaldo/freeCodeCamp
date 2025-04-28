@@ -14,7 +14,7 @@
 
 <h1>🔵 Front End Development Libraries</h1>
 
-<p><i>In progress... (80%)</i></p>
+<p><i>In progress... (100%)</i></p>
 
 <h1>🔵 Certified Full Stack Developer Curriculum</h1>
 
