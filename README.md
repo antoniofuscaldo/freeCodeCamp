@@ -12,6 +12,13 @@
 <img src="img/certification/javaScript-algorithms-and-data-structures-certification.png" alt="freecodecamp responsive web design certification">
 <figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/javascript-algorithms-and-data-structures-v8">Verify this certification</a> <-</figcaption>
 
+<<<<<<< HEAD
+<h1>🔵 Front End Development Libraries</h1>
+
+<p><i>(In progress... (20%))</i></p>
+
+=======
+>>>>>>> 4d8f3e0 (Build a Travel Agency Page)
 <h1>🔵 Certified Full Stack Developer Curriculum</h1>
 
 <p><i>Coming soon...</i></p>

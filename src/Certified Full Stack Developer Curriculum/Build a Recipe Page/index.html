@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Recipe Page</title>
+    <style>
+      /* Reset e base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 20px;
+      }
+
+      /* Contenitore principale */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Titolo principale */
+      h1 {
+        color: #e67e22;
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      /* Paragrafo introduttivo */
+      p {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Sezioni */
+      h2 {
+        color: #2c3e50;
+        border-bottom: 3px solid #e67e22;
+        padding-bottom: 10px;
+        margin: 40px 0 25px;
+        font-size: 1.8em;
+      }
+
+      /* Liste */
+      ul,
+      ol {
+        padding-left: 30px;
+        margin-bottom: 30px;
+      }
+
+      li {
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        line-height: 1.5;
+        padding: 10px;
+        background: #fff9f2;
+        border-radius: 5px;
+        transition: transform 0.2s;
+      }
+
+      li:hover {
+        transform: translateX(10px);
+        background: #fff0e0;
+      }
+
+      /* Immagine */
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        li {
+          font-size: 1em;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .recipe-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ricetta Pancake</h1>
+      <p>
+        I found this pancake recipe in my Grandma's recipe book. Judging from
+        the weathered look of this recipe card, this was a family favorite.
+      </p>
+
+      <div class="recipe-grid">
+        <div>
+          <h2>Ingredients</h2>
+          <ul>
+            <li>Flour</li>
+            <li>Baking powder</li>
+            <li>Sugar</li>
+            <li>Salt</li>
+            <li>Milk</li>
+            <li>Butter</li>
+            <li>Egg</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Instructions</h2>
+          <ol>
+            <li>Sift the dry ingredients together.</li>
+            <li>Make a well, then add the wet ingredients. Stir to combine.</li>
+            <li>Scoop the batter onto a hot griddle or pan.</li>
+            <li>Cook for two to three minutes, then flip.</li>
+            <li>Continue cooking until brown on both sides.</li>
+          </ol>
+        </div>
+      </div>
+
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg"
+        alt="Pancake stack"
+      />
+    </div>
+  </body>
+</html>
