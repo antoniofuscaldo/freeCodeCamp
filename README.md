@@ -17,6 +17,11 @@
 <img src="img/certification/front-end-development-libraries-certification.png" alt="freecodecamp responsive web design certification">
 <figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/front-end-development-libraries">Verify this certification</a> <-</figcaption>
 
+<h1>🔵 Data Visuallizzation</h1>
+
+<img src="img/certification/data-visualization-certification.png" alt="freecodecamp responsive web design certification">
+<figcaption>-> <a href="https://www.freecodecamp.org/certification/Anon_txt/data-visualization">Verify this certification</a> <-</figcaption>
+
 <h1>🔵 Certified Full Stack Developer Curriculum</h1>
 
 <p><i>Coming soon...</i></p>
