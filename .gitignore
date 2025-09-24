@@ -1,9 +1,8 @@
 ### CUSTOM ###
-Icon?
 test*
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudio,visualstudiocode,intellij,intellij+iml,intellij+all,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,node,python,java,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,linux,visualstudio,visualstudiocode,intellij,intellij+iml,intellij+all,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,node,python,java,react
+# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudio,visualstudiocode,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,intellij,intellij+iml,intellij+all,node,react,python,java
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,linux,visualstudio,visualstudiocode,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,intellij,intellij+iml,intellij+all,node,react,python,java
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -1425,4 +1424,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudio,visualstudiocode,intellij,intellij+iml,intellij+all,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,node,python,java,react
+# End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudio,visualstudiocode,webstorm,webstorm+iml,webstorm+all,phpstorm,phpstorm+iml,phpstorm+all,intellij,intellij+iml,intellij+all,node,react,python,java
