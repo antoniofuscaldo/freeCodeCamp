@@ -22,7 +22,7 @@ function digitsOrLetters(str) {
     }
   }
 
-  if (digits > letters) return "digits";
-  if (letters > digits) return "letters";
-  return "tie";
+  if (digits > letters) return 'digits';
+  if (letters > digits) return 'letters';
+  return 'tie';
 }

@@ -14,9 +14,9 @@ Assume all parentheses are evenly balanced and correctly nested.
 function decode(s) {
   let stack = [];
   for (let char of s) {
-    if (char === ")") {
-      let temp = "";
-      while (stack.length && stack[stack.length - 1] !== "(") {
+    if (char === ')') {
+      let temp = '';
+      while (stack.length && stack[stack.length - 1] !== '(') {
         temp += stack.pop();
       }
       stack.pop();
@@ -27,5 +27,5 @@ function decode(s) {
       stack.push(char);
     }
   }
-  return stack.join("");
+  return stack.join('');
 }

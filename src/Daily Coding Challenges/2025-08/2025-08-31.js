@@ -21,21 +21,21 @@ function generateHex(color) {
   let r = 0,
     g = 0,
     b = 0;
-  if (color === "red") {
+  if (color === 'red') {
     r = 200 + (rand() % 56);
     g = rand() % r;
     b = rand() % r;
-  } else if (color === "green") {
+  } else if (color === 'green') {
     g = 200 + (rand() % 56);
     r = rand() % g;
     b = rand() % g;
-  } else if (color === "blue") {
+  } else if (color === 'blue') {
     b = 200 + (rand() % 56);
     r = rand() % b;
     g = rand() % b;
   } else {
-    return "Invalid color";
+    return 'Invalid color';
   }
-  const toHex = (n) => n.toString(16).padStart(2, "0").toUpperCase();
+  const toHex = (n) => n.toString(16).padStart(2, '0').toUpperCase();
   return `${toHex(r)}${toHex(g)}${toHex(b)}`;
 }

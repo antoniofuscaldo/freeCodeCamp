@@ -9,8 +9,8 @@ Non-alphabetical characters should remain unchanged (except for spaces).
 */
 
 function spaceJam(s) {
-  let noSpaces = s.replace(/\s+/g, "");
-  let transformed = "";
+  let noSpaces = s.replace(/\s+/g, '');
+  let transformed = '';
   for (let char of noSpaces) {
     if (/[a-zA-Z]/.test(char)) {
       transformed += char.toUpperCase();
@@ -18,5 +18,5 @@ function spaceJam(s) {
       transformed += char;
     }
   }
-  return transformed.split("").join("  ");
+  return transformed.split('').join('  ');
 }

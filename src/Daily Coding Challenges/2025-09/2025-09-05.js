@@ -11,11 +11,11 @@ Only numeric characters are allowed.
 */
 
 function isValidIPv4(ipv4) {
-  let parts = ipv4.split(".");
+  let parts = ipv4.split('.');
   if (parts.length !== 4) return false;
   for (let part of parts) {
     if (!/^\d+$/.test(part)) return false;
-    if (part.length > 1 && part[0] === "0") return false;
+    if (part.length > 1 && part[0] === '0') return false;
     let num = Number(part);
     if (num < 0 || num > 255) return false;
   }

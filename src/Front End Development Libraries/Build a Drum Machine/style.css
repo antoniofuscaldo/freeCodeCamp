@@ -38,7 +38,10 @@ h1 {
   font-size: 1.5rem !important;
   font-weight: 700;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.1s, box-shadow 0.2s, background-color 0.2s !important;
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s,
+    background-color 0.2s !important;
   border: 2px solid white !important;
 }
 

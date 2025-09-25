@@ -25,9 +25,9 @@ function permAlone(str) {
     }
     return result;
   }
-  let perms = permute(str.split(""));
-  let permStrings = perms.map((p) => p.join(""));
+  let perms = permute(str.split(''));
+  let permStrings = perms.map((p) => p.join(''));
   let valid = permStrings.filter((p) => !hasRepeats(p));
   return valid.length;
 }
-console.log(permAlone("aab"));
+console.log(permAlone('aab'));

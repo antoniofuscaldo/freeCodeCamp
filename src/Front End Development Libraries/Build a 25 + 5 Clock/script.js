@@ -11,19 +11,19 @@ function _defineProperty(obj, key, value) {
   }
   return obj;
 }
-const audio = document.getElementById("beep");
+const audio = document.getElementById('beep');
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    _defineProperty(this, "state", {
+    _defineProperty(this, 'state', {
       breakCount: 5,
       sessionCount: 25,
       clockCount: 25 * 60,
-      currentTimer: "Session",
+      currentTimer: 'Session',
       isPlaying: false,
     });
-    _defineProperty(this, "handlePlayPause", () => {
+    _defineProperty(this, 'handlePlayPause', () => {
       const { isPlaying } = this.state;
 
       if (isPlaying) {
@@ -37,16 +37,12 @@ class App extends React.Component {
         });
 
         this.loop = setInterval(() => {
-          const { clockCount, currentTimer, breakCount, sessionCount } =
-            this.state;
+          const { clockCount, currentTimer, breakCount, sessionCount } = this.state;
 
           if (clockCount === 0) {
             this.setState({
-              currentTimer: currentTimer === "Session" ? "Break" : "Session",
-              clockCount:
-                currentTimer === "Session"
-                  ? breakCount * 60
-                  : sessionCount * 60,
+              currentTimer: currentTimer === 'Session' ? 'Break' : 'Session',
+              clockCount: currentTimer === 'Session' ? breakCount * 60 : sessionCount * 60,
             });
 
             audio.play();
@@ -58,12 +54,12 @@ class App extends React.Component {
         }, 1000);
       }
     });
-    _defineProperty(this, "handleReset", () => {
+    _defineProperty(this, 'handleReset', () => {
       this.setState({
         breakCount: 5,
         sessionCount: 25,
         clockCount: 25 * 60,
-        currentTimer: "Session",
+        currentTimer: 'Session',
         isPlaying: false,
       });
 
@@ -72,21 +68,21 @@ class App extends React.Component {
       audio.pause();
       audio.currentTime = 0;
     });
-    _defineProperty(this, "convertToTime", (count) => {
+    _defineProperty(this, 'convertToTime', (count) => {
       let minutes = Math.floor(count / 60);
       let seconds = count % 60;
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
 
       return `${minutes}:${seconds}`;
     });
-    _defineProperty(this, "handleLengthChange", (count, timerType) => {
+    _defineProperty(this, 'handleLengthChange', (count, timerType) => {
       const { sessionCount, breakCount, isPlaying, currentTimer } = this.state;
 
       let newCount;
 
-      if (timerType === "session") {
+      if (timerType === 'session') {
         newCount = sessionCount + count;
       } else {
         newCount = breakCount + count;
@@ -111,58 +107,53 @@ class App extends React.Component {
   }
 
   render() {
-    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } =
-      this.state;
+    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } = this.state;
 
     const breakProps = {
-      title: "Break",
+      title: 'Break',
       count: breakCount,
-      handleDecrease: () => this.handleLengthChange(-1, "break"),
-      handleIncrease: () => this.handleLengthChange(1, "break"),
+      handleDecrease: () => this.handleLengthChange(-1, 'break'),
+      handleIncrease: () => this.handleLengthChange(1, 'break'),
     };
 
     const sessionProps = {
-      title: "Session",
+      title: 'Session',
       count: sessionCount,
-      handleDecrease: () => this.handleLengthChange(-1, "session"),
-      handleIncrease: () => this.handleLengthChange(1, "session"),
+      handleDecrease: () => this.handleLengthChange(-1, 'session'),
+      handleIncrease: () => this.handleLengthChange(1, 'session'),
     };
 
     return React.createElement(
-      "div",
+      'div',
       null,
       React.createElement(
-        "div",
-        { className: "flex" },
+        'div',
+        { className: 'flex' },
         React.createElement(SetTimer, breakProps),
         React.createElement(SetTimer, sessionProps)
       ),
 
       React.createElement(
-        "div",
-        { className: "clock-container" },
-        React.createElement("h1", { id: "timer-label" }, currentTimer),
-        React.createElement(
-          "span",
-          { id: "time-left" },
-          this.convertToTime(clockCount)
-        ),
+        'div',
+        { className: 'clock-container' },
+        React.createElement('h1', { id: 'timer-label' }, currentTimer),
+        React.createElement('span', { id: 'time-left' }, this.convertToTime(clockCount)),
 
         React.createElement(
-          "div",
-          { className: "flex" },
+          'div',
+          { className: 'flex' },
           React.createElement(
-            "button",
-            { id: "start_stop", onClick: this.handlePlayPause },
-            React.createElement("i", {
-              className: `fas fa-${isPlaying ? "pause" : "play"}`,
+            'button',
+            { id: 'start_stop', onClick: this.handlePlayPause },
+            React.createElement('i', {
+              className: `fas fa-${isPlaying ? 'pause' : 'play'}`,
             })
           ),
 
           React.createElement(
-            "button",
-            { id: "reset", onClick: this.handleReset },
-            React.createElement("i", { className: "fas fa-sync" })
+            'button',
+            { id: 'reset', onClick: this.handleReset },
+            React.createElement('i', { className: 'fas fa-sync' })
           )
         )
       )
@@ -174,28 +165,28 @@ const SetTimer = (props) => {
   const id = props.title.toLowerCase();
 
   return React.createElement(
-    "div",
-    { className: "timer-container" },
-    React.createElement("h2", { id: `${id}-label` }, props.title, " Length"),
+    'div',
+    { className: 'timer-container' },
+    React.createElement('h2', { id: `${id}-label` }, props.title, ' Length'),
 
     React.createElement(
-      "div",
-      { className: "flex actions-wrapper" },
+      'div',
+      { className: 'flex actions-wrapper' },
       React.createElement(
-        "button",
+        'button',
         { id: `${id}-decrement`, onClick: props.handleDecrease },
-        React.createElement("i", { className: "fas fa-minus" })
+        React.createElement('i', { className: 'fas fa-minus' })
       ),
 
-      React.createElement("span", { id: `${id}-length` }, props.count),
+      React.createElement('span', { id: `${id}-length` }, props.count),
 
       React.createElement(
-        "button",
+        'button',
         { id: `${id}-increment`, onClick: props.handleIncrease },
-        React.createElement("i", { className: "fas fa-plus" })
+        React.createElement('i', { className: 'fas fa-plus' })
       )
     )
   );
 };
 
-ReactDOM.render(React.createElement(App, null), document.getElementById("app"));
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));

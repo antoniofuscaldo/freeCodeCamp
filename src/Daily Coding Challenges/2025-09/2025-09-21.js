@@ -35,8 +35,8 @@ function numberOfVideos(videoSize, videoUnit, driveSize, driveUnit) {
     TB: 1000 ** 4,
   };
 
-  if (!videoUnits[videoUnit]) return "Invalid video unit";
-  if (!driveUnits[driveUnit]) return "Invalid drive unit";
+  if (!videoUnits[videoUnit]) return 'Invalid video unit';
+  if (!driveUnits[driveUnit]) return 'Invalid drive unit';
 
   let videoBytes = videoSize * videoUnits[videoUnit];
   let driveBytes = driveSize * driveUnits[driveUnit];

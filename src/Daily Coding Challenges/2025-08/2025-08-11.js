@@ -11,7 +11,7 @@ If there's an odd number of characters in the string, ignore the center characte
 */
 
 function isBalanced(s) {
-  const vowels = "aeiouAEIOU";
+  const vowels = 'aeiouAEIOU';
   let n = s.length;
   if (n % 2 !== 0) {
     s = s.slice(0, Math.floor(n / 2)) + s.slice(Math.floor(n / 2) + 1);

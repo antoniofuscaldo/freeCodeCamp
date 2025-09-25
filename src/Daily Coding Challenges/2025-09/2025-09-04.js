@@ -12,9 +12,9 @@ All non-vowel characters should keep their original case.
 */
 
 function repeatVowels(str) {
-  const vowels = "aeiouAEIOU";
+  const vowels = 'aeiouAEIOU';
   let count = 0;
-  let result = "";
+  let result = '';
   for (let char of str) {
     if (vowels.includes(char)) {
       count++;

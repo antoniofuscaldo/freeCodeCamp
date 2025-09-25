@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&display=swap');
 
 #quote-box {
   position: absolute;
@@ -13,14 +13,14 @@
 }
 
 #text {
-  font-family: "Parisienne", cursive;
+  font-family: 'Parisienne', cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
 }
 
 #author {
-  font-family: "Pinyon Script", cursive;
+  font-family: 'Pinyon Script', cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;

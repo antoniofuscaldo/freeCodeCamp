@@ -21,8 +21,8 @@ For each battle, the stronger character wins. The army with more victories, wins
 
 function battle(myArmy, opposingArmy) {
   // Step 1: check lengths
-  if (myArmy.length > opposingArmy.length) return "Opponent retreated";
-  if (myArmy.length < opposingArmy.length) return "We retreated";
+  if (myArmy.length > opposingArmy.length) return 'Opponent retreated';
+  if (myArmy.length < opposingArmy.length) return 'We retreated';
   function getStrength(ch) {
     if (/[a-z]/.test(ch)) {
       return ch.charCodeAt(0) - 96;
@@ -45,7 +45,7 @@ function battle(myArmy, opposingArmy) {
       opponentWins++;
     }
   }
-  if (myWins > opponentWins) return "We won";
-  if (myWins < opponentWins) return "We lost";
-  return "It was a tie";
+  if (myWins > opponentWins) return 'We won';
+  if (myWins < opponentWins) return 'We lost';
+  return 'It was a tie';
 }

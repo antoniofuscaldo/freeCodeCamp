@@ -10,7 +10,5 @@ Sentences can end with a period (.), one or more question marks (?), or one or m
 */
 
 function capitalize(paragraph) {
-  return paragraph.replace(/(^\s*[a-z])|([.!?]+[\s]*[a-z])/g, (match) =>
-    match.toUpperCase()
-  );
+  return paragraph.replace(/(^\s*[a-z])|([.!?]+[\s]*[a-z])/g, (match) => match.toUpperCase());
 }

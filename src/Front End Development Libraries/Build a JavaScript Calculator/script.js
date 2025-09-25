@@ -1,225 +1,207 @@
 const buttons = [
   {
-    name: "AC",
-    id: "clear",
+    name: 'AC',
+    id: 'clear',
   },
   {
-    name: "/",
-    id: "divide",
+    name: '/',
+    id: 'divide',
   },
   {
-    name: "*",
-    id: "multiply",
+    name: '*',
+    id: 'multiply',
   },
   {
-    name: "7",
-    id: "seven",
+    name: '7',
+    id: 'seven',
   },
   {
-    name: "8",
-    id: "eight",
+    name: '8',
+    id: 'eight',
   },
   {
-    name: "9",
-    id: "nine",
+    name: '9',
+    id: 'nine',
   },
   {
-    name: "-",
-    id: "subtract",
+    name: '-',
+    id: 'subtract',
   },
   {
-    name: "4",
-    id: "four",
+    name: '4',
+    id: 'four',
   },
   {
-    name: "5",
-    id: "five",
+    name: '5',
+    id: 'five',
   },
   {
-    name: "6",
-    id: "six",
+    name: '6',
+    id: 'six',
   },
   {
-    name: "+",
-    id: "add",
+    name: '+',
+    id: 'add',
   },
   {
-    name: "1",
-    id: "one",
+    name: '1',
+    id: 'one',
   },
   {
-    name: "2",
-    id: "two",
+    name: '2',
+    id: 'two',
   },
   {
-    name: "3",
-    id: "three",
+    name: '3',
+    id: 'three',
   },
   {
-    name: "=",
-    id: "equals",
+    name: '=',
+    id: 'equals',
   },
   {
-    name: "0",
-    id: "zero",
+    name: '0',
+    id: 'zero',
   },
   {
-    name: ".",
-    id: "decimal",
+    name: '.',
+    id: 'decimal',
   },
 ];
 function App() {
-  const [output, setOutput] = React.useState("0");
-  const [lastInput, setLastInput] = React.useState("");
-  const [secondLastInput, setSecondLastInput] = React.useState("");
+  const [output, setOutput] = React.useState('0');
+  const [lastInput, setLastInput] = React.useState('');
+  const [secondLastInput, setSecondLastInput] = React.useState('');
   function handleClick(clickedButton) {
     let outputTemp = output;
     let length = outputTemp.length;
     setSecondLastInput(output[length - 1]);
-    if (
-      clickedButton === "*" ||
-      clickedButton === "/" ||
-      clickedButton === "+"
-    ) {
-      if (
-        lastInput === "+" ||
-        lastInput === "/" ||
-        lastInput === "*" ||
-        lastInput === "-"
-      ) {
+    if (clickedButton === '*' || clickedButton === '/' || clickedButton === '+') {
+      if (lastInput === '+' || lastInput === '/' || lastInput === '*' || lastInput === '-') {
         outputTemp = outputTemp.slice(0, length - 1);
       }
     }
-    if (clickedButton === "-") {
-      if (lastInput === "+" || lastInput === "-") {
+    if (clickedButton === '-') {
+      if (lastInput === '+' || lastInput === '-') {
         outputTemp = outputTemp.slice(0, length - 1);
       }
     }
-    if (secondLastInput === "*" || secondLastInput === "/") {
-      if (
-        clickedButton === "*" ||
-        clickedButton === "/" ||
-        clickedButton === "+"
-      ) {
+    if (secondLastInput === '*' || secondLastInput === '/') {
+      if (clickedButton === '*' || clickedButton === '/' || clickedButton === '+') {
         outputTemp = outputTemp.slice(0, length - 2);
       }
     }
 
-    if (outputTemp == "0") {
+    if (outputTemp == '0') {
       outputTemp = parseInt(outputTemp);
     }
     switch (clickedButton) {
-      case "AC":
+      case 'AC':
         setOutput(0);
-        setLastInput("");
+        setLastInput('');
         break;
 
-      case "1":
-        const concatOne = (outputTemp === 0 ? "" : outputTemp) + "1";
+      case '1':
+        const concatOne = (outputTemp === 0 ? '' : outputTemp) + '1';
         setOutput(concatOne);
-        setLastInput("1");
+        setLastInput('1');
         break;
 
-      case "2":
-        const concatTwo = (outputTemp === 0 ? "" : outputTemp) + "2";
+      case '2':
+        const concatTwo = (outputTemp === 0 ? '' : outputTemp) + '2';
         setOutput(concatTwo);
-        setLastInput("2");
+        setLastInput('2');
         break;
 
-      case "3":
-        const concatThree = (outputTemp === 0 ? "" : outputTemp) + "3";
+      case '3':
+        const concatThree = (outputTemp === 0 ? '' : outputTemp) + '3';
         setOutput(concatThree);
-        setLastInput("3");
+        setLastInput('3');
         break;
 
-      case "4":
-        const concatFour = (outputTemp === 0 ? "" : outputTemp) + "4";
+      case '4':
+        const concatFour = (outputTemp === 0 ? '' : outputTemp) + '4';
         setOutput(concatFour);
-        setLastInput("4");
+        setLastInput('4');
         break;
 
-      case "5":
-        const concatFive = (outputTemp === 0 ? "" : outputTemp) + "5";
+      case '5':
+        const concatFive = (outputTemp === 0 ? '' : outputTemp) + '5';
         setOutput(concatFive);
-        setLastInput("5");
+        setLastInput('5');
         break;
 
-      case "6":
-        const concatSix = (outputTemp === 0 ? "" : outputTemp) + "6";
+      case '6':
+        const concatSix = (outputTemp === 0 ? '' : outputTemp) + '6';
         setOutput(concatSix);
-        setLastInput("6");
+        setLastInput('6');
         break;
 
-      case "7":
-        const concatSeven = (outputTemp === 0 ? "" : outputTemp) + "7";
+      case '7':
+        const concatSeven = (outputTemp === 0 ? '' : outputTemp) + '7';
         setOutput(concatSeven);
-        setLastInput("7");
+        setLastInput('7');
         break;
 
-      case "8":
-        const concatEight = (outputTemp === 0 ? "" : outputTemp) + "8";
+      case '8':
+        const concatEight = (outputTemp === 0 ? '' : outputTemp) + '8';
         setOutput(concatEight);
-        setLastInput("8");
+        setLastInput('8');
         break;
 
-      case "9":
-        const concatNine = (outputTemp === 0 ? "" : outputTemp) + "9";
+      case '9':
+        const concatNine = (outputTemp === 0 ? '' : outputTemp) + '9';
         setOutput(concatNine);
-        setLastInput("9");
+        setLastInput('9');
         break;
 
-      case "0":
-        const concatZero = (parseInt(outputTemp) === 0 ? "" : outputTemp) + "0";
-        outputTemp === 0 ? setOutput("0") : setOutput(concatZero);
-        setLastInput("0");
+      case '0':
+        const concatZero = (parseInt(outputTemp) === 0 ? '' : outputTemp) + '0';
+        outputTemp === 0 ? setOutput('0') : setOutput(concatZero);
+        setLastInput('0');
         break;
 
-      case "/":
-        const divide = (outputTemp === 0 ? "" : outputTemp) + "/";
+      case '/':
+        const divide = (outputTemp === 0 ? '' : outputTemp) + '/';
         setOutput(divide);
-        setLastInput("/");
+        setLastInput('/');
         break;
 
-      case "+":
-        const add = (outputTemp === 0 ? "" : outputTemp) + "+";
+      case '+':
+        const add = (outputTemp === 0 ? '' : outputTemp) + '+';
         setOutput(add);
-        setLastInput("+");
+        setLastInput('+');
         break;
 
-      case "*":
-        const multiply = (outputTemp === 0 ? "" : outputTemp) + "*";
+      case '*':
+        const multiply = (outputTemp === 0 ? '' : outputTemp) + '*';
         setOutput(multiply);
-        setLastInput("*");
+        setLastInput('*');
         break;
 
-      case "-":
-        const subtract = (outputTemp === 0 ? "" : outputTemp) + "-";
+      case '-':
+        const subtract = (outputTemp === 0 ? '' : outputTemp) + '-';
         setOutput(subtract);
-        setLastInput("-");
+        setLastInput('-');
         break;
 
-      case ".":
+      case '.':
         let count = 0;
         let countForSymbol = 0;
         for (let i = 0; i < output.length; i++) {
-          if (output[i] === ".") {
+          if (output[i] === '.') {
             ++count;
           }
-          if (
-            output[i] === "+" ||
-            output[i] === "-" ||
-            output[i] === "*" ||
-            output[i] === "/"
-          ) {
+          if (output[i] === '+' || output[i] === '-' || output[i] === '*' || output[i] === '/') {
             ++countForSymbol;
           }
         }
-        const dot = (outputTemp === 0 ? "" : outputTemp) + ".";
+        const dot = (outputTemp === 0 ? '' : outputTemp) + '.';
         count > countForSymbol ? null : setOutput(dot);
-        setLastInput(".");
+        setLastInput('.');
         break;
 
-      case "=":
+      case '=':
         const evaluated = eval(output);
         setOutput(evaluated);
         break;
@@ -251,4 +233,4 @@ function App() {
     </>
   );
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));

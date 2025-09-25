@@ -12,7 +12,7 @@ Non-alphabetical characters should not get decoded.
 */
 
 function decode(message, shift) {
-  let result = "";
+  let result = '';
   for (let char of message) {
     if (/[a-zA-Z]/.test(char)) {
       let base = char === char.toUpperCase() ? 65 : 97;

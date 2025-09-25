@@ -11,15 +11,15 @@ The input strings will contain no punctuation, and will be entirely lowercase.
 */
 
 function jbelmu(text) {
-  let words = text.split(" ");
+  let words = text.split(' ');
   let result = words.map((word) => {
     if (word.length <= 2) {
       return word;
     }
     let first = word[0];
-    let middle = word.slice(1, -1).split("").sort().join("");
+    let middle = word.slice(1, -1).split('').sort().join('');
     let last = word[word.length - 1];
     return first + middle + last;
   });
-  return result.join(" ");
+  return result.join(' ');
 }

@@ -13,7 +13,7 @@ The returned array should be in descending order with the most frequently occurr
 */
 
 function getWords(paragraph) {
-  let clean = paragraph.toLowerCase().replace(/[,.!]/g, "");
+  let clean = paragraph.toLowerCase().replace(/[,.!]/g, '');
   let words = clean.split(/\s+/).filter(Boolean);
   let freq = {};
   for (let word of words) {

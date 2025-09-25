@@ -1,110 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentazione CSS</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav id="navbar">
-        <header>Documentazione CSS</header>
-        <a href="#introduzione" class="nav-link">Introduzione</a>
-        <a href="#sintassi_base" class="nav-link">Sintassi Base</a>
-        <a href="#selettori" class="nav-link">Selettori</a>
-        <a href="#box_model" class="nav-link">Box Model</a>
-        <a href="#flexbox" class="nav-link">Flexbox</a>
+      <header>Documentazione CSS</header>
+      <a href="#introduzione" class="nav-link">Introduzione</a>
+      <a href="#sintassi_base" class="nav-link">Sintassi Base</a>
+      <a href="#selettori" class="nav-link">Selettori</a>
+      <a href="#box_model" class="nav-link">Box Model</a>
+      <a href="#flexbox" class="nav-link">Flexbox</a>
     </nav>
 
     <main id="main-doc">
-        <section class="main-section" id="introduzione">
-            <header>Introduzione</header>
-            <p>CSS (Cascading Style Sheets) è un linguaggio utilizzato per descrivere la presentazione di documenti
-                HTML.
-            </p>
-            <p>Principali caratteristiche:</p>
-            <ul>
-                <li>Separazione tra contenuto e presentazione</li>
-                <li>Supporto per vari dispositivi</li>
-                <li>Cascata e ereditarietà</li>
-            </ul>
-            <p>CSS viene applicato attraverso regole che specificano come gli elementi devono essere visualizzati.</p>
-            <code>body {
-        font-family: Arial, sans-serif;
-        color: #333;
-    }</code>
-        </section>
+      <section class="main-section" id="introduzione">
+        <header>Introduzione</header>
+        <p>
+          CSS (Cascading Style Sheets) è un linguaggio utilizzato per descrivere la presentazione di
+          documenti HTML.
+        </p>
+        <p>Principali caratteristiche:</p>
+        <ul>
+          <li>Separazione tra contenuto e presentazione</li>
+          <li>Supporto per vari dispositivi</li>
+          <li>Cascata e ereditarietà</li>
+        </ul>
+        <p>
+          CSS viene applicato attraverso regole che specificano come gli elementi devono essere
+          visualizzati.
+        </p>
+        <code>body { font-family: Arial, sans-serif; color: #333; }</code>
+      </section>
 
-        <section class="main-section" id="sintassi_base">
-            <header>Sintassi Base</header>
-            <p>Una regola CSS è composta da:</p>
-            <code>selettore {
-        proprietà: valore;
-    }</code>
-            <p>Esempio pratico:</p>
-            <code>h1 {
-        color: blue;
-        font-size: 24px;
-    }</code>
-            <p>Ogni dichiarazione deve terminare con un punto e virgola.</p>
-        </section>
+      <section class="main-section" id="sintassi_base">
+        <header>Sintassi Base</header>
+        <p>Una regola CSS è composta da:</p>
+        <code>selettore { proprietà: valore; }</code>
+        <p>Esempio pratico:</p>
+        <code>h1 { color: blue; font-size: 24px; }</code>
+        <p>Ogni dichiarazione deve terminare con un punto e virgola.</p>
+      </section>
 
-        <section class="main-section" id="selettori">
-            <header>Selettori</header>
-            <p>Tipi di selettori principali:</p>
-            <ul>
-                <li>Elemento: <code>div</code></li>
-                <li>Classe: <code>.classe</code></li>
-                <li>ID: <code>#id</code></li>
-            </ul>
-            <p>I selettori possono essere combinati per maggiore specificità.</p>
-            <code>.container {
-        width: 80%;
-        margin: 0 auto;
-    }</code>
-        </section>
+      <section class="main-section" id="selettori">
+        <header>Selettori</header>
+        <p>Tipi di selettori principali:</p>
+        <ul>
+          <li>Elemento: <code>div</code></li>
+          <li>Classe: <code>.classe</code></li>
+          <li>ID: <code>#id</code></li>
+        </ul>
+        <p>I selettori possono essere combinati per maggiore specificità.</p>
+        <code>.container { width: 80%; margin: 0 auto; }</code>
+      </section>
 
-        <section class="main-section" id="box_model">
-            <header>Box Model</header>
-            <p>Componenti principali:</p>
-            <code>div {
-        width: 300px;
-        padding: 20px;
-        border: 1px solid #000;
-        margin: 10px;
-    }</code>
-            <p>Proprietà correlate:</p>
-            <ul>
-                <li>box-sizing</li>
-                <li>display</li>
-                <li>position</li>
-            </ul>
-            <p>Il box-sizing: border-box include padding e border nelle dimensioni totali.</p>
-        </section>
+      <section class="main-section" id="box_model">
+        <header>Box Model</header>
+        <p>Componenti principali:</p>
+        <code>div { width: 300px; padding: 20px; border: 1px solid #000; margin: 10px; }</code>
+        <p>Proprietà correlate:</p>
+        <ul>
+          <li>box-sizing</li>
+          <li>display</li>
+          <li>position</li>
+        </ul>
+        <p>Il box-sizing: border-box include padding e border nelle dimensioni totali.</p>
+      </section>
 
-        <section class="main-section" id="flexbox">
-            <header>Flexbox</header>
-            <p>Modello di layout per organizzare elementi complessi:</p>
-            <code>.container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }</code>
-            <p>Vantaggi principali:</p>
-            <ul>
-                <li>Allineamento semplice</li>
-                <li>Distribuzione dello spazio</li>
-                <li>Layout responsive</li>
-            </ul>
-            <p>Flexbox è particolarmente utile per layout dinamici.</p>
-            <code>.item {
-        flex: 1;
-        order: 2;
-    }</code>
-        </section>
+      <section class="main-section" id="flexbox">
+        <header>Flexbox</header>
+        <p>Modello di layout per organizzare elementi complessi:</p>
+        <code>.container { display: flex; justify-content: center; align-items: center; }</code>
+        <p>Vantaggi principali:</p>
+        <ul>
+          <li>Allineamento semplice</li>
+          <li>Distribuzione dello spazio</li>
+          <li>Layout responsive</li>
+        </ul>
+        <p>Flexbox è particolarmente utile per layout dinamici.</p>
+        <code>.item { flex: 1; order: 2; }</code>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>

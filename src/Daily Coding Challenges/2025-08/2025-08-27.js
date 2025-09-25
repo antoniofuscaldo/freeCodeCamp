@@ -18,23 +18,23 @@ function evaluate(numbers, operators) {
     let op = operators[(i - 1) % operators.length];
     let num = numbers[i];
     switch (op) {
-      case "+":
+      case '+':
         result += num;
         break;
-      case "-":
+      case '-':
         result -= num;
         break;
-      case "*":
+      case '*':
         result *= num;
         break;
-      case "/":
+      case '/':
         result = Math.trunc(result / num);
         break;
-      case "%":
+      case '%':
         result %= num;
         break;
       default:
-        throw new Error("Invalid operator: " + op);
+        throw new Error('Invalid operator: ' + op);
     }
   }
   return result;

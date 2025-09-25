@@ -10,7 +10,7 @@ Ignore letter casing in the word or sentence.
 */
 
 function isPangram(sentence, letters) {
-  let clean = sentence.toLowerCase().replace(/[^a-z]/g, "");
+  let clean = sentence.toLowerCase().replace(/[^a-z]/g, '');
   let sentenceSet = new Set(clean);
   let lettersSet = new Set(letters);
   for (let ch of lettersSet) {

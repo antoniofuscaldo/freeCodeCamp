@@ -20,8 +20,8 @@ function hello() {
 
 **Bolded Text**`;
 
-const editor = document.getElementById("editor");
-const preview = document.getElementById("preview");
+const editor = document.getElementById('editor');
+const preview = document.getElementById('preview');
 
 marked.setOptions({
   breaks: true,
@@ -30,6 +30,6 @@ marked.setOptions({
 editor.value = defaultMarkdown;
 preview.innerHTML = marked.parse(defaultMarkdown);
 
-editor.addEventListener("input", (e) => {
+editor.addEventListener('input', (e) => {
   preview.innerHTML = marked.parse(e.target.value);
 });

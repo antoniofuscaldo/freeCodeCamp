@@ -1,10 +1,10 @@
 window.onload = go;
 function go() {
-  $("#new-quote").click(function () {
+  $('#new-quote').click(function () {
     genRandQuote();
   });
 
-  $("#tweet-quote").click(function () {});
+  $('#tweet-quote').click(function () {});
 
   genRandQuote();
 }
@@ -63,25 +63,19 @@ function genRandQuote() {
     },
   ];
   var randQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  $("#text").html(randQuote.text);
-  $("#author").html(randQuote.source);
-  $("#tweet-quote").attr(
-    "href",
+  $('#text').html(randQuote.text);
+  $('#author').html(randQuote.source);
+  $('#tweet-quote').attr(
+    'href',
     stringToClickToTweetURL('"' + randQuote.text + '" - ' + randQuote.source)
   );
 }
 
 function stringToClickToTweetURL(str) {
   // Convert to Click to Tweet URL
-  var stringToConvert = str
-    .split(" ")
-    .join("%20")
-    .split("@")
-    .join("%40")
-    .split("!")
-    .join("%21");
+  var stringToConvert = str.split(' ').join('%20').split('@').join('%40').split('!').join('%21');
 
-  var resultString = "https://twitter.com/intent/tweet?text=" + stringToConvert;
+  var resultString = 'https://twitter.com/intent/tweet?text=' + stringToConvert;
 
   return resultString;
 }

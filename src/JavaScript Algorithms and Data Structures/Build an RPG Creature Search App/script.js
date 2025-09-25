@@ -1,16 +1,16 @@
-const searchInput = document.getElementById("search-input");
-const searchButton = document.getElementById("search-button");
-const creatureName = document.getElementById("creature-name");
-const creatureId = document.getElementById("creature-id");
-const creatureWeight = document.getElementById("weight");
-const creatureHeight = document.getElementById("height");
-const creatureTypes = document.getElementById("types");
-const hp = document.getElementById("hp");
-const attack = document.getElementById("attack");
-const defense = document.getElementById("defense");
-const specialAttack = document.getElementById("special-attack");
-const specialDefense = document.getElementById("special-defense");
-const speed = document.getElementById("speed");
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const creatureName = document.getElementById('creature-name');
+const creatureId = document.getElementById('creature-id');
+const creatureWeight = document.getElementById('weight');
+const creatureHeight = document.getElementById('height');
+const creatureTypes = document.getElementById('types');
+const hp = document.getElementById('hp');
+const attack = document.getElementById('attack');
+const defense = document.getElementById('defense');
+const specialAttack = document.getElementById('special-attack');
+const specialDefense = document.getElementById('special-defense');
+const speed = document.getElementById('speed');
 
 const getCreature = async () => {
   try {
@@ -22,7 +22,7 @@ const getCreature = async () => {
     setCreatureInfo(data);
   } catch (err) {
     /* resetDisplay(); */
-    alert("Creature not found");
+    alert('Creature not found');
     console.log(err);
   }
 };
@@ -42,19 +42,17 @@ const setCreatureInfo = (data) => {
   speed.textContent = `${stats[5].base_stat}`;
 
   creatureTypes.innerHTML = types
-    .map(
-      (obj) => `<span>${obj.name[0].toUpperCase() + obj.name.slice(1)}</span>`
-    )
-    .join(" ");
+    .map((obj) => `<span>${obj.name[0].toUpperCase() + obj.name.slice(1)}</span>`)
+    .join(' ');
 };
 
-searchButton.addEventListener("click", (e) => {
+searchButton.addEventListener('click', (e) => {
   e.preventDefault();
   getCreature();
 });
 
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
     searchButton.click();
   }
 });

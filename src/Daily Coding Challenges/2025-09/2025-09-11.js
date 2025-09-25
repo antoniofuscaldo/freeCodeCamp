@@ -10,5 +10,5 @@ The returned string should only have one space between words.
 */
 
 function reverseSentence(sentence) {
-  return sentence.trim().split(/\s+/).reverse().join(" ");
+  return sentence.trim().split(/\s+/).reverse().join(' ');
 }

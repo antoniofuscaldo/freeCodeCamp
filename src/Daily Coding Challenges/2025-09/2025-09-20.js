@@ -25,7 +25,7 @@ function numberOfFiles(fileSize, fileUnit, driveSizeGb) {
     MB: 1000 ** 2,
   };
 
-  if (!fileUnits[fileUnit]) return "Invalid file unit";
+  if (!fileUnits[fileUnit]) return 'Invalid file unit';
 
   let fileBytes = fileSize * fileUnits[fileUnit];
 

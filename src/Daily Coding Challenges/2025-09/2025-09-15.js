@@ -12,10 +12,10 @@ Return "hold" if the current temperature is equal to the target.
 
 function adjustThermostat(temp, target) {
   if (temp < target) {
-    return "heat";
+    return 'heat';
   } else if (temp > target) {
-    return "cool";
+    return 'cool';
   } else {
-    return "hold";
+    return 'hold';
   }
 }

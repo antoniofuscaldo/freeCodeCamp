@@ -14,7 +14,7 @@ The returned string should not have leading or trailing %20.
 
 function generateSlug(str) {
   let slug = str.toLowerCase();
-  slug = slug.replace(/[^a-z0-9 ]/g, "");
-  slug = slug.trim().replace(/\s+/g, "%20");
+  slug = slug.replace(/[^a-z0-9 ]/g, '');
+  slug = slug.trim().replace(/\s+/g, '%20');
   return slug;
 }

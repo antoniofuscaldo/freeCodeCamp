@@ -18,5 +18,5 @@ function findTarget(arr, target) {
     }
     map.set(arr[i], i);
   }
-  return "Target not found";
+  return 'Target not found';
 }

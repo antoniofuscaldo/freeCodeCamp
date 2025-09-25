@@ -40,5 +40,5 @@ function binarySearch(searchList, value) {
       high = mid - 1;
     }
   }
-  return "Value Not Found";
+  return 'Value Not Found';
 }
