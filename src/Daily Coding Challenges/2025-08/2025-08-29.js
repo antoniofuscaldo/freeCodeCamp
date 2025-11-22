@@ -18,15 +18,15 @@ You will have burned 13 total candles in the example.
 */
 
 function burnCandles(candles, leftoversNeeded) {
-  let burned = 0;
-  let leftovers = 0;
+  let burned = 0,
+    leftovers = 0;
   while (candles > 0) {
     burned += candles;
     leftovers += candles;
     candles = 0;
     if (leftovers >= leftoversNeeded) {
-      let newCandles = Math.floor(leftovers / leftoversNeeded);
-      leftovers = leftovers % leftoversNeeded;
+      const newCandles = Math.floor(leftovers / leftoversNeeded);
+      leftovers %= leftoversNeeded;
       candles += newCandles;
     }
   }

@@ -1,6 +1,6 @@
 /**
 
-camelCase
+CamelCase
 
 Given a string, return its camel case version using the following rules:
 
@@ -12,7 +12,7 @@ All spaces and separators should be removed.
 */
 
 function toCamelCase(s) {
-  let words = s.split(/[ _-]+/);
+  const words = s.split(/[ _-]+/);
   return words
     .map((word, index) => {
       word = word.toLowerCase();

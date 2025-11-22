@@ -12,9 +12,9 @@ For example, given "ACGT", return "TGCA".
 */
 
 function complementaryDNA(strand) {
-  const pairs = { A: "T", T: "A", C: "G", G: "C" };
+  const pairs = { A: 'T', T: 'A', C: 'G', G: 'C' };
   return strand
-    .split("")
+    .split('')
     .map((ch) => pairs[ch])
-    .join("");
+    .join('');
 }

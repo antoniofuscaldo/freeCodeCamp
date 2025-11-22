@@ -9,8 +9,8 @@ If there were no vehicles speeding, return [0, 0].
 */
 
 function speeding(speeds, limit) {
-  let over = speeds.filter((s) => s > limit).map((s) => s - limit);
+  const over = speeds.filter((s) => s > limit).map((s) => s - limit);
   if (over.length === 0) return [0, 0];
-  let avg = over.reduce((a, b) => a + b, 0) / over.length;
+  const avg = over.reduce((a, b) => a + b, 0) / over.length;
   return [over.length, avg];
 }

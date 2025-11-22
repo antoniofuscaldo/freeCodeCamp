@@ -17,9 +17,9 @@ For example, given 1 as a mass, return [0.95, 1.37].
 */
 
 function goldilocksZone(mass) {
-  const luminosity = Math.pow(mass, 3.5);
-  const sqrtLum = Math.sqrt(luminosity);
-  const start = 0.95 * sqrtLum;
-  const end = 1.37 * sqrtLum;
+  const luminosity = mass ** 3.5,
+    sqrtLum = Math.sqrt(luminosity),
+    start = 0.95 * sqrtLum,
+    end = 1.37 * sqrtLum;
   return [parseFloat(start.toFixed(2)), parseFloat(end.toFixed(2))];
 }

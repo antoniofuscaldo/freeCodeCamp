@@ -12,5 +12,5 @@ For example, '<a href="#">Click here</a>' should return "Click here".
 */
 
 function stripTags(html) {
-  return html.replace(/<[^>]*>/g, "");
+  return html.replace(/<[^>]*>/g, '');
 }

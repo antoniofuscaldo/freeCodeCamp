@@ -15,8 +15,8 @@ You should return [[3, 1], [4, 2]], which looks like this:
 */
 
 function rotate(matrix) {
-  let n = matrix.length;
-  let result = Array.from({ length: n }, () => Array(n).fill(0));
+  const n = matrix.length,
+    result = Array.from({ length: n }, () => Array(n).fill(0));
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       result[j][n - 1 - i] = matrix[i][j];

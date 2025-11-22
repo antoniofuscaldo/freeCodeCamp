@@ -19,9 +19,9 @@ Return "We win" if your team is the winner, "We lose" if your team loses, and "D
 function battle(ourTeam, opponent) {
   function wordValue(word) {
     let sum = 0;
-    for (let char of word) {
-      let code = char.toLowerCase().charCodeAt(0) - 96;
-      if (char >= "A" && char <= "Z") {
+    for (const char of word) {
+      const code = char.toLowerCase().charCodeAt(0) - 96;
+      if (char >= 'A' && char <= 'Z') {
         sum += code * 2;
       } else {
         sum += code;
@@ -30,15 +30,15 @@ function battle(ourTeam, opponent) {
     return sum;
   }
 
-  const ourWords = ourTeam.split(" ");
-  const oppWords = opponent.split(" ");
+  const ourWords = ourTeam.split(' '),
+    oppWords = opponent.split(' ');
 
-  let ourWins = 0;
-  let oppWins = 0;
+  let oppWins = 0,
+    ourWins = 0;
 
   for (let i = 0; i < ourWords.length; i++) {
-    const ourVal = wordValue(ourWords[i]);
-    const oppVal = wordValue(oppWords[i]);
+    const ourVal = wordValue(ourWords[i]),
+      oppVal = wordValue(oppWords[i]);
 
     if (ourVal > oppVal) {
       ourWins++;
@@ -47,7 +47,7 @@ function battle(ourTeam, opponent) {
     }
   }
 
-  if (ourWins > oppWins) return "We win";
-  if (ourWins < oppWins) return "We lose";
-  return "Draw";
+  if (ourWins > oppWins) return 'We win';
+  if (ourWins < oppWins) return 'We lose';
+  return 'Draw';
 }

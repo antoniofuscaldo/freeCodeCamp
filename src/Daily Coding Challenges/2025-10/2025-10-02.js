@@ -15,8 +15,8 @@ A binary number uses only the digits 0 and 1 to represent any number. To convert
 */
 
 function toBinary(decimal) {
-  if (decimal === 0) return "0";
-  let result = "";
+  if (decimal === 0) return '0';
+  let result = '';
   while (decimal > 0) {
     result = (decimal % 2) + result;
     decimal = Math.floor(decimal / 2);

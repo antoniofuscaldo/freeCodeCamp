@@ -31,7 +31,7 @@ Create an adjacency matrix of an undirected graph with five nodes. This matrix s
 
 */
 
-var adjMatUndirected = [
+const adjMatUndirected = [
   [0, 0, 1, 1, 0],
   [0, 0, 0, 0, 0],
   [1, 0, 0, 0, 1],

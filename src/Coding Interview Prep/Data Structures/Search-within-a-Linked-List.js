@@ -13,12 +13,12 @@ Write an isEmpty method that checks if the linked list is empty, an indexOf meth
 */
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
-  var Node = function (element) {
-    this.element = element;
-    this.next = null;
-  };
+  let length = 0,
+    head = null,
+    Node = function (element) {
+      this.element = element;
+      this.next = null;
+    };
   this.size = function () {
     return length;
   };
@@ -26,11 +26,11 @@ function LinkedList() {
     return head;
   };
   this.add = function (element) {
-    var node = new Node(element);
+    const node = new Node(element);
     if (head === null) {
       head = node;
     } else {
-      var currentNode = head;
+      let currentNode = head;
       while (currentNode.next) {
         currentNode = currentNode.next;
       }
@@ -39,8 +39,8 @@ function LinkedList() {
     length++;
   };
   this.remove = function (element) {
-    var currentNode = head;
-    var previousNode;
+    let currentNode = head,
+      previousNode;
     if (currentNode.element === element) {
       head = currentNode.next;
     } else {
@@ -57,8 +57,8 @@ function LinkedList() {
   };
 
   this.indexOf = function (element) {
-    var currentNode = head;
-    var index = 0;
+    let currentNode = head,
+      index = 0;
     while (currentNode) {
       if (currentNode.element === element) {
         return index;
@@ -70,8 +70,8 @@ function LinkedList() {
   };
   this.elementAt = function (index) {
     if (index < 0 || index >= length) return undefined;
-    var currentNode = head;
-    var count = 0;
+    let currentNode = head,
+      count = 0;
     while (count < index) {
       currentNode = currentNode.next;
       count++;

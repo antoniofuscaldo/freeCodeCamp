@@ -52,9 +52,9 @@ function distinctPowers(n) {
   for (let a = 2; a <= n; a++) {
     const fa = factorize(a);
     for (let b = 2; b <= n; b++) {
-      let key = "";
+      let key = '';
       for (let i = 0; i < fa.length; i++) {
-        key += fa[i][0] + ":" + fa[i][1] * b + ",";
+        key += `${fa[i][0]}:${fa[i][1] * b},`;
       }
       set.add(key);
     }

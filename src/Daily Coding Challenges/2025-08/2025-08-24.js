@@ -30,15 +30,14 @@ function battle(myArmy, opposingArmy) {
       return ch.charCodeAt(0) - 64 + 26;
     } else if (/[0-9]/.test(ch)) {
       return Number(ch);
-    } else {
-      return 0;
     }
+    return 0;
   }
-  let myWins = 0;
-  let opponentWins = 0;
+  let myWins = 0,
+    opponentWins = 0;
   for (let i = 0; i < myArmy.length; i++) {
-    let myStrength = getStrength(myArmy[i]);
-    let oppStrength = getStrength(opposingArmy[i]);
+    const myStrength = getStrength(myArmy[i]),
+      oppStrength = getStrength(opposingArmy[i]);
     if (myStrength > oppStrength) {
       myWins++;
     } else if (oppStrength > myStrength) {

@@ -10,6 +10,6 @@ A number is a perfect square if you can multiply an integer by itself to achieve
 
 function isPerfectSquare(n) {
   if (n < 0) return false;
-  let sqrt = Math.sqrt(n);
+  const sqrt = Math.sqrt(n);
   return Number.isInteger(sqrt);
 }

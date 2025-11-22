@@ -12,9 +12,9 @@ For example, given "4012-8888-8888-1881" return "****-****-****-1881".
 */
 
 function mask(card) {
-  let parts = card.split(/[- ]/);
+  const parts = card.split(/[- ]/);
   for (let i = 0; i < parts.length - 1; i++) {
-    parts[i] = "****";
+    parts[i] = '****';
   }
-  return parts.join(card.includes("-") ? "-" : " ");
+  return parts.join(card.includes('-') ? '-' : ' ');
 }

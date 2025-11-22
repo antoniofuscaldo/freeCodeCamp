@@ -17,14 +17,14 @@ The number has the same digit four or more times in a row (ignoring the formatti
 */
 
 function isSpam(number) {
-  let digits = number.replace(/\D/g, "");
+  let digits = number.replace(/\D/g, '');
   let match = number.match(/^\+(\d+)\s\((\d{3})\)\s(\d{3})-(\d{4})$/);
   if (!match) return true;
   let [, country, area, first, last] = match;
-  if (country.length > 2 || country[0] !== "0") return true;
+  if (country.length > 2 || country[0] !== '0') return true;
   let areaNum = parseInt(area);
   if (areaNum > 900 || areaNum < 200) return true;
-  let sumFirst = first.split("").reduce((a, b) => a + parseInt(b), 0);
+  let sumFirst = first.split('').reduce((a, b) => a + parseInt(b), 0);
   if (last.includes(sumFirst.toString())) return true;
   if (/(.)\1{3,}/.test(digits)) return true;
   return false;

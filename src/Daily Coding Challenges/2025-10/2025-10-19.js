@@ -13,11 +13,11 @@ If no attributes are found, return an empty array.
 */
 
 function extractAttributes(element) {
-  let attrs = [];
-  let regex = /(\w+)="([^"]*)"/g;
+  const attrs = [],
+    regex = /(\w+)="([^"]*)"/g;
   let match;
   while ((match = regex.exec(element)) !== null) {
-    attrs.push(match[1] + ", " + match[2]);
+    attrs.push(`${match[1]}, ${match[2]}`);
   }
   return attrs;
 }

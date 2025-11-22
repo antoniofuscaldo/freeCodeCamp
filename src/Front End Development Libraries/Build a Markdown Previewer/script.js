@@ -18,10 +18,9 @@ function hello() {
 
 ![Logo](https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg)
 
-**Bolded Text**`;
-
-const editor = document.getElementById('editor');
-const preview = document.getElementById('preview');
+**Bolded Text**`,
+  editor = document.getElementById('editor'),
+  preview = document.getElementById('preview');
 
 marked.setOptions({
   breaks: true,

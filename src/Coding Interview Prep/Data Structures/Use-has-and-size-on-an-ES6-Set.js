@@ -18,8 +18,8 @@ In this exercise we will pass an array and a value to the checkSet() function. Y
 */
 
 function checkSet(arrToBeSet, checkValue) {
-  let set = new Set(arrToBeSet);
-  let hasValue = set.has(checkValue);
-  let howBig = set.size;
+  const set = new Set(arrToBeSet),
+    hasValue = set.has(checkValue),
+    howBig = set.size;
   return [hasValue, howBig];
 }

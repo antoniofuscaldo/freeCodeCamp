@@ -14,9 +14,9 @@ Return a number rounded to 4 decimal places, with trailing zeros removed.
 */
 
 function sendMessage(route) {
-  const speed = 300000;
-  const distanceTime = route.reduce((a, b) => a + b, 0) / speed;
-  const satelliteDelay = (route.length - 1) * 0.5;
-  const total = distanceTime + satelliteDelay;
+  const speed = 300000,
+    distanceTime = route.reduce((a, b) => a + b, 0) / speed,
+    satelliteDelay = (route.length - 1) * 0.5,
+    total = distanceTime + satelliteDelay;
   return parseFloat(total.toFixed(4));
 }

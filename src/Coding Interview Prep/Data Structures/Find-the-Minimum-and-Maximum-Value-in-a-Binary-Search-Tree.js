@@ -6,7 +6,7 @@ In this challenge you will define two methods, findMin and findMax. These method
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;

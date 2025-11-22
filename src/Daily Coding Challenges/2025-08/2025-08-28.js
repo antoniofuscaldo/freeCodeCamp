@@ -16,7 +16,7 @@ function getLaptopCost(laptops, budget) {
   if (unique.length >= 2 && unique[1] <= budget) {
     return unique[1];
   }
-  for (let price of unique) {
+  for (const price of unique) {
     if (price <= budget) return price;
   }
   return 0;

@@ -12,7 +12,7 @@ The returned value should be rounded to two decimal places in the format: "$d.dd
 */
 
 function costToFill(tankSize, fuelLevel, pricePerGallon) {
-  let gallonsNeeded = tankSize - fuelLevel;
-  let cost = gallonsNeeded * pricePerGallon;
+  const gallonsNeeded = tankSize - fuelLevel,
+    cost = gallonsNeeded * pricePerGallon;
   return `$${cost.toFixed(2)}`;
 }

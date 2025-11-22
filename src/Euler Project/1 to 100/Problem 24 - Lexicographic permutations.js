@@ -10,9 +10,9 @@ What is the nth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 
 */
 
 function lexicographicPermutations(n) {
-  let digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  let k = n;
-  let result = 0;
+  const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let k = n,
+    result = 0;
 
   function factorial(x) {
     let f = 1;
@@ -21,8 +21,8 @@ function lexicographicPermutations(n) {
   }
 
   for (let i = digits.length; i > 0; i--) {
-    let f = factorial(i - 1);
-    let index = Math.floor(k / f);
+    const f = factorial(i - 1),
+      index = Math.floor(k / f);
     result = result * 10 + digits[index];
     digits.splice(index, 1);
     k %= f;

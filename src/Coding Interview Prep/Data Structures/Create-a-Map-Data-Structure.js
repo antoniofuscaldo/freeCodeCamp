@@ -16,7 +16,7 @@ clear empties the map
 
 */
 
-var Map = function () {
+const Map = function () {
   this.collection = {};
   this.add = function (key, value) {
     this.collection[key] = value;

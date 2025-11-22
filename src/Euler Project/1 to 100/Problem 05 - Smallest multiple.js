@@ -11,7 +11,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 function smallestMult(n) {
   function gcd(a, b) {
     while (b !== 0) {
-      let t = b;
+      const t = b;
       b = a % b;
       a = t;
     }

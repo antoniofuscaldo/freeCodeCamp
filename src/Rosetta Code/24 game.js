@@ -23,15 +23,15 @@ solve24("1127");	(1+7)*(2+1)
 */
 
 function solve24(numStr) {
-  const nums = numStr.split("").map(Number);
-  const ops = ["+", "-", "*", "/"];
+  const nums = numStr.split('').map(Number),
+    ops = ['+', '-', '*', '/'];
 
   function* permutations(arr) {
     if (arr.length === 1) yield arr;
     else {
       for (let i = 0; i < arr.length; i++) {
         const rest = arr.slice(0, i).concat(arr.slice(i + 1));
-        for (let perm of permutations(rest)) {
+        for (const perm of permutations(rest)) {
           yield [arr[i], ...perm];
         }
       }
@@ -39,16 +39,16 @@ function solve24(numStr) {
   }
 
   function applyOp(a, b, op) {
-    if (op === "+") return a + b;
-    if (op === "-") return a - b;
-    if (op === "*") return a * b;
-    if (op === "/") return b !== 0 ? a / b : null;
+    if (op === '+') return a + b;
+    if (op === '-') return a - b;
+    if (op === '*') return a * b;
+    if (op === '/') return b !== 0 ? a / b : null;
   }
 
   function tryAll(a, b, c, d) {
-    for (let op1 of ops) {
-      for (let op2 of ops) {
-        for (let op3 of ops) {
+    for (const op1 of ops) {
+      for (const op2 of ops) {
+        for (const op3 of ops) {
           const exprs = [
             `(${a}${op1}${b})${op2}(${c}${op3}${d})`,
             `((${a}${op1}${b})${op2}${c})${op3}${d}`,
@@ -56,7 +56,7 @@ function solve24(numStr) {
             `${a}${op1}((${b}${op2}${c})${op3}${d})`,
             `${a}${op1}(${b}${op2}(${c}${op3}${d}))`,
           ];
-          for (let expr of exprs) {
+          for (const expr of exprs) {
             try {
               const val = eval(expr);
               if (Math.abs(val - 24) < 1e-6) return expr;
@@ -68,10 +68,10 @@ function solve24(numStr) {
     return null;
   }
 
-  for (let perm of permutations(nums)) {
+  for (const perm of permutations(nums)) {
     const res = tryAll(...perm);
     if (res) return res;
   }
 
-  return "no solution exists";
+  return 'no solution exists';
 }

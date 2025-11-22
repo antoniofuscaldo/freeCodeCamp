@@ -15,27 +15,27 @@ Find the sum of all positive integers <= n which cannot be written as the sum of
 function sumOfNonAbundantNumbers(n) {
   function sumDivisors(num) {
     if (num === 1) return 0;
-    let sum = 1;
-    let sqrt = Math.sqrt(num);
+    let sum = 1,
+      sqrt = Math.sqrt(num);
     for (let i = 2; i <= sqrt; i++) {
       if (num % i === 0) {
         sum += i;
-        let other = num / i;
+        const other = num / i;
         if (other !== i) sum += other;
       }
     }
     return sum;
   }
 
-  let abundants = [];
+  const abundants = [];
   for (let i = 12; i <= n; i++) {
     if (sumDivisors(i) > i) abundants.push(i);
   }
 
-  let canBeWritten = new Array(n + 1).fill(false);
+  const canBeWritten = new Array(n + 1).fill(false);
   for (let i = 0; i < abundants.length; i++) {
     for (let j = i; j < abundants.length; j++) {
-      let sum = abundants[i] + abundants[j];
+      const sum = abundants[i] + abundants[j];
       if (sum <= n) canBeWritten[sum] = true;
       else break;
     }

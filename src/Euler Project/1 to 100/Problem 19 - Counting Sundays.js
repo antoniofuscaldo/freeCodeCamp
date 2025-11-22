@@ -23,8 +23,8 @@ function countingSundays(firstYear, lastYear) {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
   }
 
-  let dayOfWeek = 1;
-  let count = 0;
+  let count = 0,
+    dayOfWeek = 1;
 
   for (let year = 1900; year <= lastYear; year++) {
     for (let month = 0; month < 12; month++) {

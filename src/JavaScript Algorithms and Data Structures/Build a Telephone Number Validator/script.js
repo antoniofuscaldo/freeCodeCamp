@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const userInput = document.getElementById('user-input');
-  const checkBtn = document.getElementById('check-btn');
-  const clearBtn = document.getElementById('clear-btn');
-  const resultsDiv = document.getElementById('results-div');
-  const exampleItems = document.querySelectorAll('.example-item');
+document.addEventListener('DOMContentLoaded', () => {
+  const userInput = document.getElementById('user-input'),
+    checkBtn = document.getElementById('check-btn'),
+    clearBtn = document.getElementById('clear-btn'),
+    resultsDiv = document.getElementById('results-div'),
+    exampleItems = document.querySelectorAll('.example-item');
 
   exampleItems.forEach((item) => {
     item.addEventListener('click', function () {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  checkBtn.addEventListener('click', function () {
+  checkBtn.addEventListener('click', () => {
     const phoneNumber = userInput.value.trim();
 
     if (!phoneNumber) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resultsDiv.className = isValid ? 'valid' : 'invalid';
   });
 
-  clearBtn.addEventListener('click', function () {
+  clearBtn.addEventListener('click', () => {
     resultsDiv.textContent = '';
     resultsDiv.className = '';
     userInput.value = '';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return phoneRegex.test(phoneNumber);
   }
 
-  userInput.addEventListener('keypress', function (e) {
+  userInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       checkBtn.click();
     }

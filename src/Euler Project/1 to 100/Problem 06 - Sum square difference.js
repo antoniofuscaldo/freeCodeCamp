@@ -14,8 +14,8 @@ Find the difference between the sum of the squares of the first n natural number
 */
 
 function sumSquareDifference(n) {
-  let sumSquares = 0;
-  let sum = 0;
+  let sum = 0,
+    sumSquares = 0;
   for (let i = 1; i <= n; i++) {
     sumSquares += i * i;
     sum += i;

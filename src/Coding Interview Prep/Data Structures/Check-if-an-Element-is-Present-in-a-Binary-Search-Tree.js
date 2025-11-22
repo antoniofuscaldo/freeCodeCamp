@@ -8,7 +8,7 @@ In this challenge, we will create a utility for our tree. Write a method isPrese
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;

@@ -8,7 +8,7 @@ We've provided some code in our remove method that accomplishes the tasks from t
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 
 function Node(value) {
   this.value = value;
@@ -23,8 +23,8 @@ function BinarySearchTree() {
     if (this.root === null) {
       return null;
     }
-    var target = null;
-    var parent = null;
+    let parent = null,
+      target = null;
 
     (function findValue(node = this.root) {
       if (value == node.value) {
@@ -46,31 +46,26 @@ function BinarySearchTree() {
       return null;
     }
 
-    var children =
-      (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
+    const children = (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
 
     if (children === 0) {
       if (target == this.root) {
         this.root = null;
+      } else if (parent.left == target) {
+        parent.left = null;
       } else {
-        if (parent.left == target) {
-          parent.left = null;
-        } else {
-          parent.right = null;
-        }
+        parent.right = null;
       }
     }
 
     if (children === 1) {
-      var child = target.left !== null ? target.left : target.right;
+      const child = target.left !== null ? target.left : target.right;
       if (target == this.root) {
         this.root = child;
+      } else if (parent.left == target) {
+        parent.left = child;
       } else {
-        if (parent.left == target) {
-          parent.left = child;
-        } else {
-          parent.right = child;
-        }
+        parent.right = child;
       }
     }
   };

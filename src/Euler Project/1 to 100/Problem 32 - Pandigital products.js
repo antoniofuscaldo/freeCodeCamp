@@ -14,15 +14,13 @@ Hint: Some products can be obtained in more than one way so be sure to only incl
 
 function pandigitalProducts(n) {
   if (n < 4) return 0;
-  const pow10 = [
-    1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000,
-  ];
-  const targetMask = (1 << n) - 1;
-  const products = new Set();
+  const pow10 = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000],
+    targetMask = (1 << n) - 1,
+    products = new Set();
 
   function isPandigital(a, b, p) {
-    let mask = 0,
-      count = 0;
+    let count = 0,
+      mask = 0;
 
     function addDigits(x) {
       while (x > 0) {
@@ -45,12 +43,12 @@ function pandigitalProducts(n) {
 
   for (let da = 1; da <= n - 2; da++) {
     for (let db = 1; db <= n - da - 1; db++) {
-      const dp = n - da - db;
-      const minA = pow10[da - 1],
-        maxA = pow10[da] - 1;
-      const minB = pow10[db - 1],
-        maxB = pow10[db] - 1;
-      const minP = pow10[dp - 1],
+      const dp = n - da - db,
+        minA = pow10[da - 1],
+        maxA = pow10[da] - 1,
+        minB = pow10[db - 1],
+        maxB = pow10[db] - 1,
+        minP = pow10[dp - 1],
         maxP = pow10[dp] - 1;
 
       for (let a = minA; a <= maxA; a++) {

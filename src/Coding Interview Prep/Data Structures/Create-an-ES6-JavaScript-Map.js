@@ -16,7 +16,7 @@ Define a JavaScript Map object and assign to it a variable called myMap. Add the
 
 */
 
-let myMap = new Map();
-myMap.set("freeCodeCamp", "Awesome!");
-console.log(myMap.get("freeCodeCamp"));
-console.log(myMap.has("freeCodeCamp"));
+const myMap = new Map();
+myMap.set('freeCodeCamp', 'Awesome!');
+console.log(myMap.get('freeCodeCamp'));
+console.log(myMap.has('freeCodeCamp'));

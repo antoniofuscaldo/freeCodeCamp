@@ -15,23 +15,23 @@ Circular primes individual rotation can exceed n.
 */
 
 function circularPrimes(n) {
-  var limit = 1000000;
-  var isPrime = new Array(limit).fill(true);
+  const limit = 1000000,
+    isPrime = new Array(limit).fill(true);
   isPrime[0] = false;
   isPrime[1] = false;
-  for (var i = 2; i * i < limit; i++) {
+  for (let i = 2; i * i < limit; i++) {
     if (isPrime[i]) {
-      for (var j = i * i; j < limit; j += i) isPrime[j] = false;
+      for (let j = i * i; j < limit; j += i) isPrime[j] = false;
     }
   }
-  var count = 0;
-  for (var p = 2; p < n; p++) {
+  let count = 0;
+  for (let p = 2; p < n; p++) {
     if (!isPrime[p]) continue;
-    var s = String(p);
+    const s = String(p);
     if (s.length > 1) {
-      var bad = false;
-      for (var k = 0; k < s.length; k++) {
-        var d = s.charCodeAt(k) - 48;
+      let bad = false;
+      for (let k = 0; k < s.length; k++) {
+        const d = s.charCodeAt(k) - 48;
         if (d === 0 || d === 2 || d === 4 || d === 5 || d === 6 || d === 8) {
           bad = true;
           break;
@@ -39,10 +39,10 @@ function circularPrimes(n) {
       }
       if (bad) continue;
     }
-    var allPrime = true;
-    for (var r = 1; r < s.length; r++) {
-      var rot = s.slice(r) + s.slice(0, r);
-      var val = +rot;
+    let allPrime = true;
+    for (let r = 1; r < s.length; r++) {
+      const rot = s.slice(r) + s.slice(0, r),
+        val = +rot;
       if (!isPrime[val]) {
         allPrime = false;
         break;

@@ -9,7 +9,7 @@ Write a push method that pushes an element to the top of the stack, a pop method
 */
 
 function Stack() {
-  var collection = [];
+  let collection = [];
   this.print = function () {
     console.log(collection);
   };

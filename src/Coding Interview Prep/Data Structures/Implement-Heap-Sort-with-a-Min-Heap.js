@@ -19,42 +19,42 @@ function isSorted(a) {
   return true;
 }
 function createRandomArray(size = 5) {
-  let a = new Array(size);
+  const a = new Array(size);
   for (let i = 0; i < size; i++) {
     a[i] = Math.floor(Math.random() * 100);
   }
   return a;
 }
-const array = createRandomArray(25);
-var MinHeap = function () {
-  this.heap = [null];
-  this.insert = (element) => {
-    this.heap.push(element);
-    let heap = this.heap;
-    function maxHeap(index) {
-      let parent = Math.floor(index / 2);
-      if (element < heap[parent] && index > 1) {
-        [heap[index], heap[parent]] = [heap[parent], heap[index]];
-        maxHeap(parent);
-      }
-    }
-    maxHeap(this.heap.length - 1);
-  };
-  this.remove = () => {
-    let arr = [...this.heap];
-    let max = arr.splice(1, 1);
+const array = createRandomArray(25),
+  MinHeap = function () {
     this.heap = [null];
-    for (let i = 1; i < arr.length; i++) {
-      this.insert(arr[i]);
-    }
-    return max[0];
+    this.insert = (element) => {
+      this.heap.push(element);
+      const { heap } = this;
+      function maxHeap(index) {
+        const parent = Math.floor(index / 2);
+        if (element < heap[parent] && index > 1) {
+          [heap[index], heap[parent]] = [heap[parent], heap[index]];
+          maxHeap(parent);
+        }
+      }
+      maxHeap(this.heap.length - 1);
+    };
+    this.remove = () => {
+      const arr = [...this.heap],
+        max = arr.splice(1, 1);
+      this.heap = [null];
+      for (let i = 1; i < arr.length; i++) {
+        this.insert(arr[i]);
+      }
+      return max[0];
+    };
+    this.sort = (heap = this.heap) => {
+      const arr = [];
+      for (let i = 0; i < heap.length; i++) {
+        arr.push(this.remove());
+      }
+      return arr;
+    };
+    // Only change code above this line
   };
-  this.sort = (heap = this.heap) => {
-    let arr = [];
-    for (let i = 0; i < heap.length; i++) {
-      arr.push(this.remove());
-    }
-    return arr;
-  };
-  // Only change code above this line
-};

@@ -47,8 +47,8 @@ First create a buffer that is 64-bytes. Then create a Int32Array typed array wit
 
 */
 
-var buffer = new ArrayBuffer(64);
-var i32View = new Int32Array(buffer);
+const buffer = new ArrayBuffer(64),
+  i32View = new Int32Array(buffer);
 console.log(buffer.byteLength);
 console.log(i32View.length);
 console.log(i32View);

@@ -12,7 +12,7 @@ Find the sum of the digits n!
 */
 
 function sumFactorialDigits(n) {
-  let digits = [1];
+  const digits = [1];
   for (let i = 2; i <= n; i++) {
     let carry = 0;
     for (let j = 0; j < digits.length; j++) {

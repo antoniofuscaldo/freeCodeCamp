@@ -18,12 +18,12 @@ function play(str) {
   } else if (str === 'c' || str === 'C') {
     document.getElementById('display').innerText = 'On the rythm!';
   }
-  var audio = document.getElementById(str);
+  const audio = document.getElementById(str);
   audio.play();
 }
 
 window.document.onkeyup = function (event) {
-  let keystroke = event.key;
+  const keystroke = event.key;
   if (keystroke === 'q' || keystroke === 'Q') {
     play('Q');
   } else if (keystroke === 'w' || keystroke === 'W') {

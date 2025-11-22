@@ -12,11 +12,9 @@ Create a function that takes two or more arrays and returns an array of their sy
 
 function sym(...args) {
   function diff(arr1, arr2) {
-    const set1 = new Set(arr1);
-    const set2 = new Set(arr2);
-    const result = [...set1]
-      .filter((x) => !set2.has(x))
-      .concat([...set2].filter((x) => !set1.has(x)));
+    const set1 = new Set(arr1),
+      set2 = new Set(arr2),
+      result = [...set1].filter((x) => !set2.has(x)).concat([...set2].filter((x) => !set1.has(x)));
     return result;
   }
   return [...new Set(args.reduce((acc, curr) => diff(acc, curr)))];

@@ -18,23 +18,23 @@ What is the largest 1 to k pandigital k-digit number that can be formed as the c
 function pandigitalMultiples(k) {
   function isPandigital(s, k) {
     if (s.length !== k) return false;
-    var set = new Set(s.split(""));
+    const set = new Set(s.split(''));
     if (set.size !== k) return false;
-    for (var i = 1; i <= k; i++) {
+    for (let i = 1; i <= k; i++) {
       if (!set.has(String(i))) return false;
     }
     return true;
   }
-  var max = 0;
-  for (var i = 1; i < 10000; i++) {
-    var concat = "";
-    var n = 1;
+  let max = 0;
+  for (let i = 1; i < 10000; i++) {
+    let concat = '',
+      n = 1;
     while (concat.length < k) {
       concat += String(i * n);
       n++;
     }
     if (isPandigital(concat, k)) {
-      var val = +concat;
+      const val = +concat;
       if (val > max) max = val;
     }
   }

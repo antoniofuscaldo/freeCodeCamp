@@ -17,16 +17,16 @@ For example, given "You must speak wisely." return "Speak wisely, you must."
 */
 
 function wiseSpeak(sentence) {
-  let punctuation = sentence[sentence.length - 1];
-  let words = sentence.slice(0, -1).split(" ");
-  let keywords = ["have", "must", "are", "will", "can"];
-  let index = words.findIndex((w) => keywords.includes(w.toLowerCase()));
+  const punctuation = sentence[sentence.length - 1],
+    words = sentence.slice(0, -1).split(' '),
+    keywords = ['have', 'must', 'are', 'will', 'can'],
+    index = words.findIndex((w) => keywords.includes(w.toLowerCase()));
   if (index === -1) return sentence;
-  let firstPart = words
-    .slice(0, index + 1)
-    .join(" ")
-    .toLowerCase();
-  let secondPart = words.slice(index + 1).join(" ");
-  let result = secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
-  return result + ", " + firstPart + punctuation;
+  const firstPart = words
+      .slice(0, index + 1)
+      .join(' ')
+      .toLowerCase(),
+    secondPart = words.slice(index + 1).join(' '),
+    result = secondPart.charAt(0).toUpperCase() + secondPart.slice(1);
+  return `${result}, ${firstPart}${punctuation}`;
 }

@@ -9,12 +9,12 @@ Add leading zeros when needed.
 */
 
 function milePace(miles, duration) {
-  let [minutes, seconds] = duration.split(':').map(Number);
-  let totalSeconds = minutes * 60 + seconds;
-  let paceSeconds = Math.floor(totalSeconds / miles);
-  let paceMinutes = Math.floor(paceSeconds / 60);
-  let paceRemainingSeconds = paceSeconds % 60;
-  let mm = String(paceMinutes).padStart(2, '0');
-  let ss = String(paceRemainingSeconds).padStart(2, '0');
+  const [minutes, seconds] = duration.split(':').map(Number),
+    totalSeconds = minutes * 60 + seconds,
+    paceSeconds = Math.floor(totalSeconds / miles),
+    paceMinutes = Math.floor(paceSeconds / 60),
+    paceRemainingSeconds = paceSeconds % 60,
+    mm = String(paceMinutes).padStart(2, '0'),
+    ss = String(paceRemainingSeconds).padStart(2, '0');
   return `${mm}:${ss}`;
 }

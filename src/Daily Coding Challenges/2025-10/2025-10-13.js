@@ -9,10 +9,10 @@ The given input will always be a four-digit string in 24-hour time format, from 
 */
 
 function to12(time) {
-  let h = parseInt(time.slice(0, 2), 10);
-  let m = time.slice(2);
-  let period = h >= 12 ? "PM" : "AM";
-  h = h % 12;
+  let h = parseInt(time.slice(0, 2), 10),
+    m = time.slice(2),
+    period = h >= 12 ? 'PM' : 'AM';
+  h %= 12;
   if (h === 0) h = 12;
-  return h + ":" + m + " " + period;
+  return `${h}:${m} ${period}`;
 }

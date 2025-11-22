@@ -20,9 +20,9 @@ Base 36: 0-9 and A-Z
 
 function isValidNumber(n, base) {
   n = n.toUpperCase();
-  const validChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const allowed = validChars.slice(0, base);
-  for (let char of n) {
+  const validChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    allowed = validChars.slice(0, base);
+  for (const char of n) {
     if (!allowed.includes(char)) {
       return false;
     }

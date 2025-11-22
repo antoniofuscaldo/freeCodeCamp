@@ -26,13 +26,13 @@ Your function should output an array of all nodes reachable from root.
 */
 
 function dfs(graph, root) {
-  var visited = [];
-  var stack = [root];
+  const visited = [],
+    stack = [root];
   while (stack.length > 0) {
-    var node = stack.pop();
+    const node = stack.pop();
     if (!visited.includes(node)) {
       visited.push(node);
-      for (var i = graph[node].length - 1; i >= 0; i--) {
+      for (let i = graph[node].length - 1; i >= 0; i--) {
         if (graph[node][i] === 1 && !visited.includes(i)) {
           stack.push(i);
         }
@@ -41,7 +41,7 @@ function dfs(graph, root) {
   }
   return visited;
 }
-var exDFSGraph = [
+const exDFSGraph = [
   [0, 1, 0, 0],
   [1, 0, 1, 0],
   [0, 1, 0, 1],

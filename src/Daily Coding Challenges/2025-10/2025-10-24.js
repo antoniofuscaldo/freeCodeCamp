@@ -29,24 +29,24 @@ And [2, 1] for the coordinates of the dive location, return "Recovered" because 
 */
 
 function dive(map, coordinates) {
-  const [row, col] = coordinates;
-  const cell = map[row][col];
+  const [row, col] = coordinates,
+    cell = map[row][col];
 
-  if (cell === "-") {
-    return "Empty";
+  if (cell === '-') {
+    return 'Empty';
   }
 
-  if (cell === "O") {
-    map[row][col] = "X";
+  if (cell === 'O') {
+    map[row][col] = 'X';
   }
 
   for (let r = 0; r < map.length; r++) {
     for (let c = 0; c < map[r].length; c++) {
-      if (map[r][c] === "O") {
-        return "Found";
+      if (map[r][c] === 'O') {
+        return 'Found';
       }
     }
   }
 
-  return "Recovered";
+  return 'Recovered';
 }

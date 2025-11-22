@@ -18,7 +18,7 @@ Remove the values 2 and 5, and then return the set.
 */
 
 function checkSet() {
-  var set = new Set([1, 2, 3, 4, 5]);
+  const set = new Set([1, 2, 3, 4, 5]);
   set.delete(2);
   set.delete(5);
   return set;

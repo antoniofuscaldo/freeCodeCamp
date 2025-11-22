@@ -12,9 +12,9 @@ If no integers are missing, return an empty array.
 
 function findMissingNumbers(arr) {
   if (arr.length === 0) return [];
-  let n = Math.max(...arr);
-  let set = new Set(arr);
-  let missing = [];
+  const n = Math.max(...arr),
+    set = new Set(arr),
+    missing = [];
   for (let i = 1; i <= n; i++) {
     if (!set.has(i)) {
       missing.push(i);

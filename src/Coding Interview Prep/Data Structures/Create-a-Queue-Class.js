@@ -13,7 +13,7 @@ Write an enqueue method that pushes an element to the tail of the queue, a deque
 */
 
 function Queue() {
-  var collection = [];
+  const collection = [];
   this.print = function () {
     console.log(collection);
   };

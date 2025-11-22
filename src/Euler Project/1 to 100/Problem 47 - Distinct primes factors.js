@@ -17,9 +17,9 @@ Find the first four consecutive integers to have four distinct prime factors eac
 
 function distinctPrimeFactors(targetNumPrimes, targetConsecutive) {
   function primeFactorsCount(n) {
-    let count = 0;
-    let num = n;
-    let factor = 2;
+    let count = 0,
+      num = n,
+      factor = 2;
     while (factor * factor <= num) {
       if (num % factor === 0) {
         count++;
@@ -31,8 +31,8 @@ function distinctPrimeFactors(targetNumPrimes, targetConsecutive) {
     return count;
   }
 
-  let n = 2;
-  let consecutive = 0;
+  let consecutive = 0,
+    n = 2;
 
   while (true) {
     if (primeFactorsCount(n) === targetNumPrimes) {

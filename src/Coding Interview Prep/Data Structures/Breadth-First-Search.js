@@ -27,21 +27,21 @@ Your function will output a JavaScript object key-value pairs with the node and 
 */
 
 function bfs(graph, root) {
-  var nodesLen = {};
-  var n = graph.length;
+  const nodesLen = {},
+    n = graph.length;
 
-  for (var i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {
     nodesLen[i] = Infinity;
   }
 
   nodesLen[root] = 0;
 
-  var queue = [root];
+  const queue = [root];
 
   while (queue.length > 0) {
-    var current = queue.shift();
+    const current = queue.shift();
 
-    for (var j = 0; j < n; j++) {
+    for (let j = 0; j < n; j++) {
       if (graph[current][j] === 1 && nodesLen[j] === Infinity) {
         nodesLen[j] = nodesLen[current] + 1;
         queue.push(j);
@@ -52,7 +52,7 @@ function bfs(graph, root) {
   return nodesLen;
 }
 
-var exBFSGraph = [
+const exBFSGraph = [
   [0, 1, 0, 0],
   [1, 0, 1, 0],
   [0, 1, 0, 1],

@@ -23,8 +23,8 @@ What is the value of the first triangle number to have over n divisors?
 
 function divisibleTriangleNumber(n) {
   function divCount(x) {
-    let count = 1;
-    let exp = 0;
+    let count = 1,
+      exp = 0;
     while (x % 2 === 0) {
       x /= 2;
       exp++;
@@ -53,7 +53,7 @@ function divisibleTriangleNumber(n) {
       a = k;
       b = (k + 1) / 2;
     }
-    let d = divCount(a) * divCount(b);
+    const d = divCount(a) * divCount(b);
     if (d > n) return (k * (k + 1)) / 2;
     k++;
   }

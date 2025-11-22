@@ -12,42 +12,42 @@ Be careful to handle any possible edge cases when writing these methods, such as
 
 */
 
-var Node = function (data, prev) {
-  this.data = data;
-  this.prev = prev;
-  this.next = null;
-};
-var DoublyLinkedList = function () {
-  this.head = null;
-  this.tail = null;
-  this.add = function (data) {
-    let newNode = new Node(data, this.tail);
-    if (!this.head) {
-      this.head = newNode;
-      this.tail = newNode;
-    } else {
-      this.tail.next = newNode;
-      this.tail = newNode;
-    }
-  };
-  this.remove = function (data) {
-    if (!this.head) return null;
-    let current = this.head;
-    while (current) {
-      if (current.data === data) {
-        if (current === this.head) {
-          this.head = current.next;
-          if (this.head) this.head.prev = null;
-          else this.tail = null;
-        } else if (current === this.tail) {
-          this.tail = current.prev;
-          this.tail.next = null;
-        } else {
-          current.prev.next = current.next;
-          current.next.prev = current.prev;
-        }
+const Node = function (data, prev) {
+    this.data = data;
+    this.prev = prev;
+    this.next = null;
+  },
+  DoublyLinkedList = function () {
+    this.head = null;
+    this.tail = null;
+    this.add = function (data) {
+      const newNode = new Node(data, this.tail);
+      if (!this.head) {
+        this.head = newNode;
+        this.tail = newNode;
+      } else {
+        this.tail.next = newNode;
+        this.tail = newNode;
       }
-      current = current.next;
-    }
+    };
+    this.remove = function (data) {
+      if (!this.head) return null;
+      let current = this.head;
+      while (current) {
+        if (current.data === data) {
+          if (current === this.head) {
+            this.head = current.next;
+            if (this.head) this.head.prev = null;
+            else this.tail = null;
+          } else if (current === this.tail) {
+            this.tail = current.prev;
+            this.tail.next = null;
+          } else {
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+          }
+        }
+        current = current.next;
+      }
+    };
   };
-};

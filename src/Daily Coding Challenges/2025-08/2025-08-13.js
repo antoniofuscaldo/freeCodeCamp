@@ -14,9 +14,9 @@ Note that the starting numbers are part of the sequence.
 
 function fibonacciSequence(startSequence, length) {
   if (length === 0) return [];
-  let seq = startSequence.slice(0, length);
+  const seq = startSequence.slice(0, length);
   while (seq.length < length) {
-    let next = seq[seq.length - 1] + seq[seq.length - 2];
+    const next = seq[seq.length - 1] + seq[seq.length - 2];
     seq.push(next);
   }
   return seq;

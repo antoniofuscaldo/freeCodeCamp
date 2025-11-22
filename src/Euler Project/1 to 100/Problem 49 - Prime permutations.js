@@ -21,21 +21,21 @@ function primePermutations() {
   }
 
   function arePermutations(a, b, c) {
-    const sortDigits = (x) => x.toString().split("").sort().join("");
+    const sortDigits = (x) => x.toString().split('').sort().join('');
     return sortDigits(a) === sortDigits(b) && sortDigits(b) === sortDigits(c);
   }
 
-  let primes = [];
+  const primes = [];
   for (let i = 1000; i < 10000; i++) {
     if (isPrime(i)) primes.push(i);
   }
 
   for (let i = 0; i < primes.length; i++) {
     for (let j = i + 1; j < primes.length; j++) {
-      let a = primes[i];
-      let b = primes[j];
-      let diff = b - a;
-      let c = b + diff;
+      const a = primes[i],
+        b = primes[j],
+        diff = b - a,
+        c = b + diff;
       if (c < 10000 && isPrime(c)) {
         if (arePermutations(a, b, c)) {
           if (!(a === 1487 && b === 4817 && c === 8147)) {

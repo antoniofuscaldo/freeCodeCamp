@@ -8,7 +8,7 @@ Let's finish our remove method by handling the third case. We've provided some c
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 
 function Node(value) {
   this.value = value;
@@ -23,8 +23,8 @@ function BinarySearchTree() {
     if (this.root === null) {
       return null;
     }
-    var target;
-    var parent = null;
+    let parent = null,
+      target;
 
     (function findValue(node = this.root) {
       if (value == node.value) {
@@ -46,21 +46,18 @@ function BinarySearchTree() {
       return null;
     }
 
-    var children =
-      (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
+    const children = (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
 
     if (children === 0) {
       if (target == this.root) {
         this.root = null;
+      } else if (parent.left == target) {
+        parent.left = null;
       } else {
-        if (parent.left == target) {
-          parent.left = null;
-        } else {
-          parent.right = null;
-        }
+        parent.right = null;
       }
     } else if (children == 1) {
-      var newChild = target.left !== null ? target.left : target.right;
+      const newChild = target.left !== null ? target.left : target.right;
       if (parent === null) {
         this.root = newChild;
       } else if (parent.left == target) {
@@ -70,8 +67,8 @@ function BinarySearchTree() {
       }
       target = null;
     } else if (children == 2) {
-      var successorParent = target;
-      var successor = target.right;
+      let successorParent = target,
+        successor = target.right;
       while (successor.left !== null) {
         successorParent = successor;
         successor = successor.left;

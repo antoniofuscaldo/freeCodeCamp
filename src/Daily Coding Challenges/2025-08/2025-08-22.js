@@ -13,12 +13,12 @@ Non-alphabetical characters should not get decoded.
 
 function decode(message, shift) {
   let result = '';
-  for (let char of message) {
+  for (const char of message) {
     if (/[a-zA-Z]/.test(char)) {
-      let base = char === char.toUpperCase() ? 65 : 97;
-      let decodedChar = String.fromCharCode(
-        ((char.charCodeAt(0) - base - shift + 26 * 1000) % 26) + base
-      );
+      const base = char === char.toUpperCase() ? 65 : 97,
+        decodedChar = String.fromCharCode(
+          ((char.charCodeAt(0) - base - shift + 26 * 1000) % 26) + base
+        );
       result += decodedChar;
     } else {
       result += char;

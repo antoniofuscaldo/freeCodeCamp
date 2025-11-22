@@ -13,11 +13,11 @@ How many different ways can n pence be made using any number of coins?
 */
 
 function coinSums(n) {
-  const coins = [1, 2, 5, 10, 20, 50, 100, 200];
-  const ways = new Array(n + 1).fill(0);
+  const coins = [1, 2, 5, 10, 20, 50, 100, 200],
+    ways = new Array(n + 1).fill(0);
   ways[0] = 1;
 
-  for (let c of coins) {
+  for (const c of coins) {
     for (let i = c; i <= n; i++) {
       ways[i] += ways[i - c];
     }

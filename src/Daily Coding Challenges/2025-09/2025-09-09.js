@@ -9,8 +9,8 @@ Uppercase and lowercase letters should be considered different characters.
 */
 
 function allUnique(str) {
-  let seen = new Set();
-  for (let char of str) {
+  const seen = new Set();
+  for (const char of str) {
     if (seen.has(char)) {
       return false;
     }

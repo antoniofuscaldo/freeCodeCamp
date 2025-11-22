@@ -20,7 +20,7 @@ Hint: trees are naturally recursive data structures!
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -42,13 +42,12 @@ function BinarySearchTree() {
           return;
         }
         return searchAndInsert(node.left);
-      } else {
-        if (!node.right) {
-          node.right = new Node(value);
-          return;
-        }
-        return searchAndInsert(node.right);
       }
+      if (!node.right) {
+        node.right = new Node(value);
+        return;
+      }
+      return searchAndInsert(node.right);
     }
     return searchAndInsert(this.root);
   };

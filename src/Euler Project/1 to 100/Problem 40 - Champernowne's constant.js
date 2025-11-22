@@ -16,22 +16,22 @@ d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
 
 function champernownesConstant(n) {
   function digitAt(k) {
-    var d = 1;
-    var start = 1;
-    var count = 9;
+    let count = 9,
+      d = 1,
+      start = 1;
     while (k > count * d) {
       k -= count * d;
       d++;
       start *= 10;
       count = 9 * start;
     }
-    var idx = k - 1;
-    var num = start + Math.floor(idx / d);
-    var pos = idx % d;
+    const idx = k - 1,
+      num = start + Math.floor(idx / d),
+      pos = idx % d;
     return String(num).charCodeAt(pos) - 48;
   }
-  var prod = 1;
-  var p = 1;
+  let p = 1,
+    prod = 1;
   while (p <= n) {
     prod *= digitAt(p);
     p *= 10;

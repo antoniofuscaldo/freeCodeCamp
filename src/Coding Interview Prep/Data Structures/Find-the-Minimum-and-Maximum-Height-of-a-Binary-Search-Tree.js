@@ -12,7 +12,7 @@ Write two methods for our binary tree: findMinHeight and findMaxHeight. These me
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -22,14 +22,14 @@ function BinarySearchTree() {
   this.root = null;
   this.findMinHeight = function (node = this.root) {
     if (!node) return -1;
-    let left = this.findMinHeight(node.left);
-    let right = this.findMinHeight(node.right);
+    const left = this.findMinHeight(node.left),
+      right = this.findMinHeight(node.right);
     return 1 + Math.min(left, right);
   };
   this.findMaxHeight = function (node = this.root) {
     if (!node) return -1;
-    let left = this.findMaxHeight(node.left);
-    let right = this.findMaxHeight(node.right);
+    const left = this.findMaxHeight(node.left),
+      right = this.findMaxHeight(node.right);
     return 1 + Math.max(left, right);
   };
   this.isBalanced = function () {

@@ -10,5 +10,5 @@ Remove any leading or trailing whitespace from each heading.
 */
 
 function getHeadings(csv) {
-  return csv.split(",").map((h) => h.trim());
+  return csv.split(',').map((h) => h.trim());
 }

@@ -18,8 +18,8 @@ function nthPrime(n) {
     }
     return true;
   }
-  let count = 0;
-  let num = 1;
+  let count = 0,
+    num = 1;
   while (count < n) {
     num++;
     if (isPrime(num)) count++;

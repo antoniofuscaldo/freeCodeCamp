@@ -15,7 +15,7 @@ Return a # followed by six characters. Don't use any shorthand values.
  */
 
 function rgbToHex(rgb) {
-  let values = rgb.match(/\d+/g).map(Number);
-  let hex = values.map((num) => num.toString(16).padStart(2, '0')).join('');
-  return '#' + hex.toLowerCase();
+  const values = rgb.match(/\d+/g).map(Number),
+    hex = values.map((num) => num.toString(16).padStart(2, '0')).join('');
+  return `#${hex.toLowerCase()}`;
 }

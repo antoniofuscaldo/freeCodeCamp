@@ -16,7 +16,7 @@ function fiboEvenSum(n) {
     sum = 0;
   while (b <= n) {
     if (b % 2 === 0) sum += b;
-    let temp = a + b;
+    const temp = a + b;
     a = b;
     b = temp;
   }

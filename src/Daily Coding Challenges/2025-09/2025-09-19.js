@@ -10,6 +10,6 @@ Return the number of whole photos the drive can store.
 */
 
 function numberOfPhotos(photoSizeMb, hardDriveSizeGb) {
-  let driveMb = hardDriveSizeGb * 1000;
+  const driveMb = hardDriveSizeGb * 1000;
   return Math.floor(driveMb / photoSizeMb);
 }

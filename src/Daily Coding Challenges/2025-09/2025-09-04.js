@@ -13,9 +13,9 @@ All non-vowel characters should keep their original case.
 
 function repeatVowels(str) {
   const vowels = 'aeiouAEIOU';
-  let count = 0;
-  let result = '';
-  for (let char of str) {
+  let count = 0,
+    result = '';
+  for (const char of str) {
     if (vowels.includes(char)) {
       count++;
       result += char + char.toLowerCase().repeat(count - 1);

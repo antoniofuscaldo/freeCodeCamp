@@ -55,8 +55,8 @@ function quadraticPrimes(range) {
   }
 
   const bPrimes = primesUpTo(range);
-  let bestLen = 0;
-  let bestProduct = 0;
+  let bestLen = 0,
+    bestProduct = 0;
 
   for (let a = -range + 1; a < range; a++) {
     for (let bi = 0; bi < bPrimes.length; bi++) {

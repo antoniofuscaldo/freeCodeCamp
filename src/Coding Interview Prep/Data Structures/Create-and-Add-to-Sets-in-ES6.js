@@ -26,7 +26,7 @@ For this exercise, return a set with the following values: 1, 2, 3, 'Taco', 'Cat
 */
 
 function checkSet() {
-  var set = new Set([1, 2, 3, 3, 2, 1, 2, 3, 1]);
+  const set = new Set([1, 2, 3, 3, 2, 1, 2, 3, 1]);
   set.add('Taco');
   set.add('Cat');
   set.add('Awesome');

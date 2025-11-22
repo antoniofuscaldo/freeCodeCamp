@@ -21,10 +21,10 @@ Return [0, 1], the indices for the 0 in the first array.
 */
 
 function findLandingSpot(matrix) {
-  let best = null;
-  let minDanger = Infinity;
-  let rows = matrix.length;
-  let cols = matrix[0].length;
+  let best = null,
+    minDanger = Infinity,
+    rows = matrix.length,
+    cols = matrix[0].length;
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {

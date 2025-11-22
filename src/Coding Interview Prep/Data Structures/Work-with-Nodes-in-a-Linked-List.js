@@ -12,14 +12,14 @@ Create a Cat and Dog node and manually add them to the line.
 
 */
 
-var Node = function (element) {
-  this.element = element;
-  this.next = null;
-};
-var Kitten = new Node("Kitten");
-var Puppy = new Node("Puppy");
+const Node = function (element) {
+    this.element = element;
+    this.next = null;
+  },
+  Kitten = new Node('Kitten'),
+  Puppy = new Node('Puppy');
 Kitten.next = Puppy;
-var Cat = new Node("Cat");
-var Dog = new Node("Dog");
+const Cat = new Node('Cat'),
+  Dog = new Node('Dog');
 Puppy.next = Cat;
 Cat.next = Dog;

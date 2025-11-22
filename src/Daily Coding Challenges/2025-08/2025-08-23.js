@@ -12,7 +12,7 @@ A negative prime number is the negative version of a positive prime number.
 
 function isUnnaturalPrime(n) {
   if (n === 0 || n === 1) return false;
-  let num = Math.abs(n);
+  const num = Math.abs(n);
   if (num < 2) return false;
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;

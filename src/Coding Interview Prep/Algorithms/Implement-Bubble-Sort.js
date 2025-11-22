@@ -13,14 +13,14 @@ Instructions: Write a function bubbleSort which takes an array of integers as in
  */
 
 function bubbleSort(array) {
-  let n = array.length;
-  let swapped;
+  let n = array.length,
+    swapped;
   do {
     swapped = false;
     for (let i = 0; i < n - 1; i++) {
       if (array[i] > array[i + 1]) {
         // Swap
-        let temp = array[i];
+        const temp = array[i];
         array[i] = array[i + 1];
         array[i + 1] = temp;
         swapped = true;

@@ -17,17 +17,11 @@ Instructions: Add a method to our max heap called remove. This method should ret
 const MaxHeap = function () {
   this.heap = [];
 
-  this.parent = (index) => {
-    return Math.floor((index - 1) / 2);
-  };
+  this.parent = (index) => Math.floor((index - 1) / 2);
 
-  this.leftChild = (index) => {
-    return 2 * index + 1;
-  };
+  this.leftChild = (index) => 2 * index + 1;
 
-  this.rightChild = (index) => {
-    return 2 * index + 2;
-  };
+  this.rightChild = (index) => 2 * index + 2;
 
   this.insert = (element) => {
     this.heap.push(element);
@@ -38,10 +32,7 @@ const MaxHeap = function () {
     let currentIndex = index,
       parentIndex = this.parent(currentIndex);
 
-    while (
-      currentIndex > 0 &&
-      this.heap[currentIndex] > this.heap[parentIndex]
-    ) {
+    while (currentIndex > 0 && this.heap[currentIndex] > this.heap[parentIndex]) {
       this.swap(currentIndex, parentIndex);
       currentIndex = parentIndex;
       parentIndex = this.parent(parentIndex);
@@ -49,15 +40,10 @@ const MaxHeap = function () {
   };
 
   this.swap = (index1, index2) => {
-    [this.heap[index1], this.heap[index2]] = [
-      this.heap[index2],
-      this.heap[index1],
-    ];
+    [this.heap[index1], this.heap[index2]] = [this.heap[index2], this.heap[index1]];
   };
 
-  this.print = () => {
-    return this.heap;
-  };
+  this.print = () => this.heap;
 
   // Only change code below this line
   this.remove = () => {
@@ -65,15 +51,15 @@ const MaxHeap = function () {
     if (this.heap.length === 1) return this.heap.pop();
 
     const max = this.heap[0];
-    this.heap[0] = this.heap.pop(); // move last element to root
+    this.heap[0] = this.heap.pop(); // Move last element to root
     this.heapifyDown(0);
     return max;
   };
 
   this.heapifyDown = (index) => {
-    let largest = index;
-    let left = this.leftChild(index);
-    let right = this.rightChild(index);
+    let largest = index,
+      left = this.leftChild(index),
+      right = this.rightChild(index);
 
     if (left < this.heap.length && this.heap[left] > this.heap[largest]) {
       largest = left;

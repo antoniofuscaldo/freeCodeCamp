@@ -12,15 +12,14 @@ To convert Celsius to Fahrenheit, multiply the Celsius temperature by 1.8 and ad
 */
 
 function adjustThermostat(currentF, targetC) {
-  let targetF = targetC * 1.8 + 32;
+  const targetF = targetC * 1.8 + 32;
 
   if (currentF < targetF) {
-    let diff = (targetF - currentF).toFixed(1);
+    const diff = (targetF - currentF).toFixed(1);
     return `Heat: ${diff} degrees Fahrenheit`;
   } else if (currentF > targetF) {
-    let diff = (currentF - targetF).toFixed(1);
+    const diff = (currentF - targetF).toFixed(1);
     return `Cool: ${diff} degrees Fahrenheit`;
-  } else {
-    return "Hold";
   }
+  return 'Hold';
 }

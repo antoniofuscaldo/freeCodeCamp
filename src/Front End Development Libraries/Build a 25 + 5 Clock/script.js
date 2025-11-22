@@ -1,7 +1,7 @@
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
-      value: value,
+      value,
       enumerable: true,
       configurable: true,
       writable: true,
@@ -69,11 +69,11 @@ class App extends React.Component {
       audio.currentTime = 0;
     });
     _defineProperty(this, 'convertToTime', (count) => {
-      let minutes = Math.floor(count / 60);
-      let seconds = count % 60;
+      let minutes = Math.floor(count / 60),
+        seconds = count % 60;
 
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-      seconds = seconds < 10 ? '0' + seconds : seconds;
+      minutes = minutes < 10 ? `0${minutes}` : minutes;
+      seconds = seconds < 10 ? `0${seconds}` : seconds;
 
       return `${minutes}:${seconds}`;
     });
@@ -107,21 +107,19 @@ class App extends React.Component {
   }
 
   render() {
-    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } = this.state;
-
-    const breakProps = {
-      title: 'Break',
-      count: breakCount,
-      handleDecrease: () => this.handleLengthChange(-1, 'break'),
-      handleIncrease: () => this.handleLengthChange(1, 'break'),
-    };
-
-    const sessionProps = {
-      title: 'Session',
-      count: sessionCount,
-      handleDecrease: () => this.handleLengthChange(-1, 'session'),
-      handleIncrease: () => this.handleLengthChange(1, 'session'),
-    };
+    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } = this.state,
+      breakProps = {
+        title: 'Break',
+        count: breakCount,
+        handleDecrease: () => this.handleLengthChange(-1, 'break'),
+        handleIncrease: () => this.handleLengthChange(1, 'break'),
+      },
+      sessionProps = {
+        title: 'Session',
+        count: sessionCount,
+        handleDecrease: () => this.handleLengthChange(-1, 'session'),
+        handleIncrease: () => this.handleLengthChange(1, 'session'),
+      };
 
     return React.createElement(
       'div',

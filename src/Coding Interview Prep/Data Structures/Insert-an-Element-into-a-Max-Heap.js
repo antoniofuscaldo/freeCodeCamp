@@ -31,19 +31,16 @@ Finally, add a print method which returns an array of all the items that have be
 
 */
 
-var MaxHeap = function () {
+const MaxHeap = function () {
   this.heap = [null];
 
   this.insert = function (value) {
     this.heap.push(value);
-    let index = this.heap.length - 1;
-    let parent = Math.floor(index / 2);
+    let index = this.heap.length - 1,
+      parent = Math.floor(index / 2);
 
     while (parent > 0 && this.heap[parent] < this.heap[index]) {
-      [this.heap[parent], this.heap[index]] = [
-        this.heap[index],
-        this.heap[parent],
-      ];
+      [this.heap[parent], this.heap[index]] = [this.heap[index], this.heap[parent]];
       index = parent;
       parent = Math.floor(index / 2);
     }

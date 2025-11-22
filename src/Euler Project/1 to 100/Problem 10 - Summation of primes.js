@@ -10,7 +10,7 @@ Find the sum of all the primes below n.
 
 function primeSummation(n) {
   if (n <= 2) return 0;
-  let isPrime = new Array(n).fill(true);
+  const isPrime = new Array(n).fill(true);
   isPrime[0] = false;
   isPrime[1] = false;
   for (let i = 2; i * i < n; i++) {

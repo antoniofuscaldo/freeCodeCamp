@@ -15,8 +15,8 @@ function evaluate(numbers, operators) {
   if (numbers.length === 1) return numbers[0];
   let result = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
-    let op = operators[(i - 1) % operators.length];
-    let num = numbers[i];
+    const op = operators[(i - 1) % operators.length],
+      num = numbers[i];
     switch (op) {
       case '+':
         result += num;
@@ -34,7 +34,7 @@ function evaluate(numbers, operators) {
         result %= num;
         break;
       default:
-        throw new Error('Invalid operator: ' + op);
+        throw new Error(`Invalid operator: ${op}`);
     }
   }
   return result;

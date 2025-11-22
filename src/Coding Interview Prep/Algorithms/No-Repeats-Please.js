@@ -14,20 +14,20 @@ function permAlone(str) {
   }
   function permute(arr) {
     if (arr.length === 1) return [arr];
-    let result = [];
+    const result = [];
     for (let i = 0; i < arr.length; i++) {
-      let current = arr[i];
-      let remaining = arr.slice(0, i).concat(arr.slice(i + 1));
-      let perms = permute(remaining);
-      for (let p of perms) {
+      const current = arr[i],
+        remaining = arr.slice(0, i).concat(arr.slice(i + 1)),
+        perms = permute(remaining);
+      for (const p of perms) {
         result.push([current].concat(p));
       }
     }
     return result;
   }
-  let perms = permute(str.split(''));
-  let permStrings = perms.map((p) => p.join(''));
-  let valid = permStrings.filter((p) => !hasRepeats(p));
+  const perms = permute(str.split('')),
+    permStrings = perms.map((p) => p.join('')),
+    valid = permStrings.filter((p) => !hasRepeats(p));
   return valid.length;
 }
 console.log(permAlone('aab'));

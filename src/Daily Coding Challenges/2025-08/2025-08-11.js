@@ -17,12 +17,12 @@ function isBalanced(s) {
     s = s.slice(0, Math.floor(n / 2)) + s.slice(Math.floor(n / 2) + 1);
     n = s.length;
   }
-  let half = n / 2;
-  let firstHalf = s.slice(0, half);
-  let secondHalf = s.slice(half);
+  const half = n / 2,
+    firstHalf = s.slice(0, half),
+    secondHalf = s.slice(half);
   function countVowels(str) {
     let count = 0;
-    for (let char of str) {
+    for (const char of str) {
       if (vowels.includes(char)) count++;
     }
     return count;

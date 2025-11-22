@@ -23,24 +23,24 @@ function consecutivePrimeSum(limit) {
     return true;
   }
 
-  let primes = [];
+  const primes = [];
 
   for (let i = 2; i < limit; i++) {
     if (isPrime(i)) primes.push(i);
   }
 
-  let prefix = [0];
+  const prefix = [0];
 
-  for (let p of primes) {
+  for (const p of primes) {
     prefix.push(prefix[prefix.length - 1] + p);
   }
 
-  let maxLen = 0;
-  let result = 0;
+  let maxLen = 0,
+    result = 0;
 
   for (let i = 0; i < prefix.length; i++) {
     for (let j = i - (maxLen + 1); j >= 0; j--) {
-      let sum = prefix[i] - prefix[j];
+      const sum = prefix[i] - prefix[j];
       if (sum >= limit) break;
       if (isPrime(sum)) {
         maxLen = i - j;

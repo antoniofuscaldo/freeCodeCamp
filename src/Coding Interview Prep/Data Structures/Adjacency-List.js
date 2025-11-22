@@ -25,9 +25,9 @@ Create a social network as an undirected graph with 4 nodes/people named James, 
 
 */
 
-var undirectedAdjList = {
-  James: ["Jeff"],
-  Jill: ["Jenny"],
-  Jenny: ["Jill", "Jeff"],
-  Jeff: ["James", "Jenny"],
+const undirectedAdjList = {
+  James: ['Jeff'],
+  Jill: ['Jenny'],
+  Jenny: ['Jill', 'Jeff'],
+  Jeff: ['James', 'Jenny'],
 };

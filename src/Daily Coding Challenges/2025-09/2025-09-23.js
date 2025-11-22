@@ -11,8 +11,8 @@ Ignore all non-alphabetical characters.
 */
 
 function isMirror(str1, str2) {
-  let clean1 = str1.replace(/[^a-zA-Z]/g, '');
-  let clean2 = str2.replace(/[^a-zA-Z]/g, '');
-  let reversed1 = clean1.split('').reverse().join('');
+  const clean1 = str1.replace(/[^a-zA-Z]/g, ''),
+    clean2 = str2.replace(/[^a-zA-Z]/g, ''),
+    reversed1 = clean1.split('').reverse().join('');
   return reversed1 === clean2;
 }

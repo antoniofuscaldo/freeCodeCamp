@@ -11,12 +11,12 @@ Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 */
 
 function digitFactorial() {
-  var fact = [1];
-  for (var i = 1; i <= 9; i++) fact[i] = fact[i - 1] * i;
-  var numbers = [];
-  var sum = 0;
-  for (var n = 10; n <= 2540160; n++) {
-    var s = 0,
+  const fact = [1];
+  for (let i = 1; i <= 9; i++) fact[i] = fact[i - 1] * i;
+  let numbers = [],
+    sum = 0;
+  for (let n = 10; n <= 2540160; n++) {
+    let s = 0,
       m = n;
     while (m > 0) {
       s += fact[m % 10];

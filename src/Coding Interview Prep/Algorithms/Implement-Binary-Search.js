@@ -25,12 +25,12 @@ const testArray = [0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1
 */
 
 function binarySearch(searchList, value) {
-  let arrayPath = [];
-  let low = 0;
-  let high = searchList.length - 1;
+  const arrayPath = [];
+  let low = 0,
+    high = searchList.length - 1;
   while (low <= high) {
-    let mid = Math.floor((low + high) / 2);
-    let midValue = searchList[mid];
+    const mid = Math.floor((low + high) / 2),
+      midValue = searchList[mid];
     arrayPath.push(midValue);
     if (midValue === value) {
       return arrayPath;

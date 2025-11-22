@@ -12,16 +12,16 @@ A star is considered to have an exoplanet if any single reading is less than or 
 */
 
 function hasExoplanet(readings) {
-  let values = [];
-  for (let ch of readings) {
+  const values = [];
+  for (const ch of readings) {
     if (/[0-9]/.test(ch)) values.push(parseInt(ch));
     else values.push(ch.charCodeAt(0) - 55);
   }
 
-  let avg = values.reduce((a, b) => a + b, 0) / values.length;
-  let threshold = avg * 0.8;
+  const avg = values.reduce((a, b) => a + b, 0) / values.length,
+    threshold = avg * 0.8;
 
-  for (let v of values) {
+  for (const v of values) {
     if (v <= threshold) return true;
   }
   return false;

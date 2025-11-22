@@ -31,9 +31,9 @@ Note: Pandigital numbers starting with 0 are to be considered in the result.
 */
 
 function substringDivisibility(n) {
-  const primes = [2, 3, 5, 7, 11, 13, 17].slice(0, Math.max(0, n - 2));
-  const used = new Array(n + 1).fill(false);
-  const arr = new Array(n + 1);
+  const primes = [2, 3, 5, 7, 11, 13, 17].slice(0, Math.max(0, n - 2)),
+    used = new Array(n + 1).fill(false),
+    arr = new Array(n + 1);
   let sum = 0;
   function dfs(pos) {
     if (pos === n + 1) {

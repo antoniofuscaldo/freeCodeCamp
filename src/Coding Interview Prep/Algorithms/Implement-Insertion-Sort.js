@@ -10,7 +10,7 @@ Instructions: Write a function insertionSort which takes an array of integers as
 
 function insertionSort(array) {
   for (let i = 1; i < array.length; i++) {
-    let current = array[i];
+    const current = array[i];
     let j = i - 1;
     while (j >= 0 && array[j] > current) {
       array[j + 1] = array[j];

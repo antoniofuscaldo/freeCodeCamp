@@ -6,7 +6,7 @@ Here will we create a function to invert a binary tree. Given a binary tree, we 
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 
 function Node(value) {
   this.value = value;
@@ -20,7 +20,7 @@ function BinarySearchTree() {
   this.invert = function (node = this.root) {
     if (!this.root) return null;
     if (node) {
-      let temp = node.left;
+      const temp = node.left;
       node.left = node.right;
       node.right = temp;
       this.invert(node.left);

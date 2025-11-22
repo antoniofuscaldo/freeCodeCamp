@@ -18,9 +18,9 @@ Input	Output
 function generateHex(color) {
   color = color.toLowerCase();
   const rand = () => Math.floor(Math.random() * 255);
-  let r = 0,
+  let b = 0,
     g = 0,
-    b = 0;
+    r = 0;
   if (color === 'red') {
     r = 200 + (rand() % 56);
     g = rand() % r;

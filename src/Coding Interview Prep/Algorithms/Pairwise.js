@@ -19,7 +19,7 @@ Below we'll take their corresponding indices and add them.
 */
 
 function pairwise(arr, arg) {
-  let used = new Array(arr.length).fill(false);
+  const used = new Array(arr.length).fill(false);
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     if (used[i]) continue;

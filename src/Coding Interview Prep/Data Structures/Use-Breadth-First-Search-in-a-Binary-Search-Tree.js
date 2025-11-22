@@ -10,7 +10,7 @@ Let's create a breadth-first search method in our tree called levelOrder. This m
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -20,10 +20,10 @@ function BinarySearchTree() {
   this.root = null;
   this.levelOrder = function () {
     if (!this.root) return null;
-    let result = [];
-    let queue = [this.root];
+    const result = [],
+      queue = [this.root];
     while (queue.length) {
-      let node = queue.shift();
+      const node = queue.shift();
       result.push(node.value);
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
@@ -32,10 +32,10 @@ function BinarySearchTree() {
   };
   this.reverseLevelOrder = function () {
     if (!this.root) return null;
-    let result = [];
-    let queue = [this.root];
+    const result = [],
+      queue = [this.root];
     while (queue.length) {
-      let node = queue.shift();
+      const node = queue.shift();
       result.push(node.value);
       if (node.right) queue.push(node.right);
       if (node.left) queue.push(node.left);

@@ -63,7 +63,7 @@ class CircularQueue {
     if (this.queue[this.read] === null) {
       return null;
     }
-    let item = this.queue[this.read];
+    const item = this.queue[this.read];
     this.queue[this.read] = null;
     this.read = (this.read + 1) % this.queue.length;
     return item;

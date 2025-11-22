@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# Esegui lint:fix in modo silenzioso e non bloccare il commit
+npm run lint:fix --silent || true
+
+# Mantieni lint-staged ma non bloccare in caso di errori
+npx --no-install lint-staged || true

@@ -19,12 +19,12 @@ Your list's length should increase by one every time an element is added to the 
 */
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
-  var Node = function (element) {
-    this.element = element;
-    this.next = null;
-  };
+  let length = 0,
+    head = null,
+    Node = function (element) {
+      this.element = element;
+      this.next = null;
+    };
   this.head = function () {
     return head;
   };
@@ -32,11 +32,11 @@ function LinkedList() {
     return length;
   };
   this.add = function (element) {
-    var node = new Node(element);
+    const node = new Node(element);
     if (head === null) {
       head = node;
     } else {
-      var current = head;
+      let current = head;
       while (current.next !== null) {
         current = current.next;
       }

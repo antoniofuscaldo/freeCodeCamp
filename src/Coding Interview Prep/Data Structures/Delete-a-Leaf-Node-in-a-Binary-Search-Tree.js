@@ -8,7 +8,7 @@ Create a method on our binary tree called remove. We'll build the logic for our 
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
 function Node(value) {
   this.value = value;
   this.left = null;
@@ -18,8 +18,8 @@ function BinarySearchTree() {
   this.root = null;
   this.remove = function (value) {
     if (!this.root) return null;
-    let parent = null;
-    let current = this.root;
+    let parent = null,
+      current = this.root;
     while (current) {
       if (value === current.value) {
         if (!current.left && !current.right) {
@@ -31,9 +31,8 @@ function BinarySearchTree() {
             parent.right = null;
           }
           return;
-        } else {
-          return null;
         }
+        return null;
       } else if (value < current.value) {
         parent = current;
         current = current.left;

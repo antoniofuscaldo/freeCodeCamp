@@ -22,8 +22,8 @@ function pentagonNumbers() {
   let minD = Infinity;
   for (let j = 0; j < pent.length; j++) {
     for (let k = j + 1; k < pent.length; k++) {
-      const sum = pent[j] + pent[k];
-      const diff = pent[k] - pent[j];
+      const sum = pent[j] + pent[k],
+        diff = pent[k] - pent[j];
       if (isPentagonal(sum) && isPentagonal(diff)) {
         if (diff < minD) minD = diff;
       }

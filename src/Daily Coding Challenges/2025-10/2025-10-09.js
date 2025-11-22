@@ -19,13 +19,13 @@ Return the correct phase as a string.
 */
 
 function moonPhase(dateString) {
-  const reference = new Date("2000-01-06");
-  const target = new Date(dateString);
-  const diffDays = Math.floor((target - reference) / (1000 * 60 * 60 * 24));
-  const dayInCycle = (diffDays % 28) + 1;
+  const reference = new Date('2000-01-06'),
+    target = new Date(dateString),
+    diffDays = Math.floor((target - reference) / (1000 * 60 * 60 * 24)),
+    dayInCycle = (diffDays % 28) + 1;
 
-  if (dayInCycle >= 1 && dayInCycle <= 7) return "New";
-  if (dayInCycle >= 8 && dayInCycle <= 14) return "Waxing";
-  if (dayInCycle >= 15 && dayInCycle <= 21) return "Full";
-  return "Waning";
+  if (dayInCycle >= 1 && dayInCycle <= 7) return 'New';
+  if (dayInCycle >= 8 && dayInCycle <= 14) return 'Waxing';
+  if (dayInCycle >= 15 && dayInCycle <= 21) return 'Full';
+  return 'Waning';
 }

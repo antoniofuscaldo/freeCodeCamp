@@ -21,8 +21,8 @@ function primeDigitReplacements(n) {
   }
 
   function getSubsets(indices) {
-    const res = [];
-    const m = indices.length;
+    const res = [],
+      m = indices.length;
     for (let mask = 1; mask < 1 << m; mask++) {
       const subset = [];
       for (let i = 0; i < m; i++) {
@@ -44,14 +44,14 @@ function primeDigitReplacements(n) {
       if (positions.length === 0) continue;
       const subsets = getSubsets(positions);
       for (const subset of subsets) {
-        let count = 0;
-        let minMember = Infinity;
+        let count = 0,
+          minMember = Infinity;
         for (let r = 0; r <= 9; r++) {
           if (subset.includes(0) && r === 0) continue;
-          const arr = s.split("");
+          const arr = s.split('');
           for (const pos of subset) arr[pos] = String(r);
-          if (arr[0] === "0") continue;
-          const num = Number(arr.join(""));
+          if (arr[0] === '0') continue;
+          const num = Number(arr.join(''));
           if (isPrime(num)) {
             count++;
             if (num < minMember) minMember = num;

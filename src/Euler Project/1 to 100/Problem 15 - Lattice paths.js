@@ -20,9 +20,9 @@ function latticePaths(gridSize) {
     return result;
   }
 
-  const n = BigInt(gridSize);
-  const numerator = factorial(2n * n);
-  const denominator = factorial(n) * factorial(n);
+  const n = BigInt(gridSize),
+    numerator = factorial(2n * n),
+    denominator = factorial(n) * factorial(n);
   return Number(numerator / denominator);
 }
 

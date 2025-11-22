@@ -9,12 +9,12 @@ Create an addAt(index,element) method that adds an element at a given index. Ret
 */
 
 function LinkedList() {
-  var length = 0;
-  var head = null;
-  var Node = function (element) {
-    this.element = element;
-    this.next = null;
-  };
+  let length = 0,
+    head = null,
+    Node = function (element) {
+      this.element = element;
+      this.next = null;
+    };
   this.size = function () {
     return length;
   };
@@ -22,11 +22,11 @@ function LinkedList() {
     return head;
   };
   this.add = function (element) {
-    var node = new Node(element);
+    const node = new Node(element);
     if (head === null) {
       head = node;
     } else {
-      var currentNode = head;
+      let currentNode = head;
       while (currentNode.next) {
         currentNode = currentNode.next;
       }
@@ -36,14 +36,14 @@ function LinkedList() {
   };
   this.addAt = function (index, element) {
     if (index < 0 || index > length) return false;
-    var node = new Node(element);
+    const node = new Node(element);
     if (index === 0) {
       node.next = head;
       head = node;
     } else {
-      var currentNode = head;
-      var previousNode;
-      var currentIndex = 0;
+      let currentNode = head,
+        previousNode,
+        currentIndex = 0;
       while (currentIndex < index) {
         previousNode = currentNode;
         currentNode = currentNode.next;

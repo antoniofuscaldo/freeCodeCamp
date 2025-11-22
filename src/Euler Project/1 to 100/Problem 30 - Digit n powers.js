@@ -24,8 +24,8 @@ function digitnPowers(n) {
 
   let total = 0;
   for (let i = 2; i <= max; i++) {
-    let sum = 0;
-    let x = i;
+    let sum = 0,
+      x = i;
     while (x > 0) {
       sum += powers[x % 10];
       x = (x / 10) | 0;

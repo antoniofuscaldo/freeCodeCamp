@@ -16,54 +16,54 @@ Note: The remove method tests won't pass until the add and lookup methods are co
 
 */
 
-var called = 0;
-var hash = (string) => {
-  called++;
-  var hashed = 0;
-  for (var i = 0; i < string.length; i++) {
-    hashed += string.charCodeAt(i);
-  }
-  return hashed;
-};
-var HashTable = function () {
-  this.collection = {};
-  this.add = function (key, value) {
-    let hashedKey = hash(key);
-    if (!this.collection[hashedKey]) {
-      this.collection[hashedKey] = [];
+let called = 0,
+  hash = (string) => {
+    called++;
+    let hashed = 0;
+    for (let i = 0; i < string.length; i++) {
+      hashed += string.charCodeAt(i);
     }
-    let bucket = this.collection[hashedKey];
-    for (let i = 0; i < bucket.length; i++) {
-      if (bucket[i][0] === key) {
-        bucket[i][1] = value;
-        return;
+    return hashed;
+  },
+  HashTable = function () {
+    this.collection = {};
+    this.add = function (key, value) {
+      const hashedKey = hash(key);
+      if (!this.collection[hashedKey]) {
+        this.collection[hashedKey] = [];
       }
-    }
-    bucket.push([key, value]);
-  };
-  this.remove = function (key) {
-    let hashedKey = hash(key);
-    let bucket = this.collection[hashedKey];
-    if (!bucket) return;
-    for (let i = 0; i < bucket.length; i++) {
-      if (bucket[i][0] === key) {
-        bucket.splice(i, 1);
-        if (bucket.length === 0) {
-          delete this.collection[hashedKey];
+      const bucket = this.collection[hashedKey];
+      for (let i = 0; i < bucket.length; i++) {
+        if (bucket[i][0] === key) {
+          bucket[i][1] = value;
+          return;
         }
-        return;
       }
-    }
-  };
-  this.lookup = function (key) {
-    let hashedKey = hash(key);
-    let bucket = this.collection[hashedKey];
-    if (!bucket) return null;
-    for (let i = 0; i < bucket.length; i++) {
-      if (bucket[i][0] === key) {
-        return bucket[i][1];
+      bucket.push([key, value]);
+    };
+    this.remove = function (key) {
+      const hashedKey = hash(key),
+        bucket = this.collection[hashedKey];
+      if (!bucket) return;
+      for (let i = 0; i < bucket.length; i++) {
+        if (bucket[i][0] === key) {
+          bucket.splice(i, 1);
+          if (bucket.length === 0) {
+            delete this.collection[hashedKey];
+          }
+          return;
+        }
       }
-    }
-    return null;
+    };
+    this.lookup = function (key) {
+      const hashedKey = hash(key),
+        bucket = this.collection[hashedKey];
+      if (!bucket) return null;
+      for (let i = 0; i < bucket.length; i++) {
+        if (bucket[i][0] === key) {
+          return bucket[i][1];
+        }
+      }
+      return null;
+    };
   };
-};

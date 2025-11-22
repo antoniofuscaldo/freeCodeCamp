@@ -12,11 +12,11 @@ For example, given a "$10.00" meal price, and a "25%" custom tip value, return [
 */
 
 function calculateTips(mealPrice, customTip) {
-  let price = parseFloat(mealPrice.slice(1));
-  let custom = parseFloat(customTip.slice(0, -1));
+  const price = parseFloat(mealPrice.slice(1)),
+    custom = parseFloat(customTip.slice(0, -1));
 
   function formatTip(percent) {
-    return "$" + ((price * percent) / 100).toFixed(2);
+    return `$${((price * percent) / 100).toFixed(2)}`;
   }
 
   return [formatTip(15), formatTip(20), formatTip(custom)];

@@ -16,16 +16,16 @@ Neither the local or domain part can have two dots in a row.
 */
 
 function validate(email) {
-  if (email.split("@").length !== 2) return false;
+  if (email.split('@').length !== 2) return false;
 
-  let [local, domain] = email.split("@");
+  const [local, domain] = email.split('@');
 
   if (!/^[A-Za-z0-9._-]+$/.test(local)) return false;
-  if (local.startsWith(".") || local.endsWith(".")) return false;
-  if (local.includes("..")) return false;
+  if (local.startsWith('.') || local.endsWith('.')) return false;
+  if (local.includes('..')) return false;
 
-  if (domain.includes("..")) return false;
-  if (!domain.includes(".")) return false;
+  if (domain.includes('..')) return false;
+  if (!domain.includes('.')) return false;
   if (!/\.[A-Za-z]{2,}$/.test(domain)) return false;
 
   return true;

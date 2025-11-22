@@ -8,64 +8,60 @@ Let's create a trie to store words. It will accept words through an add method a
 
 */
 
-var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));
+const displayTree = (tree) => console.log(JSON.stringify(tree, null, 2)),
+  Node = function () {
+    this.keys = new Map();
+    this.end = false;
+    this.setEnd = function () {
+      this.end = true;
+    };
+    this.isEnd = function () {
+      return this.end;
+    };
+  },
+  Trie = function () {
+    this.root = new Node();
 
-var Node = function () {
-  this.keys = new Map();
-  this.end = false;
-  this.setEnd = function () {
-    this.end = true;
-  };
-  this.isEnd = function () {
-    return this.end;
-  };
-};
-
-var Trie = function () {
-  this.root = new Node();
-
-  this.add = function (word, node = this.root) {
-    if (word.length === 0) {
-      node.setEnd();
-      return;
-    }
-    let letter = word[0];
-    if (!node.keys.has(letter)) {
-      node.keys.set(letter, new Node());
-    }
-    return this.add(word.substr(1), node.keys.get(letter));
-  };
-
-  this.isWord = function (word) {
-    let node = this.root;
-    while (word.length > 0) {
-      let letter = word[0];
+    this.add = function (word, node = this.root) {
+      if (word.length === 0) {
+        node.setEnd();
+        return;
+      }
+      const letter = word[0];
       if (!node.keys.has(letter)) {
-        return false;
+        node.keys.set(letter, new Node());
       }
-      node = node.keys.get(letter);
-      word = word.substr(1);
-    }
-    return node.isEnd();
-  };
+      return this.add(word.substr(1), node.keys.get(letter));
+    };
 
-  this.print = function () {
-    let words = [];
-    function search(node, string) {
-      if (node.keys.size !== 0) {
-        for (let letter of node.keys.keys()) {
-          search(node.keys.get(letter), string.concat(letter));
+    this.isWord = function (word) {
+      let node = this.root;
+      while (word.length > 0) {
+        const letter = word[0];
+        if (!node.keys.has(letter)) {
+          return false;
         }
-        if (node.isEnd()) {
-          words.push(string);
-        }
-      } else {
-        if (string.length > 0) {
+        node = node.keys.get(letter);
+        word = word.substr(1);
+      }
+      return node.isEnd();
+    };
+
+    this.print = function () {
+      const words = [];
+      function search(node, string) {
+        if (node.keys.size !== 0) {
+          for (const letter of node.keys.keys()) {
+            search(node.keys.get(letter), string.concat(letter));
+          }
+          if (node.isEnd()) {
+            words.push(string);
+          }
+        } else if (string.length > 0) {
           words.push(string);
         }
       }
-    }
-    search(this.root, "");
-    return words.length > 0 ? words : null;
+      search(this.root, '');
+      return words.length > 0 ? words : null;
+    };
   };
-};

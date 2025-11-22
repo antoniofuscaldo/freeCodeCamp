@@ -12,11 +12,11 @@ The acronym should not contain any spaces.
 */
 
 function buildAcronym(str) {
-  const ignore = new Set(['a', 'for', 'an', 'and', 'by', 'of']);
-  let words = str.trim().split(/\s+/);
+  const ignore = new Set(['a', 'for', 'an', 'and', 'by', 'of']),
+    words = str.trim().split(/\s+/);
   let acronym = '';
   for (let i = 0; i < words.length; i++) {
-    let word = words[i].toLowerCase();
+    const word = words[i].toLowerCase();
     if (i === 0) {
       acronym += words[i][0].toUpperCase();
     } else if (!ignore.has(word)) {

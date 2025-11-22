@@ -12,10 +12,10 @@ Find the sum of all numbers, less than n, whereas 1000 ≤ n ≤ 1000000, which 
 
 function doubleBasePalindromes(n) {
   function isPalindrome(s) {
-    return s === s.split("").reverse().join("");
+    return s === s.split('').reverse().join('');
   }
-  var sum = 0;
-  for (var i = 1; i < n; i++) {
+  let sum = 0;
+  for (let i = 1; i < n; i++) {
     if (isPalindrome(String(i)) && isPalindrome(i.toString(2))) {
       sum += i;
     }

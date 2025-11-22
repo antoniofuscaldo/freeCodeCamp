@@ -31,8 +31,8 @@ function parseRomanNumeral(numeral) {
   };
   let total = 0;
   for (let i = 0; i < numeral.length; i++) {
-    let current = values[numeral[i]];
-    let next = values[numeral[i + 1]];
+    const current = values[numeral[i]],
+      next = values[numeral[i + 1]];
     if (next && current < next) {
       total -= current;
     } else {

@@ -12,15 +12,15 @@ Assume all parentheses are evenly balanced and correctly nested.
 */
 
 function decode(s) {
-  let stack = [];
-  for (let char of s) {
+  const stack = [];
+  for (const char of s) {
     if (char === ')') {
       let temp = '';
       while (stack.length && stack[stack.length - 1] !== '(') {
         temp += stack.pop();
       }
       stack.pop();
-      for (let c of temp) {
+      for (const c of temp) {
         stack.push(c);
       }
     } else {

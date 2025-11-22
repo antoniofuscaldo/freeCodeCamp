@@ -26,15 +26,15 @@ What is the index of the first term in the Fibonacci sequence to contain n digit
 */
 
 function digitFibonacci(n) {
-  let a = "1";
-  let b = "1";
-  let index = 2;
+  let a = '1',
+    b = '1',
+    index = 2;
 
   function addStrings(x, y) {
-    let res = "";
-    let carry = 0;
-    let i = x.length - 1;
-    let j = y.length - 1;
+    let res = '',
+      carry = 0,
+      i = x.length - 1,
+      j = y.length - 1;
     while (i >= 0 || j >= 0 || carry) {
       let sum = carry;
       if (i >= 0) sum += x.charCodeAt(i--) - 48;
@@ -46,7 +46,7 @@ function digitFibonacci(n) {
   }
 
   while (b.length < n) {
-    let temp = addStrings(a, b);
+    const temp = addStrings(a, b);
     a = b;
     b = temp;
     index++;

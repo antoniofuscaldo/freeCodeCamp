@@ -15,7 +15,6 @@ function adjustThermostat(temp, target) {
     return 'heat';
   } else if (temp > target) {
     return 'cool';
-  } else {
-    return 'hold';
   }
+  return 'hold';
 }

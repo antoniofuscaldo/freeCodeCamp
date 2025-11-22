@@ -22,7 +22,7 @@ function checkStrength(password) {
   if (/\d/.test(password)) rules++;
   if (/[!@#$%^&*]/.test(password)) rules++;
 
-  if (rules < 2) return "weak";
-  if (rules < 4) return "medium";
-  return "strong";
+  if (rules < 2) return 'weak';
+  if (rules < 4) return 'medium';
+  return 'strong';
 }

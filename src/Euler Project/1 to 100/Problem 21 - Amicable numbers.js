@@ -14,12 +14,12 @@ Evaluate the sum of all the amicable numbers under n.
 
 function sumAmicableNum(n) {
   function d(num) {
-    let sum = 1;
-    let sqrt = Math.sqrt(num);
+    let sum = 1,
+      sqrt = Math.sqrt(num);
     for (let i = 2; i <= sqrt; i++) {
       if (num % i === 0) {
         sum += i;
-        let other = num / i;
+        const other = num / i;
         if (other !== i) sum += other;
       }
     }
@@ -28,7 +28,7 @@ function sumAmicableNum(n) {
 
   let total = 0;
   for (let a = 2; a < n; a++) {
-    let b = d(a);
+    const b = d(a);
     if (b !== a && b < n && d(b) === a) {
       total += a;
     }

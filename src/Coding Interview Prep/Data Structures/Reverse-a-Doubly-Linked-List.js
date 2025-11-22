@@ -6,26 +6,26 @@ Let's create one more method for our doubly linked list called reverse which rev
 
 */
 
-var Node = function (data, prev) {
-  this.data = data;
-  this.prev = prev;
-  this.next = null;
-};
-var DoublyLinkedList = function () {
-  this.head = null;
-  this.tail = null;
-  this.reverse = function () {
-    if (!this.head) return null;
-    let current = this.head;
-    let temp = null;
-    while (current) {
-      temp = current.prev;
-      current.prev = current.next;
-      current.next = temp;
-      current = current.prev;
-    }
-    temp = this.head;
-    this.head = this.tail;
-    this.tail = temp;
+const Node = function (data, prev) {
+    this.data = data;
+    this.prev = prev;
+    this.next = null;
+  },
+  DoublyLinkedList = function () {
+    this.head = null;
+    this.tail = null;
+    this.reverse = function () {
+      if (!this.head) return null;
+      let current = this.head,
+        temp = null;
+      while (current) {
+        temp = current.prev;
+        current.prev = current.next;
+        current.next = temp;
+        current = current.prev;
+      }
+      temp = this.head;
+      this.head = this.tail;
+      this.tail = temp;
+    };
   };
-};

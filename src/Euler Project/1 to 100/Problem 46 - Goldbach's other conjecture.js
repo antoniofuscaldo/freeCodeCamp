@@ -29,9 +29,9 @@ function goldbachsOtherConjecture() {
   function canBeWritten(n) {
     for (let p = 2; p < n; p++) {
       if (isPrime(p)) {
-        let rest = n - p;
+        const rest = n - p;
         if (rest % 2 === 0) {
-          let s = Math.sqrt(rest / 2);
+          const s = Math.sqrt(rest / 2);
           if (Number.isInteger(s)) return true;
         }
       }

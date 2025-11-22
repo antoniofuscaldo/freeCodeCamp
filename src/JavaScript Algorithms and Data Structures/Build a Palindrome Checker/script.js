@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const textInput = document.getElementById('text-input');
-  const checkBtn = document.getElementById('check-btn');
-  const result = document.getElementById('result');
+document.addEventListener('DOMContentLoaded', () => {
+  const textInput = document.getElementById('text-input'),
+    checkBtn = document.getElementById('check-btn'),
+    result = document.getElementById('result');
 
-  checkBtn.addEventListener('click', function () {
+  checkBtn.addEventListener('click', () => {
     const inputText = textInput.value;
 
     if (!inputText) {
@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function checkPalindrome(str) {
-    const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-
-    const reversedStr = cleanedStr.split('').reverse().join('');
+    const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(),
+      reversedStr = cleanedStr.split('').reverse().join('');
     return cleanedStr === reversedStr;
   }
 });

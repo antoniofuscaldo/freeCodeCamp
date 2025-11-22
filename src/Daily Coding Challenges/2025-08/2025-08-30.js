@@ -9,9 +9,9 @@ Only include one instance of each value in the returned array.
 */
 
 function findDuplicates(arr) {
-  let counts = new Map();
-  let duplicates = new Set();
-  for (let num of arr) {
+  const counts = new Map(),
+    duplicates = new Set();
+  for (const num of arr) {
     if (counts.has(num)) {
       duplicates.add(num);
     } else {

@@ -15,7 +15,7 @@ For example, the binary number 101 equals 5 in decimal because:
 function toDecimal(binary) {
   let result = 0;
   for (let i = 0; i < binary.length; i++) {
-    result = result * 2 + (binary[i] === "1" ? 1 : 0);
+    result = result * 2 + (binary[i] === '1' ? 1 : 0);
   }
   return result;
 }

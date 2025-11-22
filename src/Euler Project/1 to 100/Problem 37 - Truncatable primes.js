@@ -14,27 +14,26 @@ function truncatablePrimes(n) {
   function isPrime(x) {
     if (x < 2) return false;
     if (x % 2 === 0) return x === 2;
-    for (var i = 3; i * i <= x; i += 2) {
+    for (let i = 3; i * i <= x; i += 2) {
       if (x % i === 0) return false;
     }
     return true;
   }
   function isTruncatable(p) {
-    var s = String(p);
-    for (var i = 1; i < s.length; i++) {
-      if (!isPrime(+s.slice(i)) || !isPrime(+s.slice(0, s.length - i)))
-        return false;
+    const s = String(p);
+    for (let i = 1; i < s.length; i++) {
+      if (!isPrime(+s.slice(i)) || !isPrime(+s.slice(0, s.length - i))) return false;
     }
     return true;
   }
-  var found = [];
-  var num = 11;
+  let found = [],
+    num = 11;
   while (found.length < n) {
     if (isPrime(num) && isTruncatable(num)) found.push(num);
     num += 2;
   }
-  var sum = 0;
-  for (var j = 0; j < found.length; j++) sum += found[j];
+  let sum = 0;
+  for (let j = 0; j < found.length; j++) sum += found[j];
   return sum;
 }
 

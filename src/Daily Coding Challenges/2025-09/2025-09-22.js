@@ -11,10 +11,10 @@ Ignore any other characters.
 */
 
 function digitsOrLetters(str) {
-  let digits = 0;
-  let letters = 0;
+  let digits = 0,
+    letters = 0;
 
-  for (let char of str) {
+  for (const char of str) {
     if (/[0-9]/.test(char)) {
       digits++;
     } else if (/[a-zA-Z]/.test(char)) {

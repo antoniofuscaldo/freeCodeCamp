@@ -8,12 +8,12 @@ What is the sum of the digits of the number 2exponent?
 */
 
 function powerDigitSum(exponent) {
-  let digits = [1];
+  const digits = [1];
 
   for (let i = 0; i < exponent; i++) {
     let carry = 0;
     for (let j = 0; j < digits.length; j++) {
-      let val = digits[j] * 2 + carry;
+      const val = digits[j] * 2 + carry;
       digits[j] = val % 10;
       carry = Math.floor(val / 10);
     }

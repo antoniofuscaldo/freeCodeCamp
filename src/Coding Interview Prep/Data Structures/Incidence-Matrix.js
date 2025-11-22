@@ -47,7 +47,7 @@ These five nodes have the following relationships. The first edge is between the
 
  */
 
-var incMatUndirected = [
+const incMatUndirected = [
   [1, 0, 0, 0],
   [1, 1, 0, 1],
   [0, 1, 1, 0],

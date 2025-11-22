@@ -22,15 +22,15 @@ function digitCancellingFractions() {
     return a;
   }
 
-  let numProd = 1;
-  let denProd = 1;
+  let denProd = 1,
+    numProd = 1;
 
   for (let n = 10; n < 100; n++) {
     for (let d = n + 1; d < 100; d++) {
       if (n % 10 === 0 && d % 10 === 0) continue;
       const n1 = (n / 10) | 0,
-        n2 = n % 10;
-      const d1 = (d / 10) | 0,
+        n2 = n % 10,
+        d1 = (d / 10) | 0,
         d2 = d % 10;
 
       if (n1 === d1 && n1 !== 0 && d2 !== 0 && n * d2 === d * n2) {
