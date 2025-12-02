@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+#drum-machine {
+  width: 320px;
+  max-width: 90vw;
+  padding: 16px;
+  border-radius: 12px;
+  background: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+#display {
+  min-height: 40px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #0b1220;
+  color: #93c5fd;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+#pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.drum-pad {
+  display: grid;
+  place-items: center;
+  height: 80px;
+  border-radius: 10px;
+  background: #334155;
+  color: #e2e8f0;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 0.04s ease,
+    background 0.2s ease;
+}
+.drum-pad:active {
+  transform: scale(0.98);
+  background: #3b4a62;
+}
+audio {
+  display: none;
+}
