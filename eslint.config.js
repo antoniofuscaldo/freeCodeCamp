@@ -4,7 +4,7 @@ import prettier from 'eslint-config-prettier';
 
 export default [
   { ignores: ['node_modules/', 'dist/'] },
-  js.configs.all,
+  js.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 'latest',
