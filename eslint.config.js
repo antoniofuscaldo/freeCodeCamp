@@ -17,6 +17,9 @@ export default [
     languageOptions: {
       globals: globals.browser,
     },
+    rules: {
+      'no-unused-vars': 'off',
+    },
   },
   prettier,
 ];
