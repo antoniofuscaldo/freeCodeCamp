@@ -13,8 +13,8 @@ If the converted value is 1, use "kilogram" instead of "kilograms".
 */
 
 function convertToKgs(lbs) {
-  const kgs = (lbs * 0.453592).toFixed(2);
-  const poundWord = lbs === 1 ? 'pound' : 'pounds';
-  const kiloWord = kgs === '1.00' ? 'kilogram' : 'kilograms';
+  const kgs = (lbs * 0.453592).toFixed(2),
+    poundWord = lbs === 1 ? 'pound' : 'pounds',
+    kiloWord = kgs === '1.00' ? 'kilogram' : 'kilograms';
   return `${lbs} ${poundWord} equals ${kgs} ${kiloWord}.`;
 }

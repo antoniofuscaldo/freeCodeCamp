@@ -14,10 +14,10 @@ For example, given an inventory of [[2, "apples"], [5, "bananas"]] and a shipmen
 
 function updateInventory(inventory, shipment) {
   const map = new Map();
-  for (let [qty, item] of inventory) {
+  for (const [qty, item] of inventory) {
     map.set(item, qty);
   }
-  for (let [qty, item] of shipment) {
+  for (const [qty, item] of shipment) {
     if (map.has(item)) {
       map.set(item, map.get(item) + qty);
     } else {

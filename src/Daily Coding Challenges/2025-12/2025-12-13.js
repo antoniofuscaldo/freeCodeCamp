@@ -32,25 +32,24 @@ Each cell updates according to the number of live neighbors. For instance, [0][0
 */
 
 function gameOfLife(grid) {
-  const rows = grid.length;
-  const cols = grid[0].length;
-  const next = Array.from({ length: rows }, () => Array(cols).fill(0));
-
-  const directions = [
-    [-1, -1],
-    [-1, 0],
-    [-1, 1],
-    [0, -1],
-    [0, 1],
-    [1, -1],
-    [1, 0],
-    [1, 1],
-  ];
+  const rows = grid.length,
+    cols = grid[0].length,
+    next = Array.from({ length: rows }, () => Array(cols).fill(0)),
+    directions = [
+      [-1, -1],
+      [-1, 0],
+      [-1, 1],
+      [0, -1],
+      [0, 1],
+      [1, -1],
+      [1, 0],
+      [1, 1],
+    ];
 
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       let liveNeighbors = 0;
-      for (let [dr, dc] of directions) {
+      for (const [dr, dc] of directions) {
         const nr = r + dr,
           nc = c + dc;
         if (nr >= 0 && nr < rows && nc >= 0 && nc < cols) {

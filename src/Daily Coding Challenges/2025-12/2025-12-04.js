@@ -22,13 +22,13 @@ function countPermutations(str) {
   }
 
   const freq = {};
-  for (let char of str) {
+  for (const char of str) {
     freq[char] = (freq[char] || 0) + 1;
   }
 
   let total = factorial(str.length);
 
-  for (let char in freq) {
+  for (const char in freq) {
     total /= factorial(freq[char]);
   }
 

@@ -12,20 +12,20 @@ For example, given "December 6, 2025", return "2025-12-06".
 
 function formatDate(dateString) {
   const months = {
-    January: '01',
-    February: '02',
-    March: '03',
-    April: '04',
-    May: '05',
-    June: '06',
-    July: '07',
-    August: '08',
-    September: '09',
-    October: '10',
-    November: '11',
-    December: '12',
-  };
-  const [month, dayWithComma, year] = dateString.split(' ');
-  const day = dayWithComma.replace(',', '').padStart(2, '0');
+      January: '01',
+      February: '02',
+      March: '03',
+      April: '04',
+      May: '05',
+      June: '06',
+      July: '07',
+      August: '08',
+      September: '09',
+      October: '10',
+      November: '11',
+      December: '12',
+    },
+    [month, dayWithComma, year] = dateString.split(' '),
+    day = dayWithComma.replace(',', '').padStart(2, '0');
   return `${year}-${months[month]}-${day}`;
 }

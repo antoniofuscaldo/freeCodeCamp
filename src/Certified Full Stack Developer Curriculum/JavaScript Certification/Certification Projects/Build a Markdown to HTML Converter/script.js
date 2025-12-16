@@ -1,6 +1,6 @@
-const input = document.getElementById('markdown-input');
-const htmlOutput = document.getElementById('html-output');
-const preview = document.getElementById('preview');
+const input = document.getElementById('markdown-input'),
+  htmlOutput = document.getElementById('html-output'),
+  preview = document.getElementById('preview');
 
 function convertInline(s) {
   if (!s) return '';
@@ -26,8 +26,8 @@ function convertLine(line) {
 }
 
 function convertMarkdown() {
-  const text = input ? input.value : '';
-  const parts = text.split(/\r?\n/).map(convertLine);
+  const text = input ? input.value : '',
+    parts = text.split(/\r?\n/).map(convertLine);
   return parts.join('');
 }
 

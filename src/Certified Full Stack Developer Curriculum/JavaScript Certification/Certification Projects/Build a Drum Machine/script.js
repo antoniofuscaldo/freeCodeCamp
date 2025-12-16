@@ -12,8 +12,8 @@ document.querySelectorAll('.drum-pad').forEach((pad) => {
   });
 });
 document.addEventListener('keydown', (e) => {
-  const key = e.key.toUpperCase();
-  const audio = document.getElementById(key);
+  const key = e.key.toUpperCase(),
+    audio = document.getElementById(key);
   if (audio) {
     const pad = audio.parentElement;
     playAudio(audio, pad.dataset.name);

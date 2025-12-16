@@ -12,9 +12,9 @@ function addStr(a, b) {
     carry = 0,
     out = [];
   while (i >= 0 || j >= 0 || carry) {
-    const da = i >= 0 ? a.charCodeAt(i) - 48 : 0;
-    const db = j >= 0 ? b.charCodeAt(j) - 48 : 0;
-    const s = da + db + carry;
+    const da = i >= 0 ? a.charCodeAt(i) - 48 : 0,
+      db = j >= 0 ? b.charCodeAt(j) - 48 : 0,
+      s = da + db + carry;
     out.push(String.fromCharCode(48 + (s % 10)));
     carry = (s / 10) | 0;
     i--;
@@ -24,14 +24,14 @@ function addStr(a, b) {
 }
 
 function squareRootConvergents(n) {
-  let p = '3',
-    q = '2',
-    count = 0;
+  let count = 0,
+    p = '3',
+    q = '2';
   for (let k = 1; k <= n; k++) {
     if (p.length > q.length) count++;
-    const twoQ = addStr(q, q);
-    const nextP = addStr(p, twoQ);
-    const nextQ = addStr(p, q);
+    const twoQ = addStr(q, q),
+      nextP = addStr(p, twoQ),
+      nextQ = addStr(p, q);
     p = nextP;
     q = nextQ;
   }

@@ -10,10 +10,10 @@ Return the values in the order they first appear in the input arrays.
 */
 
 function difference(arr1, arr2) {
-  const set1 = new Set(arr1);
-  const set2 = new Set(arr2);
-  const result = [];
-  for (let x of arr1) if (!set2.has(x) && !result.includes(x)) result.push(x);
-  for (let y of arr2) if (!set1.has(y) && !result.includes(y)) result.push(y);
+  const set1 = new Set(arr1),
+    set2 = new Set(arr2),
+    result = [];
+  for (const x of arr1) if (!set2.has(x) && !result.includes(x)) result.push(x);
+  for (const y of arr2) if (!set1.has(y) && !result.includes(y)) result.push(y);
   return result;
 }

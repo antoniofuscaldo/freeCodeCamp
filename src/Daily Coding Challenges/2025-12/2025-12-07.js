@@ -12,8 +12,8 @@ For example, given "yes yes yes please", return "yes(3) please".
 
 function compressString(sentence) {
   if (!sentence) return '';
-  const words = sentence.split(' ');
-  const result = [];
+  const words = sentence.split(' '),
+    result = [];
   let count = 1;
   for (let i = 1; i <= words.length; i++) {
     if (words[i] === words[i - 1]) {

@@ -41,7 +41,7 @@ function countLychrelNumbers(num) {
   function isLychrel(n) {
     let x = BigInt(n);
     for (let i = 0; i < 50; i++) {
-      x = x + reverseBigInt(x);
+      x += reverseBigInt(x);
       if (isPalindromeStr(x.toString())) return false;
     }
     return true;

@@ -13,7 +13,7 @@ Considering natural numbers of the form,  ab
 function multiplyDigits(num, factor) {
   let carry = 0;
   for (let i = 0; i < num.length; i++) {
-    let prod = num[i] * factor + carry;
+    const prod = num[i] * factor + carry;
     num[i] = prod % 10;
     carry = Math.floor(prod / 10);
   }
@@ -40,8 +40,8 @@ function powerfulDigitSum(n) {
   let maxSum = 0;
   for (let a = 1; a < n; a++) {
     for (let b = 1; b < n; b++) {
-      let digits = powerDigits(a, b);
-      let sum = digitSum(digits);
+      const digits = powerDigits(a, b),
+        sum = digitSum(digits);
       if (sum > maxSum) maxSum = sum;
     }
   }

@@ -54,12 +54,11 @@ function pokerHands(arr) {
   }
 
   function evaluate(cards) {
-    const ranks = cards.map((c) => c[0]).sort((a, b) => b - a);
-    const suits = cards.map((c) => c[1]);
-    const isFlush = suits.every((s) => s === suits[0]);
-
-    // Rank counts
-    const count = new Map();
+    const ranks = cards.map((c) => c[0]).sort((a, b) => b - a),
+      suits = cards.map((c) => c[1]),
+      isFlush = suits.every((s) => s === suits[0]),
+      // Rank counts
+      count = new Map();
     for (const r of ranks) count.set(r, (count.get(r) || 0) + 1);
 
     // Ace-low straight check
@@ -105,25 +104,25 @@ function pokerHands(arr) {
       return [4, straightHigh];
     }
     if (groups[0][1] === 3) {
-      const triple = groups[0][0];
-      const kickers = groups
-        .slice(1)
-        .map((g) => g[0])
-        .sort((a, b) => b - a);
+      const triple = groups[0][0],
+        kickers = groups
+          .slice(1)
+          .map((g) => g[0])
+          .sort((a, b) => b - a);
       return [3, triple, ...kickers];
     }
     if (groups[0][1] === 2 && groups[1][1] === 2) {
-      const hiPair = Math.max(groups[0][0], groups[1][0]);
-      const loPair = Math.min(groups[0][0], groups[1][0]);
-      const kick = groups[2][0];
+      const hiPair = Math.max(groups[0][0], groups[1][0]),
+        loPair = Math.min(groups[0][0], groups[1][0]),
+        kick = groups[2][0];
       return [2, hiPair, loPair, kick];
     }
     if (groups[0][1] === 2) {
-      const pair = groups[0][0];
-      const kickers = groups
-        .slice(1)
-        .map((g) => g[0])
-        .sort((a, b) => b - a);
+      const pair = groups[0][0],
+        kickers = groups
+          .slice(1)
+          .map((g) => g[0])
+          .sort((a, b) => b - a);
       return [1, pair, ...kickers];
     }
     return [0, ...ranks];
@@ -140,11 +139,11 @@ function pokerHands(arr) {
 
   let wins = 0;
   for (const line of arr) {
-    const parts = line.trim().split(/\s+/);
-    const p1 = parse(parts.slice(0, 5));
-    const p2 = parse(parts.slice(5));
-    const e1 = evaluate(p1);
-    const e2 = evaluate(p2);
+    const parts = line.trim().split(/\s+/),
+      p1 = parse(parts.slice(0, 5)),
+      p2 = parse(parts.slice(5)),
+      e1 = evaluate(p1),
+      e2 = evaluate(p2);
     if (cmp(e1, e2) > 0) wins++;
   }
   return wins;
