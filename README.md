@@ -1,25 +1,8 @@
 <div >
-  <img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="140">
-  <img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="140">
+  <img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
+  <img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
   <h1><a href="https://www.freecodecamp.org/antoniofuscaldo">freeCodeCamp.org</a></h1>
-  <p><strong>Curriculum certificato · Full Stack Developer</strong></p>
-  <p>
-    <a href="https://www.freecodecamp.org/antoniofuscaldo">
-      <img src="https://img.shields.io/badge/Profile-antoniofuscaldo-1b1b32?logo=freecodecamp&logoColor=white&labelColor=0a0a23&color=1b1b32" alt="Profilo freeCodeCamp badge">
-    </a>
-    <a href="#certificazioni">
-      <img src="https://img.shields.io/badge/Certificazioni-Verificabili-0a0a23?labelColor=1b1b32&color=0a0a23" alt="Certificazioni verificabili badge">
-    </a>
-  </p>
 </div>
-
----
-
-## Indice
-
-- [Certificazioni](#certificazioni)
-- [Avvertenza](#avvertenza)
-- [Disclaimer](#disclaimer)
 
 ---
 
