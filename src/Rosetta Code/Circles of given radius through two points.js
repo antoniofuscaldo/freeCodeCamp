@@ -28,23 +28,23 @@ Sample inputs:
 */
 
 function getCircles(p1, p2, r) {
-  const [x1, y1] = p1;
-  const [x2, y2] = p2;
+  const [x1, y1] = p1,
+    [x2, y2] = p2;
   if (r === 0) return 'Radius Zero';
   if (x1 === x2 && y1 === y2) {
     return r === 0 ? 'Radius Zero' : 'Coincident point. Infinite solutions';
   }
-  const dx = x2 - x1;
-  const dy = y2 - y1;
-  const q = Math.hypot(dx, dy);
+  const dx = x2 - x1,
+    dy = y2 - y1,
+    q = Math.hypot(dx, dy);
   if (q > 2 * r) return 'No intersection. Points further apart than circle diameter';
-  const mx = (x1 + x2) / 2;
-  const my = (y1 + y2) / 2;
+  const mx = (x1 + x2) / 2,
+    my = (y1 + y2) / 2;
   if (q === 2 * r) return [mx, my];
-  const d = Math.sqrt(r * r - (q / 2) * (q / 2));
-  const ox = -dy * (d / q);
-  const oy = dx * (d / q);
-  const c1 = [+(mx + ox).toFixed(4), +(my + oy).toFixed(4)];
-  const c2 = [+(mx - ox).toFixed(4), +(my - oy).toFixed(4)];
+  const d = Math.sqrt(r * r - (q / 2) * (q / 2)),
+    ox = -dy * (d / q),
+    oy = dx * (d / q),
+    c1 = [+(mx + ox).toFixed(4), +(my + oy).toFixed(4)],
+    c2 = [+(mx - ox).toFixed(4), +(my - oy).toFixed(4)];
   return [c1, c2];
 }
