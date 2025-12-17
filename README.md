@@ -1,4 +1,5 @@
-<div align="center">
+<div >
+  <img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="140">
   <img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="140">
   <h1><a href="https://www.freecodecamp.org/antoniofuscaldo">freeCodeCamp.org</a></h1>
   <p><strong>Curriculum certificato · Full Stack Developer</strong></p>
@@ -22,40 +23,42 @@
 
 ---
 
-## Certificazioni
+## 🟡 Certified Full Stack Developer Curriculum
 
 ### 🟢 Responsive Web Design (v9)
 
 <img src="img/certification/responsive-web-design-v9.png" alt="Certificazione Responsive Web Design v9" width="720">
-<p align="center"><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design-v9">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design-v9">Verifica questa certificazione</a></p>
+
+---
 
 ---
 
 ### 🟢 Legacy Responsive Web Design (v8)
 
 <img src="img/certification/responsive-web-design.png" alt="Certificazione Responsive Web Design v8 (legacy)" width="720">
-<p align="center"><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design">Verifica questa certificazione</a></p>
 
 ---
 
 ### 🟢 JavaScript Algorithms and Data Structures (v8)
 
 <img src="img/certification/javascript-algorithms-and-data-structures-v8.png" alt="Certificazione JavaScript Algorithms and Data Structures v8" width="720">
-<p align="center"><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-algorithms-and-data-structures-v8">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-algorithms-and-data-structures-v8">Verifica questa certificazione</a></p>
 
 ---
 
 ### 🟢 Front End Development Libraries
 
 <img src="img/certification/front-end-development-libraries.png" alt="Certificazione Front End Development Libraries" width="720">
-<p align="center"><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/front-end-development-libraries">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/front-end-development-libraries">Verifica questa certificazione</a></p>
 
 ---
 
 ### 🟢 Data Visualization
 
 <img src="img/certification/data-visualization.png" alt="Certificazione Data Visualization" width="720">
-<p align="center"><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/data-visualization">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/data-visualization">Verifica questa certificazione</a></p>
 
 ---
 
