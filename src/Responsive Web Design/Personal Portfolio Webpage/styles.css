@@ -71,7 +71,9 @@ nav ul li a:hover {
   border-radius: 5px;
   text-decoration: none;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 #welcome-section .button:hover {
@@ -105,7 +107,7 @@ nav ul li a:hover {
   background: #f4f4f9;
   margin: 1rem 0;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -177,7 +179,7 @@ footer {
     transform: translateX(-100%);
   }
   to {
-    translateX(0);
+    transform: translateX(0);
   }
 }
 

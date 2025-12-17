@@ -1,4 +1,4 @@
-<div >
+<div align="center">
   <img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
   <img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
   <h1><a href="https://www.freecodecamp.org/antoniofuscaldo">freeCodeCamp.org</a></h1>
