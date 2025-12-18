@@ -6,7 +6,7 @@
 
 ---
 
-## 🟡 Certified Full Stack Developer Curriculum
+## 🟡 Certified Full Stack Developer Curriculum <em>(in progress...)</em>
 
 ### 🟢 Responsive Web Design (v9)
 
