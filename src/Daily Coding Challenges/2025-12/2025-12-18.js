@@ -17,8 +17,8 @@ For example, given [3, 3], return:
 */
 
 function createBoard(dimensions) {
-  const [rows, cols] = dimensions;
-  const board = [];
+  const [rows, cols] = dimensions,
+    board = [];
 
   for (let r = 0; r < rows; r++) {
     const row = [];

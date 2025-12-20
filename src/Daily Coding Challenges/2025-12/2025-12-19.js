@@ -13,8 +13,8 @@ Add all the indices together to get a return value of 9.
 */
 
 function pairwise(arr, target) {
-  let sum = 0;
-  let used = new Set();
+  let sum = 0,
+    used = new Set();
 
   for (let i = 0; i < arr.length; i++) {
     if (used.has(i)) continue;
