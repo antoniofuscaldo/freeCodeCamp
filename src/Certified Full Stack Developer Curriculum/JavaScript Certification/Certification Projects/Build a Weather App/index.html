@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <div class="controls">
+        <select id="city-select" aria-label="City Selection">
+          <option value=""></option>
+          <option value="new york">New York</option>
+          <option value="los angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="london">London</option>
+        </select>
+        <button id="get-weather-btn">Get Weather</button>
+      </div>
+
+      <div class="weather-info hidden">
+        <div class="header">
+          <h2 id="location"></h2>
+          <img id="weather-icon" src="" alt="Weather Icon" />
+        </div>
+
+        <div class="main-stats">
+          <div class="stat-box">
+            <span class="label">Temperature</span>
+            <p id="main-temperature"></p>
+          </div>
+          <div class="stat-box">
+            <span class="label">Condition</span>
+            <p id="weather-main"></p>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="label">Feels Like</span>
+            <p id="feels-like"></p>
+          </div>
+          <div class="detail-item">
+            <span class="label">Humidity</span>
+            <p id="humidity"></p>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind Speed</span>
+            <p id="wind"></p>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind Gust</span>
+            <p id="wind-gust"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
