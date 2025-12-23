@@ -1,16 +1,15 @@
-const weatherIcon = document.getElementById('weather-icon');
-const mainTemperature = document.getElementById('main-temperature');
-const feelsLike = document.getElementById('feels-like');
-const humidity = document.getElementById('humidity');
-const wind = document.getElementById('wind');
-const windGust = document.getElementById('wind-gust');
-const weatherMain = document.getElementById('weather-main');
-const locationElement = document.getElementById('location');
-const citySelect = document.getElementById('city-select');
-const getWeatherBtn = document.getElementById('get-weather-btn');
-const weatherInfo = document.querySelector('.weather-info');
-
-const API_BASE_URL = 'https://weather-proxy.freecodecamp.rocks/api/city/';
+const weatherIcon = document.getElementById('weather-icon'),
+  mainTemperature = document.getElementById('main-temperature'),
+  feelsLike = document.getElementById('feels-like'),
+  humidity = document.getElementById('humidity'),
+  wind = document.getElementById('wind'),
+  windGust = document.getElementById('wind-gust'),
+  weatherMain = document.getElementById('weather-main'),
+  locationElement = document.getElementById('location'),
+  citySelect = document.getElementById('city-select'),
+  getWeatherBtn = document.getElementById('get-weather-btn'),
+  weatherInfo = document.querySelector('.weather-info'),
+  API_BASE_URL = 'https://weather-proxy.freecodecamp.rocks/api/city/';
 
 async function getWeather(city) {
   try {
