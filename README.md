@@ -15,6 +15,13 @@
 
 ---
 
+## 🟢 A2 English for Developers Certification
+
+<img src="img/certification/a2-english-for-developers.png" alt="Certificazione A2 English for Developers" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/a2-english-for-developers">Verifica questa certificazione</a></p>
+
+---
+
 ---
 
 ### 🟢 Legacy Responsive Web Design (v8)

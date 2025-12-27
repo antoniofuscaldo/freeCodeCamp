@@ -18,10 +18,9 @@
  */
 
 function parseImage(markdown) {
-  const match = markdown.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
-
-  const alt = match[1];
-  const src = match[2];
+  const match = markdown.match(/^!\[([^\]]*)\]\(([^)]+)\)$/),
+    alt = match[1],
+    src = match[2];
 
   return `<img src="${src}" alt="${alt}">`;
 }
