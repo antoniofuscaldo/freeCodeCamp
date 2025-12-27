@@ -1,5 +1,5 @@
 /**
- *
+
  Markdown Image Parser
 
  Given a string of an image in Markdown, return the equivalent HTML string.
