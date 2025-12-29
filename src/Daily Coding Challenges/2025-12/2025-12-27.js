@@ -29,7 +29,6 @@ function rockPaperScissors(player1, player2) {
 
   if (wins[player1] === player2) {
     return 'Player 1 wins';
-  } else {
-    return 'Player 2 wins';
   }
+  return 'Player 2 wins';
 }
