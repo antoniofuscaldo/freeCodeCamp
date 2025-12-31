@@ -38,14 +38,14 @@
 
 ---
 
-### 🟢 Front End Development Libraries
+### 🟢 Front End Development Libraries (v8)
 
 <img src="img/certification/front-end-development-libraries.png" alt="Certificazione Front End Development Libraries" width="720">
 <p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/front-end-development-libraries">Verifica questa certificazione</a></p>
 
 ---
 
-### 🟢 Data Visualization
+### 🟢 Data Visualization (v8)
 
 <img src="img/certification/data-visualization.png" alt="Certificazione Data Visualization" width="720">
 <p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/data-visualization">Verifica questa certificazione</a></p>
