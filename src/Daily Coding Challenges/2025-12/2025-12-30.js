@@ -10,17 +10,15 @@
  */
 
 function stringSum(str) {
-  let sum = 0;
-  let current = '';
+  let current = '',
+    sum = 0;
 
-  for (let char of str) {
+  for (const char of str) {
     if (char >= '0' && char <= '9') {
       current += char;
-    } else {
-      if (current !== '') {
-        sum += Number(current);
-        current = '';
-      }
+    } else if (current !== '') {
+      sum += Number(current);
+      current = '';
     }
   }
 
