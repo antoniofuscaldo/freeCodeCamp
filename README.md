@@ -15,6 +15,20 @@
 
 ---
 
+### 🟢 Javascript (v9)
+
+<img src="img/certification/javascript-v9.png" alt="Certificazione Javascript v9" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-v9">Verifica questa certificazione</a></p>
+
+---
+
+### 🟢 B1 English for Developers Certification
+
+<img src="img/certification/b1-english-for-developers.png" alt="Certificazione B1 English for Developers" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/b1-english-for-developers">Verifica questa certificazione</a></p>
+
+---
+
 ### 🟢 A2 English for Developers Certification
 
 <img src="img/certification/a2-english-for-developers.png" alt="Certificazione A2 English for Developers" width="720">
