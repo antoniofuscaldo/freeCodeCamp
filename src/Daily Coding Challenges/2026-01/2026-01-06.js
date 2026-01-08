@@ -1,6 +1,6 @@
 /** 
 
-vOwElcAsE
+VOwElcAsE
 
 Given a string, return a new string where all vowels are converted to uppercase and all other alphabetical characters are converted to lowercase.
 

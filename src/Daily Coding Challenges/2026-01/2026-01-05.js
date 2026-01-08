@@ -14,12 +14,10 @@ Return an array with the following values for each tire:
  */
 
 function tireStatus(pressuresPSI, rangeBar) {
-  const conversionFactor = 14.5038;
-
-  const minPressurePSI = rangeBar[0] * conversionFactor;
-  const maxPressurePSI = rangeBar[1] * conversionFactor;
-
-  let statuses = [];
+  const conversionFactor = 14.5038,
+    minPressurePSI = rangeBar[0] * conversionFactor,
+    maxPressurePSI = rangeBar[1] * conversionFactor,
+    statuses = [];
 
   for (let i = 0; i < pressuresPSI.length; i++) {
     if (pressuresPSI[i] < minPressurePSI) {
