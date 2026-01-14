@@ -8,9 +8,9 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix --quiet",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint:fix": "eslint . --fix --quiet",
     "prepare": "husky"
   },
   "lint-staged": {
