@@ -24,13 +24,13 @@ function isCircularPrime(n) {
     return true;
   }
 
-  const s = String(n);
-  const len = s.length;
+  const s = String(n),
+    len = s.length;
   let rot = s;
   for (let i = 0; i < len; i++) {
     const value = parseInt(rot, 10);
     if (!isPrime(value)) return false;
-    // rotate left by one digit
+    // Rotate left by one digit
     rot = rot.slice(1) + rot[0];
   }
 

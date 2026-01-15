@@ -13,7 +13,7 @@ Note: The console may not display HTML tags in strings when logging messages —
 */
 
 function parseLink(markdown) {
-  const text = markdown.slice(markdown.indexOf('[') + 1, markdown.indexOf(']'));
-  const url = markdown.slice(markdown.indexOf('(') + 1, markdown.indexOf(')'));
+  const text = markdown.slice(markdown.indexOf('[') + 1, markdown.indexOf(']')),
+    url = markdown.slice(markdown.indexOf('(') + 1, markdown.indexOf(')'));
   return `<a href="${url}">${text}</a>`;
 }

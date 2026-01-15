@@ -20,12 +20,11 @@ Note: The console may not display HTML tags in strings when logging messages. Ch
 */
 
 function parseUnorderedList(markdown) {
-  const lines = markdown.split('\n');
-
-  const items = lines.map((line) => {
-    const text = line.replace(/^-+\s+/, '');
-    return `<li>${text}</li>`;
-  });
+  const lines = markdown.split('\n'),
+    items = lines.map((line) => {
+      const text = line.replace(/^-+\s+/, '');
+      return `<li>${text}</li>`;
+    });
 
   return `<ul>${items.join('')}</ul>`;
 }
