@@ -11,6 +11,9 @@
     "lint:fix": "eslint . --fix --quiet",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "clean:dist": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -21,6 +24,9 @@
     "**/*.{css,html}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "rimraf": "^6.1.2"
   },
   "devDependencies": {
     "eslint": "^9.39.2",
