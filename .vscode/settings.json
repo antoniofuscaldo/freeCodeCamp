@@ -1,4 +1,37 @@
 {
   "docwriter.style": "Auto-detect",
-  "docwriter.progress.trackFunctions": false
+  "docwriter.progress.trackFunctions": false,
+
+  // Editor Settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // Files Settings
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Prettier Settings
+  "prettier.enable": true,
+  "prettier.requireConfig": true,
+
+  // ESLint Settings
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact"],
+
+  // Python Settings
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+
+  // Markdown Settings
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
 }
