@@ -1,3 +1,4 @@
+/* global $ */
 window.onload = go;
 function go() {
   $('#new-quote').click(() => {

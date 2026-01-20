@@ -60,7 +60,9 @@ function solve24(numStr) {
             try {
               const val = eval(expr);
               if (Math.abs(val - 24) < 1e-6) return expr;
-            } catch {}
+            } catch {
+              // Ignore errors (e.g., division by zero)
+            }
           }
         }
       }

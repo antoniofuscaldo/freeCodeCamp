@@ -20,22 +20,22 @@ This means a knight can move to up to eight possible positions, but fewer when n
 */
 
 function knightMoves(position) {
-  const col = position.charCodeAt(0) - 64;
-  const row = Number(position[1]);
-  const moves = [
-    [1, 2],
-    [2, 1],
-    [-1, 2],
-    [-2, 1],
-    [1, -2],
-    [2, -1],
-    [-1, -2],
-    [-2, -1],
-  ];
+  const col = position.charCodeAt(0) - 64,
+    row = Number(position[1]),
+    moves = [
+      [1, 2],
+      [2, 1],
+      [-1, 2],
+      [-2, 1],
+      [1, -2],
+      [2, -1],
+      [-1, -2],
+      [-2, -1],
+    ];
   let count = 0;
   for (const m of moves) {
-    const c = col + m[0];
-    const r = row + m[1];
+    const c = col + m[0],
+      r = row + m[1];
     if (c >= 1 && c <= 8 && r >= 1 && r <= 8) count++;
   }
   return count;

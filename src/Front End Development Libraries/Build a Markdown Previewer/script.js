@@ -1,3 +1,4 @@
+/* global marked */
 const defaultMarkdown = `# Heading (H1)
 ## Sub Heading (H2)
 [Visit freeCodeCamp](https://www.freecodecamp.org)

@@ -28,7 +28,7 @@ const Map = function () {
     return this.collection[key];
   };
   this.has = function (key) {
-    return this.collection.hasOwnProperty(key);
+    return Object.hasOwn(this.collection, key);
   };
   this.values = function () {
     return Object.values(this.collection);
