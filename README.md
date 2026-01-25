@@ -1,38 +1,38 @@
+<!-- markdownlint-disable MD033 MD041 -->
+
 <div align="center">
-  <img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
-  <img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="auto" height="40">
-  <h1><a href="https://www.freecodecamp.org/antoniofuscaldo">freeCodeCamp.org</a></h1>
+  <a href="https://www.freecodecamp.org/antoniofuscaldo"><img src="img/fcc_primary_large.png" alt="freeCodeCamp logo" width="auto" height="40"><img src="img/fcc_secondary_large.png" alt="freeCodeCamp logo" width="auto" height="40"></a>
 </div>
 
----
+## <a href="https://www.freecodecamp.org/antoniofuscaldo"><p>📜 freeCodeCamp Certifications - Antonio Fuscaldo</p></a>
 
 ## 🟡 Certified Full Stack Developer Curriculum <em>(in progress...)</em>
 
 ### 🟢 Responsive Web Design (v9)
 
-<img src="img/certification/responsive-web-design-v9.png" alt="Certificazione Responsive Web Design v9" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design-v9">Verifica questa certificazione</a></p>
+<img src="img/certification/responsive-web-design-v9.png" alt="Certificazione Responsive Web Design (v9)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design-v9">Verify this certification</a></p>
 
 ---
 
 ### 🟢 Javascript (v9)
 
-<img src="img/certification/javascript-v9.png" alt="Certificazione Javascript v9" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-v9">Verifica questa certificazione</a></p>
+<img src="img/certification/javascript-v9.png" alt="Certificazione Javascript (v9)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-v9">Verify this certification</a></p>
 
 ---
 
 ### 🟢 B1 English for Developers Certification
 
 <img src="img/certification/b1-english-for-developers.png" alt="Certificazione B1 English for Developers" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/b1-english-for-developers">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/b1-english-for-developers">Verify this certification</a></p>
 
 ---
 
 ### 🟢 A2 English for Developers Certification
 
 <img src="img/certification/a2-english-for-developers.png" alt="Certificazione A2 English for Developers" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/a2-english-for-developers">Verifica questa certificazione</a></p>
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/a2-english-for-developers">Verify this certification</a></p>
 
 ---
 
@@ -40,29 +40,36 @@
 
 ### 🟢 Legacy Responsive Web Design (v8)
 
-<img src="img/certification/responsive-web-design.png" alt="Certificazione Responsive Web Design v8 (legacy)" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design">Verifica questa certificazione</a></p>
+<img src="img/certification/responsive-web-design.png" alt="Certificazione Legacy Responsive Web Design (v8)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/responsive-web-design">Verify this certification</a></p>
 
 ---
 
-### 🟢 JavaScript Algorithms and Data Structures (v8)
+### 🟢 Legacy JavaScript Algorithms and Data Structures (v8)
 
-<img src="img/certification/javascript-algorithms-and-data-structures-v8.png" alt="Certificazione JavaScript Algorithms and Data Structures v8" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-algorithms-and-data-structures-v8">Verifica questa certificazione</a></p>
+<img src="img/certification/javascript-algorithms-and-data-structures-v8.png" alt="Certificazione JavaScript Algorithms and Data Structures (v8)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-algorithms-and-data-structures-v8">Verify this certification</a></p>
 
 ---
 
 ### 🟢 Front End Development Libraries (v8)
 
-<img src="img/certification/front-end-development-libraries.png" alt="Certificazione Front End Development Libraries" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/front-end-development-libraries">Verifica questa certificazione</a></p>
+<img src="img/certification/front-end-development-libraries.png" alt="Certificazione Front End Development Libraries (v8)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/front-end-development-libraries">Verify this certification</a></p>
 
 ---
 
 ### 🟢 Data Visualization (v8)
 
-<img src="img/certification/data-visualization.png" alt="Certificazione Data Visualization" width="720">
-<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/data-visualization">Verifica questa certificazione</a></p>
+<img src="img/certification/data-visualization.png" alt="Certificazione Data Visualization (v8)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/data-visualization">Verify this certification</a></p>
+
+---
+
+### 🟢 Legacy Javascript Algorithms and Data Structures V7
+
+<img src="img/certification/javascript-algorithms-and-data-structures.png" alt="Certificazione Legacy Javascript Algorithms and Data Structures V7" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/javascript-algorithms-and-data-structures">Verify this certification</a></p>
 
 ---
 
