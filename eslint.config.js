@@ -27,9 +27,6 @@ export default [
   },
   {
     files: ['src/Front End Development Libraries/**/*.js'],
-    plugins: {
-      react,
-    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -37,6 +34,10 @@ export default [
         },
       },
     },
+    plugins: {
+      react,
+    },
+
     rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
