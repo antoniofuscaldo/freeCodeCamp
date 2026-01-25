@@ -22,6 +22,13 @@
 
 ---
 
+### 🟢 Python (v9)
+
+<img src="img/certification/python-v9.png" alt="Certificazione Python (v9)" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/python-v9">Verify this certification</a></p>
+
+---
+
 ### 🟢 B1 English for Developers Certification
 
 <img src="img/certification/b1-english-for-developers.png" alt="Certificazione B1 English for Developers" width="720">
