@@ -73,6 +73,13 @@
 
 ---
 
+### 🟢 Quality Assurance
+
+<img src="img/certification/quality-assurance-v7.png" alt="Certificazione Quality Assurance" width="720">
+<p><a href="https://www.freecodecamp.org/certification/antoniofuscaldo/quality-assurance-v7">Verify this certification</a></p>
+
+---
+
 ## Avvertenza
 
 <details>
