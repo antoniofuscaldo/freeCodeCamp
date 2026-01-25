@@ -2,7 +2,7 @@
   "name": "fcc-learn-npm-package-json",
   "author": "Antonio Fuscaldo",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.22.0"
   },
   "main": "server.js",
   "scripts": {
