@@ -1,0 +1,24 @@
+/* Style for odd elements */
+.odd {
+  background-color: yellow;
+}
+
+/* Style for the second element */
+#second {
+  color: blue;
+  font-size: 36px;
+}
+
+/* Style for the third element */
+.third {
+  font-size: 24px;
+}
+
+/* Style for the fourth element */
+#fourth {
+  background-color: red;
+  font-weight: bold;
+}
+.fourth {
+  font-size: 24px;
+}

@@ -1,0 +1,7 @@
+/* Styles for p elements that are descendants of div.container */
+.container p {
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+/* Chained selector for avatar and proportioned classes */
+.avatar.proportioned {
+  width: 300px;
+  height: auto;
+}
+
+/* Chained selector for avatar and distorted classes */
+.avatar.distorted {
+  width: 200px;
+  height: 400px; /* Twice the width */
+}
