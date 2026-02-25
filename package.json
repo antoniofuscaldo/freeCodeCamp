@@ -7,13 +7,13 @@
     "node": ">=22"
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix --quiet",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "clean:all": "rimraf dist node_modules",
     "clean:dist": "rimraf dist",
     "clean:node_modules": "rimraf node_modules",
-    "clean:all": "rimraf dist node_modules",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --quiet",
     "prepare": "husky"
   },
   "lint-staged": {
