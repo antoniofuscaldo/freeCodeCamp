@@ -28,14 +28,12 @@ with a shift of 1, move all the numbers to the right one:
 */
 
 function shiftMatrix(matrix, shift) {
-  const rows = matrix.length;
-  const cols = matrix[0].length;
-  const n = rows * cols;
-
-  const flat = matrix.flat();
-  const out = new Array(n);
-
-  const s = ((shift % n) + n) % n;
+  const rows = matrix.length,
+    cols = matrix[0].length,
+    n = rows * cols,
+    flat = matrix.flat(),
+    out = new Array(n),
+    s = ((shift % n) + n) % n;
 
   for (let i = 0; i < n; i++) {
     out[(i + s) % n] = flat[i];

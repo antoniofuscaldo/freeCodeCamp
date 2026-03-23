@@ -1,11 +1,11 @@
 // Global variables
-let humanScore = 0;
-let computerScore = 0;
+let computerScore = 0,
+  humanScore = 0;
 
 // Function to get computer's choice
 function getComputerChoice() {
-  const choices = ['rock', 'paper', 'scissors'];
-  const randomIndex = Math.floor(Math.random() * choices.length);
+  const choices = ['rock', 'paper', 'scissors'],
+    randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
 
@@ -32,10 +32,9 @@ function playRound(humanChoice, computerChoice) {
   ) {
     humanScore++;
     return `You win! ${humanChoice} beats ${computerChoice}`;
-  } else {
-    computerScore++;
-    return `You lose! ${computerChoice} beats ${humanChoice}`;
   }
+  computerScore++;
+  return `You lose! ${computerChoice} beats ${humanChoice}`;
 }
 
 // Function to play the game
@@ -44,8 +43,8 @@ function playGame() {
   computerScore = 0;
 
   for (let i = 0; i < 3; i++) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+    const humanChoice = getHumanChoice(),
+      computerChoice = getComputerChoice();
     console.log(playRound(humanChoice, computerChoice));
   }
 
@@ -53,7 +52,6 @@ function playGame() {
     return 'You win the game!';
   } else if (computerScore > humanScore) {
     return 'You lose the game!';
-  } else {
-    return 'The game is a tie!';
   }
+  return 'The game is a tie!';
 }

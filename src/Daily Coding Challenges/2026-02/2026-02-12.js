@@ -9,8 +9,8 @@ The first element of each array corresponds to lap 1, the second to lap 2, and s
 */
 
 function largestDifference(skater1, skater2) {
-  let max = -1;
-  let lap = 1;
+  let max = -1,
+    lap = 1;
 
   for (let i = 0; i < skater1.length; i++) {
     const diff = Math.abs(skater1[i] - skater2[i]);

@@ -28,8 +28,8 @@ function smallestGap(s) {
 
     const arr = pos[c];
     if (arr.length > 1) {
-      const prev = arr[arr.length - 2];
-      const g = i - prev - 1;
+      const prev = arr[arr.length - 2],
+        g = i - prev - 1;
       if (g < best) {
         best = g;
         out = s.slice(prev + 1, i);

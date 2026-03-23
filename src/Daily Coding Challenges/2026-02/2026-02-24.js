@@ -12,8 +12,8 @@ Include both the start and end dates when counting.
 */
 
 function countBusinessDays(start, end) {
-  const s = new Date(start);
-  const e = new Date(end);
+  const s = new Date(start),
+    e = new Date(end);
   let count = 0;
 
   for (let d = new Date(s); d <= e; d.setDate(d.getDate() + 1)) {

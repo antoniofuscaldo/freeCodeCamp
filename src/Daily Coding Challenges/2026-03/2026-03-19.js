@@ -20,8 +20,8 @@ Return:
 */
 
 function invertMatrix(matrix) {
-  const a = matrix[0][0];
-  const b = matrix[0][1] === a ? matrix[1][0] : matrix[0][1];
+  const a = matrix[0][0],
+    b = matrix[0][1] === a ? matrix[1][0] : matrix[0][1];
 
   return matrix.map((row) => row.map((v) => (v === a ? b : a)));
 }

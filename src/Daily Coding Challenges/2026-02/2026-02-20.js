@@ -31,19 +31,18 @@ Valid second words:
  */
 
 function isValidTrick(trickName) {
-  const [a, b] = trickName.split(' ');
-
-  const first = ['Misty', 'Ghost', 'Thunder', 'Solar', 'Sky', 'Phantom', 'Frozen', 'Polar'];
-  const second = [
-    'Twister',
-    'Icequake',
-    'Avalanche',
-    'Vortex',
-    'Snowstorm',
-    'Frostbite',
-    'Blizzard',
-    'Shadow',
-  ];
+  const [a, b] = trickName.split(' '),
+    first = ['Misty', 'Ghost', 'Thunder', 'Solar', 'Sky', 'Phantom', 'Frozen', 'Polar'],
+    second = [
+      'Twister',
+      'Icequake',
+      'Avalanche',
+      'Vortex',
+      'Snowstorm',
+      'Frostbite',
+      'Blizzard',
+      'Shadow',
+    ];
 
   return first.includes(a) && second.includes(b);
 }

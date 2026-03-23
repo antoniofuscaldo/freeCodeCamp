@@ -40,21 +40,19 @@ Return "R: 2". The two red stones in ring 1 are tied for the closest and are the
 
 function scoreCurling(house) {
   const dist = [
-    [2, 2],
-    [1, 2],
-    [2, 1],
-    [2, 3],
-    [3, 2],
-  ];
-
-  const getRing = (r, c) => {
-    if (r === 2 && c === 2) return 0;
-    if (Math.abs(r - 2) <= 1 && Math.abs(c - 2) <= 1) return 1;
-    return 2;
-  };
-
-  let reds = [];
-  let yellows = [];
+      [2, 2],
+      [1, 2],
+      [2, 1],
+      [2, 3],
+      [3, 2],
+    ],
+    getRing = (r, c) => {
+      if (r === 2 && c === 2) return 0;
+      if (Math.abs(r - 2) <= 1 && Math.abs(c - 2) <= 1) return 1;
+      return 2;
+    },
+    reds = [],
+    yellows = [];
 
   for (let r = 0; r < 5; r++) {
     for (let c = 0; c < 5; c++) {
@@ -66,16 +64,15 @@ function scoreCurling(house) {
 
   if (!reds.length && !yellows.length) return 'No points awarded';
 
-  const rMin = reds.length ? Math.min(...reds) : Infinity;
-  const yMin = yellows.length ? Math.min(...yellows) : Infinity;
+  const rMin = reds.length ? Math.min(...reds) : Infinity,
+    yMin = yellows.length ? Math.min(...yellows) : Infinity;
 
   if (rMin === yMin) return 'No points awarded';
 
-  const winner = rMin < yMin ? 'R' : 'Y';
-  const loserMin = winner === 'R' ? yMin : rMin;
-  const arr = winner === 'R' ? reds : yellows;
-
-  const pts = arr.filter((x) => x < loserMin).length;
+  const winner = rMin < yMin ? 'R' : 'Y',
+    loserMin = winner === 'R' ? yMin : rMin,
+    arr = winner === 'R' ? reds : yellows,
+    pts = arr.filter((x) => x < loserMin).length;
 
   return pts ? `${winner}: ${pts}` : 'No points awarded';
 }

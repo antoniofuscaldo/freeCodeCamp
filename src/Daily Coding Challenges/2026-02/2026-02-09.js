@@ -23,8 +23,8 @@ Otherwise, return "No Medal"
 */
 
 function skiJumpMedal(distancePoints, stylePoints, windComp, kPointBonus) {
-  const score = distancePoints + stylePoints + windComp + kPointBonus;
-  const others = [165.5, 172.0, 158.0, 180.0, 169.5, 175.0, 162.0, 170.0];
+  const score = distancePoints + stylePoints + windComp + kPointBonus,
+    others = [165.5, 172.0, 158.0, 180.0, 169.5, 175.0, 162.0, 170.0];
 
   let rank = 1;
   for (const s of others) if (s > score) rank++;

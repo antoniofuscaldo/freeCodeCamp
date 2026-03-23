@@ -10,8 +10,8 @@ A number is a perfect cube if there exists an integer (n) where n * n * n = numb
 */
 
 function countPerfectCubes(a, b) {
-  const lo = Math.min(a, b);
-  const hi = Math.max(a, b);
+  const lo = Math.min(a, b),
+    hi = Math.max(a, b);
   let c = 0;
 
   for (let n = Math.cbrt(lo) | 0; n * n * n <= hi; n++) {

@@ -21,14 +21,14 @@ For example, given "10:00", return "8ft west" because 10am is 2 hours from noon,
 */
 
 function getShadow(time) {
-  const [h, m] = time.split(':').map(Number);
-  const t = h + m / 60;
+  const [h, m] = time.split(':').map(Number),
+    t = h + m / 60;
 
   if (t < 6 || t >= 18 || t === 12) return 'No shadow';
 
-  const hours = Math.abs(t - 12);
-  const length = hours ** 3;
-  const dir = t < 12 ? 'west' : 'east';
+  const hours = Math.abs(t - 12),
+    length = hours ** 3,
+    dir = t < 12 ? 'west' : 'east';
 
   return `${length}ft ${dir}`;
 }

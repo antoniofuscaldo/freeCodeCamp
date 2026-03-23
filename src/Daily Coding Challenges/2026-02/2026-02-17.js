@@ -21,10 +21,9 @@ Return "Eligible" if the team meets all the requirements, or "Not Eligible" if t
 */
 
 function checkEligibility(athleteWeights, sledWeight) {
-  const team = athleteWeights.length;
-
-  const min = team === 1 ? 162 : team === 2 ? 170 : 210;
-  const max = team === 1 ? 247 : team === 2 ? 390 : 630;
+  const team = athleteWeights.length,
+    min = team === 1 ? 162 : team === 2 ? 170 : 210,
+    max = team === 1 ? 247 : team === 2 ? 390 : 630;
 
   if (sledWeight < min) return 'Not Eligible';
 

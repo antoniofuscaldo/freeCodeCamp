@@ -24,9 +24,9 @@ For example, given "D4", return ["D5"], the only square your pawn can move to. G
 */
 
 function findPawnMoves(position) {
-  const col = position[0];
-  const row = Number(position[1]);
-  const moves = [];
+  const col = position[0],
+    row = Number(position[1]),
+    moves = [];
 
   if (row < 8) moves.push(col + (row + 1));
   if (row === 2) moves.push(col + 4);

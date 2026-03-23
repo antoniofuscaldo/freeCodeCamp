@@ -17,9 +17,9 @@ Find the total number of points for each team and return "The semi-final games w
 
 function getSemifinalMatchups(teams) {
   const scores = teams.map((t) => {
-    const [name, rec] = t.split(': ');
-    const [w, otw, otl] = rec.split('-').map(Number);
-    const pts = w * 3 + otw * 2 + otl;
+    const [name, rec] = t.split(': '),
+      [w, otw, otl] = rec.split('-').map(Number),
+      pts = w * 3 + otw * 2 + otl;
     return { name, pts };
   });
 

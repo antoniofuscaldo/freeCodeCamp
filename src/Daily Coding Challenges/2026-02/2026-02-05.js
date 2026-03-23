@@ -10,8 +10,8 @@ In the return value, include a leading zero for amounts less than one dollar and
 */
 
 function countChange(change) {
-  const total = change.reduce((a, b) => a + b, 0);
-  const dollars = Math.floor(total / 100);
-  const cents = total % 100;
-  return '$' + dollars + '.' + String(cents).padStart(2, '0');
+  const total = change.reduce((a, b) => a + b, 0),
+    dollars = Math.floor(total / 100),
+    cents = total % 100;
+  return `$${dollars}.${String(cents).padStart(2, '0')}`;
 }

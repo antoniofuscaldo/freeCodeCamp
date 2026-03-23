@@ -50,6 +50,6 @@ function countMedals(winners) {
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
   let out = 'Country,Gold,Silver,Bronze,Total';
-  for (const r of rows) out += '\n' + r.join(',');
+  for (const r of rows) out += `\n${r.join(',')}`;
   return out;
 }

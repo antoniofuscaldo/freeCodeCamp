@@ -14,5 +14,5 @@ The given window size and returned element size are strings in the format "width
 
 function getElementSize(w, vw, vh) {
   const [W, H] = w.split(' x ').map(Number);
-  return (W * parseFloat(vw)) / 100 + ' x ' + (H * parseFloat(vh)) / 100;
+  return `${(W * parseFloat(vw)) / 100} x ${(H * parseFloat(vh)) / 100}`;
 }

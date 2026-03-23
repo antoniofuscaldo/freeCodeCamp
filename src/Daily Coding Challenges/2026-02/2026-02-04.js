@@ -8,7 +8,6 @@ Given a string, return it as-is if it's 20 characters or shorter. If it's longer
 function truncateText(text) {
   if (text.length <= 20) {
     return text;
-  } else {
-    return text.slice(0, 17) + '...';
   }
+  return `${text.slice(0, 17)}...`;
 }

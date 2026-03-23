@@ -21,8 +21,8 @@ Return "The luger's fastest speed was X m/s on segment Y.". Where X is the faste
 
 function getFastestSpeed(times) {
   const dist = [320, 280, 350, 300, 250];
-  let best = 0;
-  let seg = 1;
+  let best = 0,
+    seg = 1;
 
   for (let i = 0; i < 5; i++) {
     const s = dist[i] / times[i];

@@ -12,5 +12,5 @@ Return the scaled dimensions in the same "WxH" format.
 
 function scaleImage(size, scale) {
   const [w, h] = size.split('x').map(Number);
-  return w * scale + 'x' + h * scale;
+  return `${w * scale}x${h * scale}`;
 }

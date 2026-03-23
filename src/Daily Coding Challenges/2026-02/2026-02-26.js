@@ -12,16 +12,16 @@ Return "The string has X letters and Y numbers.", where "X" is the count of lett
 */
 
 function countLettersAndNumbers(str) {
-  let letters = 0;
-  let numbers = 0;
+  let letters = 0,
+    numbers = 0;
 
   for (const c of str) {
     if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) letters++;
     else if (c >= '0' && c <= '9') numbers++;
   }
 
-  const l = letters === 1 ? '1 letter' : `${letters} letters`;
-  const n = numbers === 1 ? '1 number' : `${numbers} numbers`;
+  const l = letters === 1 ? '1 letter' : `${letters} letters`,
+    n = numbers === 1 ? '1 number' : `${numbers} numbers`;
 
   return `The string has ${l} and ${n}.`;
 }

@@ -26,22 +26,19 @@ Both letter and Rh rule must pass for a donor to be able to donate to the recipi
 
 function canDonate(donor, recipient) {
   const parse = (t) => {
-    if (t.startsWith('AB')) return ['AB', t[2]];
-    if (t.startsWith('A')) return ['A', t[1]];
-    if (t.startsWith('B')) return ['B', t[1]];
-    return ['O', t[1]];
-  };
-
-  const [dL, dR] = parse(donor);
-  const [rL, rR] = parse(recipient);
-
-  const letterOK =
-    dL === 'O' ||
-    (dL === 'A' && (rL === 'A' || rL === 'AB')) ||
-    (dL === 'B' && (rL === 'B' || rL === 'AB')) ||
-    (dL === 'AB' && rL === 'AB');
-
-  const rhOK = dR === '-' || (dR === '+' && rR === '+');
+      if (t.startsWith('AB')) return ['AB', t[2]];
+      if (t.startsWith('A')) return ['A', t[1]];
+      if (t.startsWith('B')) return ['B', t[1]];
+      return ['O', t[1]];
+    },
+    [dL, dR] = parse(donor),
+    [rL, rR] = parse(recipient),
+    letterOK =
+      dL === 'O' ||
+      (dL === 'A' && (rL === 'A' || rL === 'AB')) ||
+      (dL === 'B' && (rL === 'B' || rL === 'AB')) ||
+      (dL === 'AB' && rL === 'AB'),
+    rhOK = dR === '-' || (dR === '+' && rR === '+');
 
   return letterOK && rhOK;
 }

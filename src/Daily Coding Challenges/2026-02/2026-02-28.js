@@ -14,8 +14,8 @@ function addPunctuation(sentences) {
   let out = '';
 
   for (let i = 0; i < sentences.length; i++) {
-    const c = sentences[i];
-    const next = sentences[i + 1];
+    const c = sentences[i],
+      next = sentences[i + 1];
 
     if (c === ' ' && next && next >= 'A' && next <= 'Z') {
       out += '. ';

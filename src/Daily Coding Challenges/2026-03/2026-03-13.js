@@ -18,17 +18,16 @@ Return the total cost in the format "$cost", "$5" for example.
 */
 
 function calculateParkingFee(parkTime, pickupTime) {
-  const [ph, pm] = parkTime.split(':').map(Number);
-  const [qh, qm] = pickupTime.split(':').map(Number);
-
-  let start = ph * 60 + pm;
+  const [ph, pm] = parkTime.split(':').map(Number),
+    [qh, qm] = pickupTime.split(':').map(Number),
+    start = ph * 60 + pm;
   let end = qh * 60 + qm;
   const overnight = end < start;
 
   if (overnight) end += 1440;
 
-  const minutes = end - start;
-  const hours = Math.ceil(minutes / 60);
+  const minutes = end - start,
+    hours = Math.ceil(minutes / 60);
   let cost = hours * 3;
 
   if (overnight) cost += 10;

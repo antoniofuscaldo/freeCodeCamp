@@ -11,7 +11,6 @@ The name of the function should be addOrSubtract.
 function addOrSubtract(integer) {
   if (integer < 10) {
     return integer + 7;
-  } else {
-    return integer - 3;
   }
+  return integer - 3;
 }

@@ -9,8 +9,8 @@ Given a string containing only letters and numbers, return a new string where a 
 function separateLettersAndNumbers(str) {
   let r = str[0];
   for (let i = 1; i < str.length; i++) {
-    const a = isNaN(str[i - 1]);
-    const b = isNaN(str[i]);
+    const a = isNaN(str[i - 1]),
+      b = isNaN(str[i]);
     if (a !== b) r += '-';
     r += str[i];
   }
