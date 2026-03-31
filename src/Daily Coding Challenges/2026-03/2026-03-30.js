@@ -10,16 +10,14 @@ If the month nine months into the future doesn't contain the original day number
 */
 
 function getDueDate(dateStr) {
-  const [Y, M, D] = dateStr.split('-').map(Number);
-  const totalMonths = M + 8;
-  const newY = Y + Math.floor(totalMonths / 12);
-  const newM = (totalMonths % 12) + 1;
-
-  const lastDay = new Date(newY, newM, 0).getDate();
-  const day = Math.min(D, lastDay);
-
-  const mm = String(newM).padStart(2, '0');
-  const dd = String(day).padStart(2, '0');
+  const [Y, M, D] = dateStr.split('-').map(Number),
+    totalMonths = M + 8,
+    newY = Y + Math.floor(totalMonths / 12),
+    newM = (totalMonths % 12) + 1,
+    lastDay = new Date(newY, newM, 0).getDate(),
+    day = Math.min(D, lastDay),
+    mm = String(newM).padStart(2, '0'),
+    dd = String(day).padStart(2, '0');
 
   return `${newY}-${mm}-${dd}`;
 }

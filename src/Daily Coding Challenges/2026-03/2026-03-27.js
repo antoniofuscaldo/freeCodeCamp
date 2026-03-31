@@ -38,8 +38,8 @@ function truncateText(str) {
   for (const c of str) total += width(c);
   if (total <= 50) return str;
 
-  let cur = 0;
-  let out = '';
+  let cur = 0,
+    out = '';
 
   for (const c of str) {
     const w = width(c);
@@ -48,5 +48,5 @@ function truncateText(str) {
     out += c;
   }
 
-  return out + '...';
+  return `${out}...`;
 }

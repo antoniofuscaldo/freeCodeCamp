@@ -20,8 +20,8 @@ function alarmCheck(alarmTime, wakeTime) {
     return h * 60 + m;
   }
 
-  const a = toMinutes(alarmTime);
-  const w = toMinutes(wakeTime);
+  const a = toMinutes(alarmTime),
+    w = toMinutes(wakeTime);
 
   if (w < a) return 'early';
   if (w <= a + 10) return 'on time';
