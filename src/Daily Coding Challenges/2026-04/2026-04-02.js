@@ -24,8 +24,8 @@ function capitalizeFibonacci(str) {
 
   let out = '';
   for (let i = 0; i < str.length; i++) {
-    const c = str[i];
-    const isLetter = /[a-zA-Z]/.test(c);
+    const c = str[i],
+      isLetter = /[a-zA-Z]/.test(c);
 
     if (fib.has(i)) {
       out += isLetter ? c.toUpperCase() : c;

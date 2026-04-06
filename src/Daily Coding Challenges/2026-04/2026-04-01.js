@@ -16,8 +16,8 @@ function fixPrankNumber(arr) {
   const n = arr.length;
   if (n <= 2) return arr.slice();
 
-  const diffs = [];
-  const freq = {};
+  const diffs = [],
+    freq = {};
   for (let i = 1; i < n; i++) {
     const d = arr[i] - arr[i - 1];
     diffs.push(d);
