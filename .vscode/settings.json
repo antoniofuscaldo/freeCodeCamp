@@ -33,5 +33,8 @@
   // Markdown Settings
   "[markdown]": {
     "files.trimTrailingWhitespace": false
-  }
+  },
+  "cSpell.words": [
+    "Millwood"
+  ]
 }
