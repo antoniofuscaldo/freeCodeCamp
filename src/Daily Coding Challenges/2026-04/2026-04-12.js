@@ -19,10 +19,10 @@ Return [1, 2, 3, 6, 9, 8, 7, 4, 5].
 
 function spiralMatrix(matrix) {
   const res = [];
-  let top = 0;
-  let bottom = matrix.length - 1;
-  let left = 0;
-  let right = matrix[0].length - 1;
+  let top = 0,
+    bottom = matrix.length - 1,
+    left = 0,
+    right = matrix[0].length - 1;
 
   while (top <= bottom && left <= right) {
     for (let i = left; i <= right; i++) res.push(matrix[top][i]);

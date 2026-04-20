@@ -26,10 +26,10 @@ Return:
 */
 
 function rookBishopAttack(rook, bishop) {
-  const rC = rook.charCodeAt(0);
-  const bC = bishop.charCodeAt(0);
-  const rR = Number(rook[1]);
-  const bR = Number(bishop[1]);
+  const rC = rook.charCodeAt(0),
+    bC = bishop.charCodeAt(0),
+    rR = Number(rook[1]),
+    bR = Number(bishop[1]);
 
   if (rC === bC || rR === bR) return 'rook';
   if (Math.abs(rC - bC) === Math.abs(rR - bR)) return 'bishop';

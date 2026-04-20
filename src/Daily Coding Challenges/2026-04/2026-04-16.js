@@ -14,11 +14,11 @@ For example, given "3ab10c8", return 5. Add 3 and 10 to get 13 because there's a
 */
 
 function doMath(str) {
-  let result = null;
-  let cur = '';
-  let inNumber = false;
-  let havePrev = false;
-  let gap = 0;
+  let cur = '',
+    gap = 0,
+    havePrev = false,
+    inNumber = false,
+    result = null;
 
   for (let i = 0; i < str.length; i++) {
     const ch = str[i];
@@ -29,22 +29,18 @@ function doMath(str) {
       } else {
         cur += ch;
       }
-    } else {
-      if (inNumber) {
-        const num = Number(cur);
-        if (!havePrev) {
-          result = num;
-          havePrev = true;
-        } else {
-          if (gap % 2 === 0) result += num;
-          else result -= num;
-        }
-        inNumber = false;
-        cur = '';
-        gap = 1;
-      } else if (havePrev) {
-        gap++;
-      }
+    } else if (inNumber) {
+      const num = Number(cur);
+      if (!havePrev) {
+        result = num;
+        havePrev = true;
+      } else if (gap % 2 === 0) result += num;
+      else result -= num;
+      inNumber = false;
+      cur = '';
+      gap = 1;
+    } else if (havePrev) {
+      gap++;
     }
   }
 
@@ -52,10 +48,8 @@ function doMath(str) {
     const num = Number(cur);
     if (!havePrev) {
       result = num;
-    } else {
-      if (gap % 2 === 0) result += num;
-      else result -= num;
-    }
+    } else if (gap % 2 === 0) result += num;
+    else result -= num;
   }
 
   return result === null ? 0 : result;

@@ -14,6 +14,6 @@ For example, "Tommy Millwood" returns "T.M.".
 function getInitials(name) {
   return name
     .split(' ')
-    .map((n) => n[0].toUpperCase() + '.')
+    .map((n) => `${n[0].toUpperCase()}.`)
     .join('');
 }

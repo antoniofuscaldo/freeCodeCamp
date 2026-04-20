@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const numberInput = document.getElementById('number');
-  const convertBtn = document.getElementById('convert-btn');
-  const output = document.getElementById('output');
+document.addEventListener('DOMContentLoaded', () => {
+  const numberInput = document.getElementById('number'),
+    convertBtn = document.getElementById('convert-btn'),
+    output = document.getElementById('output');
 
-  convertBtn.addEventListener('click', function () {
+  convertBtn.addEventListener('click', () => {
     const inputValue = numberInput.value.trim();
 
     if (inputValue === '') {
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { value: 1, numeral: 'I' },
     ];
 
-    let result = '';
-    let remaining = num;
+    let result = '',
+      remaining = num;
 
     for (const { value, numeral } of romanNumerals) {
       while (remaining >= value) {

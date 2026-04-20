@@ -16,8 +16,8 @@ For example, given "B10", return "B11", the next bingo number. If given the last
 */
 
 function getNextBingoNumber(n) {
-  const letter = n[0];
-  const num = Number(n.slice(1));
+  const letter = n[0],
+    num = Number(n.slice(1));
 
   let val = num;
   if (letter === 'I') val = num;
@@ -25,7 +25,7 @@ function getNextBingoNumber(n) {
   else if (letter === 'G') val = num;
   else if (letter === 'O') val = num;
 
-  let next = val === 75 ? 1 : val + 1;
+  const next = val === 75 ? 1 : val + 1;
 
   let l;
   if (next >= 1 && next <= 15) l = 'B';

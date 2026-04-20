@@ -24,23 +24,21 @@ All given and returned letters are uppercase.
 */
 
 function decode(message) {
-  const key = 'VLHCGMDLNH';
-  const A = 'A'.charCodeAt(0); // 65
-  let result = '';
-  let keyIndex = 0;
+  const key = 'VLHCGMDLNH',
+    A = 'A'.charCodeAt(0); // 65
+  let keyIndex = 0,
+    result = '';
 
-  for (let char of message) {
+  for (const char of message) {
     // Spaces are not encoded
     if (char === ' ') {
       result += ' ';
       continue;
     }
 
-    const shift = key.charCodeAt(keyIndex % key.length) - A + 1;
-
-    const encodedVal = char.charCodeAt(0) - A;
-
-    const decodedVal = (encodedVal - shift + 26) % 26;
+    const shift = key.charCodeAt(keyIndex % key.length) - A + 1,
+      encodedVal = char.charCodeAt(0) - A,
+      decodedVal = (encodedVal - shift + 26) % 26;
 
     result += String.fromCharCode(decodedVal + A);
     keyIndex++;
