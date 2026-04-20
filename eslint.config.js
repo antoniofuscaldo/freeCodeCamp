@@ -9,24 +9,41 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig([
   // Ignori globali
-  globalIgnores(['dist/', 'node_modules/', '.astro/']),
+  globalIgnores(['dist/', 'build/', 'coverage/', 'node_modules/', '.astro/']),
 
   // Regole base JavaScript
   {
-    files: ['**/*.{js,mjs,cjs,ts,tsx,jsx}'],
-    plugins: { js },
-    extends: ['js/recommended'],
+    ...js.configs.recommended,
+    files: ['**/*.{js,mjs,cjs,jsx}'],
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    rules: {
+      // Nei progetti/esercizi FCC e Rosetta ci sono molte funzioni "entrypoint" non richiamate nello stesso file.
+      'no-unused-vars': 'off',
+    },
   },
 
   // Regole TypeScript (strict + stylistic)
   {
-    files: ['**/*.{ts,tsx,mjs,js,jsx}'],
+    files: ['**/*.{ts,tsx}'],
     extends: [...tseslint.configs.strict, ...tseslint.configs.stylistic],
+    languageOptions: {
+      parser: tsParser,
+    },
   },
 
   // Regole Astro (all + accessibility strict)
-  ...eslintPluginAstro.configs.all,
-  ...eslintPluginAstro.configs['jsx-a11y-strict'],
+  eslintPluginAstro.configs['flat/all'],
+  eslintPluginAstro.configs['flat/jsx-a11y-strict'],
 
   // Parser TypeScript per i file Astro
   {
@@ -74,22 +91,6 @@ export default defineConfig([
         },
       ],
       'import-x/no-duplicates': 'error',
-    },
-  },
-
-  // Globals browser per gli script lato client
-  {
-    files: ['src/scripts/**/*.js'],
-    languageOptions: {
-      globals: globals.browser,
-    },
-  },
-
-  // Globals Node.js per gli script di build/tooling
-  {
-    files: ['scripts/**/*.mjs'],
-    languageOptions: {
-      globals: globals.node,
     },
   },
 
