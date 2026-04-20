@@ -1,0 +1,45 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "package.json",
+    "pnpm-lock.yaml",
+    ".nvmrc",
+    "eslint.config.js",
+    ".prettierrc.mjs"
+  ],
+  "tasks": {
+    "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "lint:fix": {
+      "dependsOn": ["^lint:fix"],
+      "outputs": [],
+      "cache": false
+    },
+    "format": {
+      "dependsOn": ["^format"],
+      "outputs": [],
+      "cache": false
+    },
+    "format:check": {
+      "dependsOn": ["^format:check"],
+      "outputs": []
+    },
+    "clean:all": {
+      "cache": false
+    },
+    "clean:build": {
+      "cache": false
+    },
+    "clean:coverage": {
+      "cache": false
+    },
+    "clean:dist": {
+      "cache": false
+    },
+    "clean:node_modules": {
+      "cache": false
+    }
+  }
+}
