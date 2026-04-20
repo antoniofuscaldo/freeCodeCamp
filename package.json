@@ -25,18 +25,32 @@
     "python"
   ],
   "engines": {
-    "node": ">=22.12.0",
-    "npm": ">=10.0.0"
+    "node": ">=22.0.0 <23.0.0",
+    "pnpm": ">=10.0.0"
   },
+  "packageManager": "pnpm@10.0.0",
   "browserslist": [
     ">0.3%",
     "not dead",
     "not op_mini all",
     "last 2 versions"
   ],
-  "scripts": {},
+  "scripts": {
+    "clean:all": "pnpm run clean:build && pnpm run clean:coverage && pnpm run clean:dist && pnpm run clean:node_modules",
+    "clean:build": "rimraf build",
+    "clean:coverage": "rimraf coverage",
+    "clean:dist": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules",
+    "lint": "eslint . --ext .js,.mjs,.cjs,.jsx,.ts,.tsx --cache",
+    "lint:fix": "pnpm run lint -- --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "rebuild": "pnpm run clean:all && pnpm install"
+  },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  },
   "overrides": {},
   "contributors": [
     {
