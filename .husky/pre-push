@@ -1,0 +1,9 @@
+current_branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+
+if [ "$current_branch" = "main" ]; then
+	echo "Push bloccato: non puoi fare push diretto su main."
+	echo "Crea un branch feature e apri una pull request verso main."
+	exit 1
+fi
+
+pnpm run turbo:pre-push

@@ -1,0 +1,2 @@
+pnpm run turbo:pre-commit
+pnpm run lint-staged
