@@ -19,7 +19,13 @@ Return the number of plants that fit in the field, rounded down to the nearest w
 
 function getNumberOfPlants(fieldSize, unit, crop) {
   const units = { acres: 4046.86, hectares: 10000 },
-    crops = { corn: 1, wheat: 0.1, soybeans: 0.5, tomatoes: 0.25, lettuce: 0.2 },
+    crops = {
+      corn: 1,
+      wheat: 0.1,
+      soybeans: 0.5,
+      tomatoes: 0.25,
+      lettuce: 0.2,
+    },
     area = fieldSize * units[unit];
   return Math.floor(area / crops[crop]);
 }

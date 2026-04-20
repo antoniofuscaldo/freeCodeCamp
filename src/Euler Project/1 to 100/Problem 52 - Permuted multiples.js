@@ -11,7 +11,10 @@ Find the smallest positive integer, such that multiplied by integers  {2,3,…,n
 
 function permutedMultiples(n) {
   function sameDigits(a, b) {
-    return a.toString().split('').sort().join('') === b.toString().split('').sort().join('');
+    return (
+      a.toString().split('').sort().join('') ===
+      b.toString().split('').sort().join('')
+    );
   }
 
   let x = 1;

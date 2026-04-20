@@ -44,5 +44,7 @@ function buyItems(funds, items) {
     }
   }
 
-  return count === items.length ? 'Buy them all!' : `Buy the first ${count} items.`;
+  return count === items.length
+    ? 'Buy them all!'
+    : `Buy the first ${count} items.`;
 }

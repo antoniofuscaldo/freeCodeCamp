@@ -12,7 +12,8 @@ function vote(option, voterId) {
   const name = typeof option === 'string' ? option.trim() : '';
   if (!name || !poll.has(name)) return `Option "${name}" does not exist.`;
   const voters = poll.get(name);
-  if (voters.has(voterId)) return `Voter ${voterId} has already voted for "${name}".`;
+  if (voters.has(voterId))
+    return `Voter ${voterId} has already voted for "${name}".`;
   voters.add(voterId);
   return `Voter ${voterId} voted for "${name}".`;
 }

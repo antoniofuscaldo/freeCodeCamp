@@ -40,7 +40,10 @@ const MaxHeap = function () {
       parent = Math.floor(index / 2);
 
     while (parent > 0 && this.heap[parent] < this.heap[index]) {
-      [this.heap[parent], this.heap[index]] = [this.heap[index], this.heap[parent]];
+      [this.heap[parent], this.heap[index]] = [
+        this.heap[index],
+        this.heap[parent],
+      ];
       index = parent;
       parent = Math.floor(index / 2);
     }

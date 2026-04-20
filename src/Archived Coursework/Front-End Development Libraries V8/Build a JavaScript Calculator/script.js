@@ -77,8 +77,17 @@ function App() {
     let outputTemp = output,
       { length } = outputTemp;
     setSecondLastInput(output[length - 1]);
-    if (clickedButton === '*' || clickedButton === '/' || clickedButton === '+') {
-      if (lastInput === '+' || lastInput === '/' || lastInput === '*' || lastInput === '-') {
+    if (
+      clickedButton === '*' ||
+      clickedButton === '/' ||
+      clickedButton === '+'
+    ) {
+      if (
+        lastInput === '+' ||
+        lastInput === '/' ||
+        lastInput === '*' ||
+        lastInput === '-'
+      ) {
         outputTemp = outputTemp.slice(0, length - 1);
       }
     }
@@ -88,7 +97,11 @@ function App() {
       }
     }
     if (secondLastInput === '*' || secondLastInput === '/') {
-      if (clickedButton === '*' || clickedButton === '/' || clickedButton === '+') {
+      if (
+        clickedButton === '*' ||
+        clickedButton === '/' ||
+        clickedButton === '+'
+      ) {
         outputTemp = outputTemp.slice(0, length - 2);
       }
     }
@@ -207,7 +220,12 @@ function App() {
           if (output[i] === '.') {
             ++count;
           }
-          if (output[i] === '+' || output[i] === '-' || output[i] === '*' || output[i] === '/') {
+          if (
+            output[i] === '+' ||
+            output[i] === '-' ||
+            output[i] === '*' ||
+            output[i] === '/'
+          ) {
             ++countForSymbol;
           }
         }

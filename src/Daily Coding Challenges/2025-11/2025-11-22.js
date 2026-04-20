@@ -14,7 +14,9 @@ function scaleRecipe(ingredients, scale) {
   return ingredients.map((item) => {
     const parts = item.split(' ');
     let quantity = parseFloat(parts[0]) * scale;
-    quantity = Number.isInteger(quantity) ? quantity : parseFloat(quantity.toFixed(10));
+    quantity = Number.isInteger(quantity)
+      ? quantity
+      : parseFloat(quantity.toFixed(10));
     return `${quantity} ${parts.slice(1).join(' ')}`;
   });
 }

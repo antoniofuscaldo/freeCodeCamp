@@ -37,7 +37,8 @@ function getCircles(p1, p2, r) {
   const dx = x2 - x1,
     dy = y2 - y1,
     q = Math.hypot(dx, dy);
-  if (q > 2 * r) return 'No intersection. Points further apart than circle diameter';
+  if (q > 2 * r)
+    return 'No intersection. Points further apart than circle diameter';
   const mx = (x1 + x2) / 2,
     my = (y1 + y2) / 2;
   if (q === 2 * r) return [mx, my];

@@ -17,7 +17,7 @@ function decode(message, shift) {
     if (/[a-zA-Z]/.test(char)) {
       const base = char === char.toUpperCase() ? 65 : 97,
         decodedChar = String.fromCharCode(
-          ((char.charCodeAt(0) - base - shift + 26 * 1000) % 26) + base
+          ((char.charCodeAt(0) - base - shift + 26 * 1000) % 26) + base,
         );
       result += decodedChar;
     } else {

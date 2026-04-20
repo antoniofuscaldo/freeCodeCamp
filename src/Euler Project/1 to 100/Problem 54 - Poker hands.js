@@ -47,7 +47,21 @@ How many hands does Player 1 win?
 */
 
 function pokerHands(arr) {
-  const R = { 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, T: 10, J: 11, Q: 12, K: 13, A: 14 };
+  const R = {
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    T: 10,
+    J: 11,
+    Q: 12,
+    K: 13,
+    A: 14,
+  };
 
   function parse(cards) {
     return cards.map((c) => [R[c[0]], c[1]]);
@@ -75,7 +89,9 @@ function pokerHands(arr) {
     }
 
     // Group ranks by frequency then by rank desc
-    const groups = [...count.entries()].sort((a, b) => b[1] - a[1] || b[0] - a[0]);
+    const groups = [...count.entries()].sort(
+      (a, b) => b[1] - a[1] || b[0] - a[0],
+    );
 
     if (isFlush && isStraight) {
       // Royal Flush or Straight Flush

@@ -27,7 +27,7 @@ export function Board() {
   const winner = useMemo(() => calculateWinner(squares), [squares]);
   const isDraw = useMemo(
     () => !winner && squares.every((square) => square !== null),
-    [squares, winner]
+    [squares, winner],
   );
 
   const status = winner

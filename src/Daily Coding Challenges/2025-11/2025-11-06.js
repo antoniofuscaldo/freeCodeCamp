@@ -18,7 +18,15 @@ Be sure to ignore time zones.
 */
 
 function getWeekday(dateString) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
   let [year, month, day] = dateString.split('-').map(Number);
 
   if (month < 3) {

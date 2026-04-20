@@ -20,5 +20,11 @@ Each card is represented as a string: "valueSuit". For Example: "AS" is the Ace 
 
 const cardValues = (cards) =>
   cards.map((c) =>
-    c.startsWith('10') ? 10 : c[0] === 'A' ? 1 : 'JQK'.includes(c[0]) ? 10 : +c[0]
+    c.startsWith('10')
+      ? 10
+      : c[0] === 'A'
+        ? 1
+        : 'JQK'.includes(c[0])
+          ? 10
+          : +c[0],
   );

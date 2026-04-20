@@ -14,7 +14,9 @@ function sym(...args) {
   function diff(arr1, arr2) {
     const set1 = new Set(arr1),
       set2 = new Set(arr2),
-      result = [...set1].filter((x) => !set2.has(x)).concat([...set2].filter((x) => !set1.has(x)));
+      result = [...set1]
+        .filter((x) => !set2.has(x))
+        .concat([...set2].filter((x) => !set1.has(x)));
     return result;
   }
   return [...new Set(args.reduce((acc, curr) => diff(acc, curr)))];

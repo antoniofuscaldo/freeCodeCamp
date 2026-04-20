@@ -33,7 +33,18 @@ function numberLetterCounts(limit) {
       'eighteen',
       'nineteen',
     ],
-    tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    tens = [
+      '',
+      '',
+      'twenty',
+      'thirty',
+      'forty',
+      'fifty',
+      'sixty',
+      'seventy',
+      'eighty',
+      'ninety',
+    ];
 
   function toWords(n) {
     if (n === 1000) return 'onethousand';

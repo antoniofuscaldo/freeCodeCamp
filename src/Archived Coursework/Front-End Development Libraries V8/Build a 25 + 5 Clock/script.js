@@ -38,12 +38,16 @@ class App extends React.Component {
         });
 
         this.loop = setInterval(() => {
-          const { clockCount, currentTimer, breakCount, sessionCount } = this.state;
+          const { clockCount, currentTimer, breakCount, sessionCount } =
+            this.state;
 
           if (clockCount === 0) {
             this.setState({
               currentTimer: currentTimer === 'Session' ? 'Break' : 'Session',
-              clockCount: currentTimer === 'Session' ? breakCount * 60 : sessionCount * 60,
+              clockCount:
+                currentTimer === 'Session'
+                  ? breakCount * 60
+                  : sessionCount * 60,
             });
 
             audio.play();
@@ -108,7 +112,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } = this.state,
+    const { breakCount, sessionCount, clockCount, currentTimer, isPlaying } =
+        this.state,
       breakProps = {
         title: 'Break',
         count: breakCount,
@@ -129,14 +134,18 @@ class App extends React.Component {
         'div',
         { className: 'flex' },
         React.createElement(SetTimer, breakProps),
-        React.createElement(SetTimer, sessionProps)
+        React.createElement(SetTimer, sessionProps),
       ),
 
       React.createElement(
         'div',
         { className: 'clock-container' },
         React.createElement('h1', { id: 'timer-label' }, currentTimer),
-        React.createElement('span', { id: 'time-left' }, this.convertToTime(clockCount)),
+        React.createElement(
+          'span',
+          { id: 'time-left' },
+          this.convertToTime(clockCount),
+        ),
 
         React.createElement(
           'div',
@@ -146,16 +155,16 @@ class App extends React.Component {
             { id: 'start_stop', onClick: this.handlePlayPause },
             React.createElement('i', {
               className: `fas fa-${isPlaying ? 'pause' : 'play'}`,
-            })
+            }),
           ),
 
           React.createElement(
             'button',
             { id: 'reset', onClick: this.handleReset },
-            React.createElement('i', { className: 'fas fa-sync' })
-          )
-        )
-      )
+            React.createElement('i', { className: 'fas fa-sync' }),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -174,7 +183,7 @@ const SetTimer = (props) => {
       React.createElement(
         'button',
         { id: `${id}-decrement`, onClick: props.handleDecrease },
-        React.createElement('i', { className: 'fas fa-minus' })
+        React.createElement('i', { className: 'fas fa-minus' }),
       ),
 
       React.createElement('span', { id: `${id}-length` }, props.count),
@@ -182,9 +191,9 @@ const SetTimer = (props) => {
       React.createElement(
         'button',
         { id: `${id}-increment`, onClick: props.handleIncrease },
-        React.createElement('i', { className: 'fas fa-plus' })
-      )
-    )
+        React.createElement('i', { className: 'fas fa-plus' }),
+      ),
+    ),
   );
 };
 

@@ -14,7 +14,9 @@ Hint: Some products can be obtained in more than one way so be sure to only incl
 
 function pandigitalProducts(n) {
   if (n < 4) return 0;
-  const pow10 = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000],
+  const pow10 = [
+      1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000,
+    ],
     targetMask = (1 << n) - 1,
     products = new Set();
 

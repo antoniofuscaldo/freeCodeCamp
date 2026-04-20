@@ -19,7 +19,8 @@ function calculateAge(birthday) {
 
   const hadBirthdayThisYear =
     target.getMonth() > birth.getMonth() ||
-    (target.getMonth() === birth.getMonth() && target.getDate() >= birth.getDate());
+    (target.getMonth() === birth.getMonth() &&
+      target.getDate() >= birth.getDate());
 
   if (!hadBirthdayThisYear) age--;
 

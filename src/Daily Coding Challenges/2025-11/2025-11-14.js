@@ -13,7 +13,15 @@ Make sure the calculation ignores your local timezone.
 */
 
 function daysUntilWeekend(dateString) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
   let [year, month, day] = dateString.split('-').map(Number);
 
   if (month < 3) {
@@ -36,5 +44,7 @@ function daysUntilWeekend(dateString) {
     return "It's the weekend!";
   }
   const daysLeft = 6 - weekday;
-  return daysLeft === 1 ? '1 day until the weekend.' : `${daysLeft} days until the weekend.`;
+  return daysLeft === 1
+    ? '1 day until the weekend.'
+    : `${daysLeft} days until the weekend.`;
 }

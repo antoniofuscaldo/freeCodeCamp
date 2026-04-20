@@ -22,7 +22,8 @@ function truncatablePrimes(n) {
   function isTruncatable(p) {
     const s = String(p);
     for (let i = 1; i < s.length; i++) {
-      if (!isPrime(+s.slice(i)) || !isPrime(+s.slice(0, s.length - i))) return false;
+      if (!isPrime(+s.slice(i)) || !isPrime(+s.slice(0, s.length - i)))
+        return false;
     }
     return true;
   }

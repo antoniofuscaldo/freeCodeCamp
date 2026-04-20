@@ -17,7 +17,14 @@ Item	Price
 */
 
 function getsFreeShipping(cart, minimum) {
-  const prices = { shirt: 34.25, jeans: 48.5, shoes: 75, hat: 19.95, socks: 15, jacket: 109.95 };
+  const prices = {
+    shirt: 34.25,
+    jeans: 48.5,
+    shoes: 75,
+    hat: 19.95,
+    socks: 15,
+    jacket: 109.95,
+  };
   let total = 0;
   for (const item of cart) total += prices[item];
   return total >= minimum;

@@ -16,7 +16,8 @@ function tribonacciSequence(startSequence, length) {
   if (length === 0) return [];
   const seq = startSequence.slice(0, length);
   while (seq.length < length) {
-    const next = seq[seq.length - 1] + seq[seq.length - 2] + seq[seq.length - 3];
+    const next =
+      seq[seq.length - 1] + seq[seq.length - 2] + seq[seq.length - 3];
     seq.push(next);
   }
   return seq;

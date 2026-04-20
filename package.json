@@ -1,7 +1,7 @@
 {
   "name": "freecodecamp",
   "type": "module",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "My freecodecamp certifications collection.",
   "author": {
     "name": "Antonio Fuscaldo",
@@ -50,6 +50,8 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^9.0.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.0",
     "prettier": "^3.0.0",
     "rimraf": "^6.0.1"
   },

@@ -32,7 +32,10 @@ const MaxHeap = function () {
     let currentIndex = index,
       parentIndex = this.parent(currentIndex);
 
-    while (currentIndex > 0 && this.heap[currentIndex] > this.heap[parentIndex]) {
+    while (
+      currentIndex > 0 &&
+      this.heap[currentIndex] > this.heap[parentIndex]
+    ) {
       this.swap(currentIndex, parentIndex);
       currentIndex = parentIndex;
       parentIndex = this.parent(parentIndex);
@@ -40,7 +43,10 @@ const MaxHeap = function () {
   };
 
   this.swap = (index1, index2) => {
-    [this.heap[index1], this.heap[index2]] = [this.heap[index2], this.heap[index1]];
+    [this.heap[index1], this.heap[index2]] = [
+      this.heap[index2],
+      this.heap[index1],
+    ];
   };
 
   this.print = () => this.heap;

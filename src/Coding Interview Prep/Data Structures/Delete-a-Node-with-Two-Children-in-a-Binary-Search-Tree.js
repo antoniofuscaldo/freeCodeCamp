@@ -46,7 +46,8 @@ function BinarySearchTree() {
       return null;
     }
 
-    const children = (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
+    const children =
+      (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
 
     if (children === 0) {
       if (target == this.root) {

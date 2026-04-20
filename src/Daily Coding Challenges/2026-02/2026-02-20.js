@@ -32,7 +32,16 @@ Valid second words:
 
 function isValidTrick(trickName) {
   const [a, b] = trickName.split(' '),
-    first = ['Misty', 'Ghost', 'Thunder', 'Solar', 'Sky', 'Phantom', 'Frozen', 'Polar'],
+    first = [
+      'Misty',
+      'Ghost',
+      'Thunder',
+      'Solar',
+      'Sky',
+      'Phantom',
+      'Frozen',
+      'Polar',
+    ],
     second = [
       'Twister',
       'Icequake',

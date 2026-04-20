@@ -45,7 +45,8 @@ const navigateTrail = (m) => {
     pc = -1,
     out = '';
 
-  for (let i = 0; i < h; i++) for (let j = 0; j < w; j++) if (m[i][j] === 'C') ((r = i), (c = j));
+  for (let i = 0; i < h; i++)
+    for (let j = 0; j < w; j++) if (m[i][j] === 'C') ((r = i), (c = j));
 
   const d = [
     [0, 1, 'R'],
@@ -59,7 +60,13 @@ const navigateTrail = (m) => {
       const nr = r + dr,
         nc = c + dc;
       if (nr === pr && nc === pc) continue;
-      if (nr >= 0 && nr < h && nc >= 0 && nc < w && (m[nr][nc] === 'T' || m[nr][nc] === 'G')) {
+      if (
+        nr >= 0 &&
+        nr < h &&
+        nc >= 0 &&
+        nc < w &&
+        (m[nr][nc] === 'T' || m[nr][nc] === 'G')
+      ) {
         out += mv;
         pr = r;
         pc = c;

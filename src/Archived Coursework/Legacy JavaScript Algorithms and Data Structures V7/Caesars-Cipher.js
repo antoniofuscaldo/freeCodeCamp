@@ -12,5 +12,7 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
 */
 
 function rot13(str) {
-  return str.replace(/[A-Z]/g, (c) => String.fromCharCode(((c.charCodeAt(0) - 65 + 13) % 26) + 65));
+  return str.replace(/[A-Z]/g, (c) =>
+    String.fromCharCode(((c.charCodeAt(0) - 65 + 13) % 26) + 65),
+  );
 }

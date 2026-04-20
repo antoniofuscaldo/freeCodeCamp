@@ -1,7 +1,11 @@
 :root {
   --primary-color: #2a2a72;
   --secondary-color: #009ffd;
-  --background-gradient: linear-gradient(45deg, var(--primary-color) 0%, #232528 100%);
+  --background-gradient: linear-gradient(
+    45deg,
+    var(--primary-color) 0%,
+    #232528 100%
+  );
   --card-bg: rgba(255, 255, 255, 0.05);
 }
 

@@ -15,7 +15,7 @@ const searchInput = document.getElementById('search-input'),
     try {
       const creatureNameOrId = searchInput.value.toLowerCase(),
         response = await fetch(
-          `https://rpg-creature-api.freecodecamp.rocks/api/creature/${creatureNameOrId}`
+          `https://rpg-creature-api.freecodecamp.rocks/api/creature/${creatureNameOrId}`,
         ),
         data = await response.json();
       setCreatureInfo(data);
@@ -40,7 +40,10 @@ const searchInput = document.getElementById('search-input'),
     speed.textContent = `${stats[5].base_stat}`;
 
     creatureTypes.innerHTML = types
-      .map((obj) => `<span>${obj.name[0].toUpperCase() + obj.name.slice(1)}</span>`)
+      .map(
+        (obj) =>
+          `<span>${obj.name[0].toUpperCase() + obj.name.slice(1)}</span>`,
+      )
       .join(' ');
   };
 

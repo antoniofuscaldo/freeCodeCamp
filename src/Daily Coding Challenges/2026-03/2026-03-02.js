@@ -20,5 +20,5 @@ const sumLetters = (s) =>
         : c >= 'a' && c <= 'z'
           ? c.charCodeAt(0) - 96
           : 0),
-    0
+    0,
   );

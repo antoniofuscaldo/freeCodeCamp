@@ -29,7 +29,8 @@ document.getElementById('purchase-btn').addEventListener('click', () => {
   }
 
   if (cash === price) {
-    changeDueElement.textContent = 'No change due - customer paid with exact cash';
+    changeDueElement.textContent =
+      'No change due - customer paid with exact cash';
     return;
   }
 
@@ -64,7 +65,9 @@ function calculateChange(price, cash, cid) {
       'ONE HUNDRED': 100.0,
     },
     changeDue = cash - price,
-    totalCID = parseFloat(cid.reduce((acc, [, amount]) => acc + amount, 0).toFixed(2));
+    totalCID = parseFloat(
+      cid.reduce((acc, [, amount]) => acc + amount, 0).toFixed(2),
+    );
 
   if (changeDue > totalCID) {
     return { status: 'INSUFFICIENT_FUNDS', change: [] };

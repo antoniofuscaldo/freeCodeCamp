@@ -18,7 +18,15 @@ Be sure to ignore time zones.
 */
 
 function getDayOfWeek(timestamp) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  const days = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ],
     d = new Date(timestamp);
   return days[d.getUTCDay()];
 }

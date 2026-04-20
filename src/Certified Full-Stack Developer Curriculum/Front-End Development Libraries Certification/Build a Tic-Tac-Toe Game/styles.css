@@ -5,7 +5,12 @@
     system-ui,
     -apple-system,
     sans-serif;
-  background: radial-gradient(circle at top, #1a1c2f 0%, #0c0d17 55%, #070810 100%);
+  background: radial-gradient(
+    circle at top,
+    #1a1c2f 0%,
+    #0c0d17 55%,
+    #070810 100%
+  );
   color-scheme: dark;
 }
 

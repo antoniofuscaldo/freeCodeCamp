@@ -15,7 +15,9 @@ function codedTriangleNumbers(n) {
   const alphabet = '-ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   let count = 0;
   for (let i = 0; i < n; i++) {
-    const wordValue = words[i].split('').reduce((a, c) => alphabet.indexOf(c) + a, 0);
+    const wordValue = words[i]
+      .split('')
+      .reduce((a, c) => alphabet.indexOf(c) + a, 0);
     if (isTriangleNumber(wordValue)) {
       count++;
     }

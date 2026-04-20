@@ -11,5 +11,8 @@ If multiple words are ties for the longest, return the first one that occurs.
 
 function getLongestWord(sentence) {
   const words = sentence.replace(/\./g, '').split(' ');
-  return words.reduce((longest, word) => (word.length > longest.length ? word : longest), '');
+  return words.reduce(
+    (longest, word) => (word.length > longest.length ? word : longest),
+    '',
+  );
 }

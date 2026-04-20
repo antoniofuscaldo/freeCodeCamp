@@ -68,13 +68,19 @@ function genRandQuote() {
   $('#author').html(randQuote.source);
   $('#tweet-quote').attr(
     'href',
-    stringToClickToTweetURL(`"${randQuote.text}" - ${randQuote.source}`)
+    stringToClickToTweetURL(`"${randQuote.text}" - ${randQuote.source}`),
   );
 }
 
 function stringToClickToTweetURL(str) {
   // Convert to Click to Tweet URL
-  const stringToConvert = str.split(' ').join('%20').split('@').join('%40').split('!').join('%21'),
+  const stringToConvert = str
+      .split(' ')
+      .join('%20')
+      .split('@')
+      .join('%40')
+      .split('!')
+      .join('%21'),
     resultString = `https://twitter.com/intent/tweet?text=${stringToConvert}`;
 
   return resultString;

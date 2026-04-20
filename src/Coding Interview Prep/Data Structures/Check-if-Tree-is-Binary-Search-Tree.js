@@ -23,7 +23,10 @@ function isBinarySearchTree(tree) {
   function validate(node, min, max) {
     if (!node) return true;
     if (node.value <= min || node.value >= max) return false;
-    return validate(node.left, min, node.value) && validate(node.right, node.value, max);
+    return (
+      validate(node.left, min, node.value) &&
+      validate(node.right, node.value, max)
+    );
   }
   return validate(tree.root, -Infinity, Infinity);
 }

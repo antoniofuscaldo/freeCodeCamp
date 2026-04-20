@@ -30,7 +30,12 @@ function getDifficulty(track) {
     const c = track[i];
     if (c === 'S') continue;
 
-    if (i > 0 && (c === 'L' || c === 'R') && track[i - 1] !== 'S' && track[i - 1] !== c)
+    if (
+      i > 0 &&
+      (c === 'L' || c === 'R') &&
+      track[i - 1] !== 'S' &&
+      track[i - 1] !== c
+    )
       score += 15;
     else score += 5;
   }

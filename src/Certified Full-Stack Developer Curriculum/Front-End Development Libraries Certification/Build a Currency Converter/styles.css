@@ -6,7 +6,12 @@
     system-ui,
     -apple-system,
     sans-serif;
-  background: radial-gradient(circle at top, #1d1f3b 0%, #0b0c17 55%, #05060b 100%);
+  background: radial-gradient(
+    circle at top,
+    #1d1f3b 0%,
+    #0b0c17 55%,
+    #05060b 100%
+  );
 }
 
 * {
@@ -124,7 +129,11 @@ select:focus {
   justify-content: space-between;
   padding: 20px 24px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(124, 134, 255, 0.18), rgba(62, 242, 194, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(124, 134, 255, 0.18),
+    rgba(62, 242, 194, 0.2)
+  );
   border: 1px solid rgba(124, 134, 255, 0.3);
 }
 
