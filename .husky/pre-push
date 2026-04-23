@@ -1,2 +1,1 @@
 pnpm run turbo:pre-push
-pnpm run py:check

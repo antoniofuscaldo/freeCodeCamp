@@ -5,25 +5,22 @@
     "pnpm-lock.yaml",
     ".nvmrc",
     "eslint.config.js",
-    ".prettierrc.mjs"
+    ".prettierrc.mjs",
+    "pyproject.toml"
   ],
   "tasks": {
-    "lint": {
-      "dependsOn": ["^lint"],
+    "repo:lint": {
       "outputs": []
     },
-    "lint:fix": {
-      "dependsOn": ["^lint:fix"],
+    "repo:lint:fix": {
       "outputs": [],
       "cache": false
     },
-    "format": {
-      "dependsOn": ["^format"],
+    "repo:format": {
       "outputs": [],
       "cache": false
     },
-    "format:check": {
-      "dependsOn": ["^format:check"],
+    "repo:format:check": {
       "outputs": []
     },
     "clean:all": {
