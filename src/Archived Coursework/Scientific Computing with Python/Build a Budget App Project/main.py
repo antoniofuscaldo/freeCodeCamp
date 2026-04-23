@@ -48,7 +48,9 @@ def create_spend_chart(categories):
     if total_spent == 0:
         percentages = [0 for _ in categories]
     else:
-        percentages = [int((amount / total_spent) * 100) // 10 * 10 for amount in withdrawals]
+        percentages = [
+            int((amount / total_spent) * 100) // 10 * 10 for amount in withdrawals
+        ]
 
     lines = ["Percentage spent by category"]
     for level in range(100, -1, -10):

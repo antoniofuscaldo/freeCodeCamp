@@ -1,4 +1,8 @@
 {
+  "*.py": [
+    ".venv/bin/python -m ruff check --fix",
+    ".venv/bin/python -m ruff format"
+  ],
   "*.{js,mjs,cjs,jsx,ts,tsx,astro}": [
     "eslint --cache --fix",
     "prettier --write"
