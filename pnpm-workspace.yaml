@@ -1,3 +1,5 @@
 packages:
   - '.'
   - 'src/**'
+allowBuilds:
+  unrs-resolver: false
