@@ -2361,10 +2361,10 @@ packages:
       }
     engines: { node: '>=4' }
 
-  postcss@8.5.10:
+  postcss@8.5.11:
     resolution:
       {
-        integrity: sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==,
+        integrity: sha512-5dDj8+lmvA8XB78SmzGI8NlQoksv7IfutGWeVZxiixHbO+p4LDPT3wuG/D9sM/wrjZZ9I+Siy/e117vbFPxSZg==,
       }
     engines: { node: ^10 || ^12 || >=14 }
 
@@ -3832,7 +3832,7 @@ snapshots:
       eslint: 9.39.4(jiti@2.6.1)
       eslint-compat-utils: 0.6.5(eslint@9.39.4(jiti@2.6.1))
       globals: 16.5.0
-      postcss: 8.5.10
+      postcss: 8.5.11
       postcss-selector-parser: 7.1.1
     transitivePeerDependencies:
       - supports-color
@@ -4455,7 +4455,7 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.5.10:
+  postcss@8.5.11:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
