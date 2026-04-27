@@ -35,11 +35,17 @@
     "files.trimTrailingWhitespace": false
   },
   "cSpell.words": [
+    "charliermarsh",
+    "dbaeumer",
+    "esbenp",
     "fifizzzbuzzfizzzz",
     "freecodecamp",
     "Fuscaldo",
+    "lintstagedrc",
     "Millwood",
+    "pyproject",
     "smol",
+    "Turborepo",
     "venv"
   ]
 }
