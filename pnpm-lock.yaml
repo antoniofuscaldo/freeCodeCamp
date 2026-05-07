@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  smol-toml: ^1.6.1
-  vite: ^7.3.2
-  yaml: ^2.8.3
-
 importers:
   .:
     devDependencies:
