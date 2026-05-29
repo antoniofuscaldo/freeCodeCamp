@@ -387,12 +387,12 @@ packages:
         integrity: sha512-uu43FGU34B5VM9mCNjXCwLaGHYjXdNincqKLaraaCW+7S2+SmiBg1Nv8bPnmschrIfZmfKNY9f3fC376MRrObw==,
       }
 
-  '@pkgr/core@0.2.9':
+  '@pkgr/core@0.3.6':
     resolution:
       {
-        integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==,
+        integrity: sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA==,
       }
-    engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
+    engines: { node: ^14.18.0 || >=16.0.0 }
 
   '@simple-libs/child-process-utils@1.0.2':
     resolution:
@@ -2080,10 +2080,10 @@ packages:
       }
     engines: { node: '>=18' }
 
-  lru-cache@11.5.0:
+  lru-cache@11.5.1:
     resolution:
       {
-        integrity: sha512-5YgH9UJd7wVb9hIouI2adWpgqrrICkt070Dnj8EUY1+B4B2P9eRLPAkAAo6NICA7CEhOIeBHl46u9zSNpNu7zA==,
+        integrity: sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A==,
       }
     engines: { node: 20 || >=22 }
 
@@ -2712,10 +2712,10 @@ packages:
       }
     engines: { node: '>=8' }
 
-  synckit@0.11.12:
+  synckit@0.11.13:
     resolution:
       {
-        integrity: sha512-Bh7QjT8/SuKUIfObSXNHNSK6WHo6J1tHCqJsuaFDP7gP0fkzSfTxI8y85JrppZ0h8l0maIgc2tfuZQ6/t3GtnQ==,
+        integrity: sha512-eNRKgb3z66Yp3D2CixVujOUvXLFUTij/zVnV8KRyvFdQwpz7I5DS8UfRkTeLzb64u+dkzDSdelE24izu+zSSUg==,
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
 
@@ -3169,7 +3169,7 @@ snapshots:
 
   '@package-json/types@0.0.12': {}
 
-  '@pkgr/core@0.2.9': {}
+  '@pkgr/core@0.3.6': {}
 
   '@simple-libs/child-process-utils@1.0.2':
     dependencies:
@@ -3469,7 +3469,7 @@ snapshots:
   astrojs-compiler-sync@1.1.1(@astrojs/compiler@3.0.1):
     dependencies:
       '@astrojs/compiler': 3.0.1
-      synckit: 0.11.12
+      synckit: 0.11.13
 
   async-function@1.0.0: {}
 
@@ -4246,7 +4246,7 @@ snapshots:
       strip-ansi: 7.2.0
       wrap-ansi: 9.0.2
 
-  lru-cache@11.5.0: {}
+  lru-cache@11.5.1: {}
 
   math-intrinsics@1.1.0: {}
 
@@ -4352,7 +4352,7 @@ snapshots:
 
   path-scurry@2.0.2:
     dependencies:
-      lru-cache: 11.5.0
+      lru-cache: 11.5.1
       minipass: 7.1.3
 
   picocolors@1.1.1: {}
@@ -4600,9 +4600,9 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  synckit@0.11.12:
+  synckit@0.11.13:
     dependencies:
-      '@pkgr/core': 0.2.9
+      '@pkgr/core': 0.3.6
 
   tinyexec@1.2.2: {}
 
