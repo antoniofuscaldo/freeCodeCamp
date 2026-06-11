@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Flashcard Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Flashcard Quiz</h1>
+
+      <!-- Flashcard display (required id) -->
+      <div id="flashcard" class="flashcard" aria-live="polite">
+        <div class="face front"></div>
+        <div class="face back"></div>
+      </div>
+
+      <div class="controls">
+        <button id="prev-btn" type="button">Previous</button>
+        <button id="next-btn" type="button">Next</button>
+        <button id="delete-btn" type="button">Delete</button>
+      </div>
+
+      <section class="status">
+        <span id="position"></span>
+      </section>
+
+      <!-- Entry form (required id) -->
+      <form id="entry-form" class="entry-form">
+        <label for="front-text">Question</label>
+        <textarea
+          id="front-text"
+          rows="3"
+          placeholder="Enter question text"
+        ></textarea>
+
+        <label for="back-text">Answer</label>
+        <textarea
+          id="back-text"
+          rows="3"
+          placeholder="Enter answer text"
+        ></textarea>
+
+        <button type="submit">Add Flashcard</button>
+      </form>
+    </main>
+
+    <!-- TypeScript entry (index.ts provided separately) -->
+    <script type="module" src="index.ts"></script>
+  </body>
+</html>

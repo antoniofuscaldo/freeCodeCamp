@@ -1,0 +1,143 @@
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    Segoe UI,
+    Roboto,
+    'Helvetica Neue',
+    Arial;
+  background: var(--bg);
+  color: #111827;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.app {
+  width: 100%;
+  max-width: 760px;
+}
+
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* Flashcard */
+.flashcard {
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.flashcard .face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  transition:
+    transform 320ms ease,
+    box-shadow 320ms ease;
+}
+
+/* front is visible by default */
+.flashcard .front {
+  transform: rotateY(0deg);
+}
+
+/* back is rotated */
+.flashcard .back {
+  transform: rotateY(180deg);
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* flipped state */
+.flashcard.flipped .front {
+  transform: rotateY(-180deg);
+}
+.flashcard.flipped .back {
+  transform: rotateY(0deg);
+}
+
+/* controls */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.controls button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: white;
+  cursor: pointer;
+}
+.controls button:hover {
+  box-shadow: 0 6px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* entry form */
+.entry-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.entry-form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.entry-form textarea {
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 10px;
+  resize: vertical;
+  font-family: inherit;
+}
+.entry-form button {
+  align-self: flex-start;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.entry-form button:hover {
+  opacity: 0.95;
+}
+
+/* small helpers */
+.status {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
