@@ -3,9 +3,8 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'weekly'
-      day: 'sunday'
-      time: '04:00'
+      interval: 'daily'
+      time: '03:00'
       timezone: 'Europe/Rome'
     open-pull-requests-limit: 5
     rebase-strategy: 'auto'
@@ -15,38 +14,3 @@ updates:
     labels:
       - 'dependencies'
       - 'dependabot'
-
-  - package-ecosystem: 'npm'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-      day: 'sunday'
-      time: '05:00'
-      timezone: 'Europe/Rome'
-    update-types:
-      - 'lockfile-only'
-    open-pull-requests-limit: 2
-    rebase-strategy: 'auto'
-    commit-message:
-      prefix: 'chore(deps):'
-    labels:
-      - 'dependencies'
-      - 'dependabot'
-      - 'lockfile-only'
-
-  - package-ecosystem: 'npm'
-    directory: '/'
-    schedule:
-      interval: 'daily'
-      time: '03:00'
-      timezone: 'Europe/Rome'
-    security-updates-only: true
-    open-pull-requests-limit: 3
-    rebase-strategy: 'auto'
-    versioning-strategy: 'increase'
-    commit-message:
-      prefix: 'chore(deps):'
-    labels:
-      - 'dependencies'
-      - 'dependabot'
-      - 'security'
