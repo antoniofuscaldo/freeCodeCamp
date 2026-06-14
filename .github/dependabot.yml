@@ -6,9 +6,6 @@ updates:
       interval: "weekly"
       time: "06:00"
       timezone: "Europe/Rome"
-    update-types:
-      - "version-update:semver-minor"
-      - "version-update:semver-patch"
     open-pull-requests-limit: 5
     rebase-strategy: "auto"
     versioning-strategy: "increase"
@@ -18,3 +15,7 @@ updates:
       - "dependencies"
       - "dependabot"
       - "minor-or-patch"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
