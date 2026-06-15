@@ -1,21 +1,21 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      time: "06:00"
-      timezone: "Europe/Rome"
+      interval: 'weekly'
+      time: '06:00'
+      timezone: 'Europe/Rome'
     open-pull-requests-limit: 5
-    rebase-strategy: "auto"
-    versioning-strategy: "increase"
+    rebase-strategy: 'auto'
+    versioning-strategy: 'increase'
     commit-message:
-      prefix: "chore(deps):"
+      prefix: 'chore(deps):'
     labels:
-      - "dependencies"
-      - "dependabot"
-      - "minor-or-patch"
+      - 'dependencies'
+      - 'dependabot'
+      - 'minor-or-patch'
     ignore:
-      - dependency-name: "*"
+      - dependency-name: '*'
         update-types:
-          - "version-update:semver-major"
+          - 'version-update:semver-major'
