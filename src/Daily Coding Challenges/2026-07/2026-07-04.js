@@ -11,9 +11,16 @@ Arrange the digits in ascending order to form the smallest number (pad with lead
 Subtract the smaller from the larger
 Repeat with the new number
 
+Tests:
+Waiting:1. kaprekar(1234) should return 3.
+Waiting:2. kaprekar(2025) should return 6.
+Waiting:3. kaprekar(7173) should return 4.
+Waiting:4. kaprekar(3164) should return 7.
+Waiting:5. kaprekar(8082) should return 2.
+
 */
 
-function kaprekar(n) {
+export function kaprekar(n) {
   let s = String(n).padStart(4, '0');
   if (s === '6174') return 0;
   let prev = null,

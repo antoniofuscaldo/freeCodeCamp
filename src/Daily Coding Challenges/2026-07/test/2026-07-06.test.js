@@ -3,27 +3,27 @@ import { describe, expect, it } from 'vitest';
 import { getLowercaseWords } from '../2026-07-06.js';
 
 describe('getLowercaseWords', () => {
-  it('returns lowercase words in their original order', () => {
+  it('getLowercaseWords("hello GOOD world") should return "hello world"', () => {
     expect(getLowercaseWords('hello GOOD world')).toBe('hello world');
   });
 
-  it('ignores uppercase, mixed-case, numeric, and punctuated words', () => {
+  it('getLowercaseWords("these are all lowercase") should return "these are all lowercase"', () => {
     expect(getLowercaseWords('these are all lowercase')).toBe(
       'these are all lowercase',
     );
   });
 
-  it('normalizes multiple spaces between words', () => {
+  it('getLowercaseWords("less is NoT more") should return "less is more"', () => {
     expect(getLowercaseWords('less is NoT more')).toBe('less is more');
   });
 
-  it('returns an empty string when no lowercase words are present', () => {
+  it('getLowercaseWords("DonT eat pizza every OTHER day") should return "eat pizza every day"', () => {
     expect(getLowercaseWords('DonT eat pizza every OTHER day')).toBe(
       'eat pizza every day',
     );
   });
 
-  it('returns an empty string for an empty input', () => {
+  it('getLowercaseWords("the Super quick AND snEaky brown fox Leapt anD jumped over aNd AROUND the lazy SloW dog") should return "the quick brown fox jumped over the lazy dog"', () => {
     expect(
       getLowercaseWords(
         'the Super quick AND snEaky brown fox Leapt anD jumped over aNd AROUND the lazy SloW dog',

@@ -11,9 +11,17 @@ Do the same for the two larger counts and the larger name
 Subtract the smaller value from the larger one to get their lucky number
 If the final value is zero (0), return 13.
 
+Tests:
+Waiting:1. getLuckyNumber("John Doe") should return 21.
+Waiting:2. getLuckyNumber("Olivia Lewis") should return 52.
+Waiting:3. getLuckyNumber("James Wilson") should return 18.
+Waiting:4. getLuckyNumber("Elizabeth Hernandez") should return 81.
+Waiting:5. getLuckyNumber("Mike Walker") should return 32.
+Waiting:6. getLuckyNumber("Chloe Perez") should return 13.
+
 */
 
-function getLuckyNumber(name) {
+export function getLuckyNumber(name) {
   const [a, b] = name.trim().split(' ').filter(Boolean);
   const count = (s) => {
     const v = s.match(/[aeiou]/gi) || [];
