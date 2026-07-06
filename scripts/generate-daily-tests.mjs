@@ -73,7 +73,10 @@ function generateTest(sourcePath) {
 
   const fileName = path.basename(sourcePath);
   const testPath = path.join(testDir, fileName.replace('.js', '.test.js'));
-  fs.writeFileSync(testPath, buildTestFile(fileName, functionName, tests));
+  fs.writeFileSync(
+    testPath,
+    buildTestFile(fileName, functionName, tests, isOrderInsensitive(source)),
+  );
 
   return { sourcePath, status: 'generated' };
 }
@@ -137,17 +140,24 @@ function parseWaitingLine(line) {
   }
 
   const [, callExpression, expectedSource] = match;
-  const alternatives = splitTopLevelAlternatives(expectedSource);
+  const alternatives = splitTopLevelAlternatives(expectedSource).map(
+    normalizeExpectedSource,
+  );
 
   return {
     callExpression,
-    expectedSource,
+    expectedLabel: expectedSource,
+    expectedSource: normalizeExpectedSource(expectedSource),
     alternatives:
       alternatives.length > 1 && expectedSource.includes(' or ')
         ? alternatives
         : null,
     name: `${callExpression} should return ${expectedSource}`,
   };
+}
+
+function normalizeExpectedSource(expectedSource) {
+  return expectedSource === 'None' ? "'None'" : expectedSource;
 }
 
 function splitTopLevelAlternatives(source) {
@@ -214,12 +224,28 @@ function splitTopLevelAlternatives(source) {
   return parts.filter(Boolean);
 }
 
-function buildTestFile(fileName, functionName, tests) {
-  const testBody = tests.map(buildTestCase).join('\n\n');
+function buildTestFile(fileName, functionName, tests, orderInsensitive) {
+  const testBody = tests
+    .map((test) => buildTestCase(test, orderInsensitive))
+    .join('\n\n');
+  const helpers = orderInsensitive
+    ? `
+function canonicalize(value) {
+  if (!Array.isArray(value)) {
+    return value;
+  }
+
+  return value
+    .map(canonicalize)
+    .sort((a, b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
+}
+`
+    : '';
 
   return `import { describe, expect, it } from 'vitest';
 
 import { ${functionName} } from '../${fileName}';
+${helpers}
 
 describe('${functionName}', () => {
 ${testBody}
@@ -227,7 +253,7 @@ ${testBody}
 `;
 }
 
-function buildTestCase(test) {
+function buildTestCase(test, orderInsensitive) {
   if (test.alternatives) {
     return `  it(${JSON.stringify(test.name)}, () => {
     const expectedResults = [
@@ -238,7 +264,19 @@ ${test.alternatives.map((alternative) => `      ${alternative},`).join('\n')}
   });`;
   }
 
+  if (orderInsensitive) {
+    return `  it(${JSON.stringify(test.name)}, () => {
+    expect(canonicalize(${test.callExpression})).toEqual(canonicalize(${test.expectedSource}));
+  });`;
+  }
+
   return `  it(${JSON.stringify(test.name)}, () => {
     expect(${test.callExpression}).toEqual(${test.expectedSource});
   });`;
+}
+
+function isOrderInsensitive(source) {
+  const initialComment = source.match(/^\s*\/\*\*([\s\S]*?)\*\//);
+
+  return initialComment?.[1].includes("Return order doesn't matter.") ?? false;
 }
