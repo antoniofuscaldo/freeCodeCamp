@@ -21,9 +21,16 @@ British	American
 Replacements should be case-insensitive. For example, "Colour" should become "Color".
 The input may contain words that build on the exact spelling of a root in the table that also need to be changed. For example, "colouring" should become "coloring", and "disorganised" should become "disorganized".
 
+Tests:
+Waiting:1. britishToAmerican("I love the colour blue.") should return "I love the color blue."
+Waiting:2. britishToAmerican("The fibre optic cable is new.") should return "The fiber optic cable is new."
+Waiting:3. britishToAmerican("It's an honour to meet someone with such humour.") should return "It's an honor to meet someone with such humor."
+Waiting:4. britishToAmerican("The unrecognised artist analysed his colour palette at the centre.") should return "The unrecognized artist analyzed his color palette at the center."
+Waiting:5. britishToAmerican("The offence analysed, with organisation, the defence centre and recognised that the neighbouring labouror was humourous, flavourful, and colourful.") should return "The offense analyzed, with organisation, the defense center and recognized that the neighboring laboror was humorous, flavorful, and colorful."
+
 */
 
-function britishToAmerican(sentence) {
+export function britishToAmerican(sentence) {
   const map = {
     colour: 'color',
     flavour: 'flavor',

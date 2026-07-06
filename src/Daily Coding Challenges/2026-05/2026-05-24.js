@@ -16,9 +16,17 @@ Symbol	Value
 "M"	1000
 When re-encoding, use the largest possible symbol at each step, using subtractive pairs ("IV", "IX", "XL", "XC", "CD", "CM") where needed.
 
+Tests:
+Waiting:1. fixNumerals("XIIIII") should return "XV".
+Waiting:2. fixNumerals("IIIILX") should return "LXIV".
+Waiting:3. fixNumerals("XXVVVIIIII") should return "XL".
+Waiting:4. fixNumerals("MDCCLXXXXVIIII") should return "MDCCXCIX".
+Waiting:5. fixNumerals("IIIIVVVVXXXXLLLLCCDD") should return "MCDLXIV".
+Waiting:6. fixNumerals("ILCDMIVDIIXLCVCXDL") should return "MMCMLXXXIV".
+
 */
 
-function fixNumerals(str) {
+export function fixNumerals(str) {
   const values = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
   let total = 0;
   for (const c of str) total += values[c];

@@ -8,9 +8,16 @@ Brackets can be any of the three types: (), [], and {}.
 The input will always have a single deepest group.
 For example, given "(hello (world))", return "world".
 
+Tests:
+Waiting:1. getDeepestBrackets("(hello (world))") should return "world".
+Waiting:2. getDeepestBrackets("[outer [inner] outer]") should return "inner".
+Waiting:3. getDeepestBrackets("{a{b}c{d{e}f}g}") should return "e".
+Waiting:4. getDeepestBrackets("[the {quick (brown [fox] jumped) over (the) lazy} dog]") should return "fox".
+Waiting:5. getDeepestBrackets("f[(r)e{e}C{o[(d){e(C)}a]m}]p") should return "C".
+
 */
 
-function getDeepestBrackets(str) {
+export function getDeepestBrackets(str) {
   const open = '([{';
   const close = ')]}';
   let depth = 0;

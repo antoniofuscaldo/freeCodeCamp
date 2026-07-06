@@ -14,9 +14,17 @@ Compatibility rules:
 "O" can only receive from "O".
 Duplicate entries in the given arrays represent quantity.
 
+Tests:
+Waiting:1. triageBlood(["O", "A", "B", "AB"], ["O", "A", "B", "AB"]) should return "4 of 4 patients served".
+Waiting:2. triageBlood(["A", "A", "B", "B", "AB"], ["O", "A", "B", "B", "B"]) should return "3 of 5 patients served".
+Waiting:3. triageBlood(["O", "A", "B", "AB"], ["AB", "AB", "AB", "AB", "AB"]) should return "4 of 5 patients served".
+Waiting:4. triageBlood(["O", "O", "O", "O", "O"], ["O", "A", "B", "AB"]) should return "4 of 4 patients served".
+Waiting:5. triageBlood(["A", "O", "B", "AB", "B", "AB", "O", "A", "A"], ["O", "A", "B", "AB", "A", "B", "A", "A", "B", "A", "B"]) should return "8 of 11 patients served".
+Waiting:6. triageBlood(["O", "B", "AB", "AB", "O", "A", "A", "AB", "O", "B", "B", "AB", "A", "B", "AB"], ["O", "A", "B", "B", "A", "B", "AB", "A", "B", "A", "O", "AB", "AB", "O"]) should return "13 of 14 patients served".
+
 */
 
-function triageBlood(bank, patients) {
+export function triageBlood(bank, patients) {
   const inv = { O: 0, A: 0, B: 0, AB: 0 };
   const need = { O: 0, A: 0, B: 0, AB: 0 };
   for (const b of bank) inv[b]++;

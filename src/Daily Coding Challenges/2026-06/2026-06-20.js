@@ -8,9 +8,18 @@ A prime factorization is the set of prime numbers that multiply together to prod
 
 If the given integer is itself prime, return it in a single-element array.
 
+Tests:
+Waiting:1. primeFactorization(20) should return [2, 2, 5].
+Waiting:2. primeFactorization(17) should return [17].
+Waiting:3. primeFactorization(15) should return [3, 5].
+Waiting:4. primeFactorization(35) should return [5, 7].
+Waiting:5. primeFactorization(999) should return [3, 3, 3, 37].
+Waiting:6. primeFactorization(360) should return [2, 2, 2, 3, 3, 5].
+Waiting:7. primeFactorization(510510) should return [2, 3, 5, 7, 11, 13, 17].
+
 */
 
-function primeFactorization(n) {
+export function primeFactorization(n) {
   if (!Number.isInteger(n) || n <= 1) {
     throw new Error('Input must be an integer greater than 1');
   }

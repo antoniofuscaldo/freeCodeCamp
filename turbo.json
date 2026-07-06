@@ -5,6 +5,7 @@
     "pnpm-lock.yaml",
     ".nvmrc",
     "eslint.config.js",
+    "vitest.config.mjs",
     ".prettierrc.mjs",
     "pyproject.toml"
   ],
@@ -22,6 +23,12 @@
     },
     "repo:format:check": {
       "outputs": []
+    },
+    "repo:test": {
+      "outputs": []
+    },
+    "repo:test:coverage": {
+      "outputs": ["coverage/**"]
     },
     "clean:all": {
       "cache": false
