@@ -15,7 +15,7 @@ const skipped = results.filter((result) => result.status === 'skipped');
 console.log(`Generated ${generated.length} daily test file(s).`);
 
 if (skipped.length > 0) {
-  console.log(`Skipped ${skipped.length} file(s) without Waiting tests.`);
+  console.log(`Skipped ${skipped.length} file(s) without a Tests section.`);
 }
 
 function exitWithUsage(message) {
@@ -91,11 +91,33 @@ function getFunctionName(source, sourcePath) {
 }
 
 function getWaitingTests(source) {
-  return source
+  const testSection = getInitialCommentTestSection(source);
+
+  if (!testSection) {
+    return [];
+  }
+
+  return testSection
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.startsWith('Waiting:'))
     .map(parseWaitingLine);
+}
+
+function getInitialCommentTestSection(source) {
+  const initialComment = source.match(/^\s*\/\*\*([\s\S]*?)\*\//);
+
+  if (!initialComment) {
+    return null;
+  }
+
+  const testsIndex = initialComment[1].indexOf('Tests:');
+
+  if (testsIndex === -1) {
+    return null;
+  }
+
+  return initialComment[1].slice(testsIndex);
 }
 
 function addExport(source, functionName) {

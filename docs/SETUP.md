@@ -206,7 +206,7 @@ pnpm run test:daily:coverage
 task repository-level `repo:test`. In futuro `repo:test` potrà includere anche
 test Python, end-to-end o altri framework.
 
-Per generare i test Vitest mancanti dai casi `Waiting:` presenti nel commento
+Per generare i test Vitest mancanti dalla sezione `Tests:` presente nel commento
 iniziale delle challenge:
 
 ```bash
@@ -214,7 +214,7 @@ pnpm run test:daily:generate
 ```
 
 Lo script controlla tutte le Daily Coding Challenges, crea solo i test mancanti,
-salta i file senza casi `Waiting:` e aggiunge l'export ESM alla funzione
+salta i file senza sezione `Tests:` e aggiunge l'export ESM alla funzione
 principale del file quando genera il relativo test.
 
 ## 5) Quality Gates Git (Automatizzati)
