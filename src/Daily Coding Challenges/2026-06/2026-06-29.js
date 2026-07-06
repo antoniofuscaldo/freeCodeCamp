@@ -14,9 +14,19 @@ Mood	Genre	BPM Range
 "hype"	"rock"	130–180
 "hype"	"electronic"	135–180
 
+Tests:
+Waiting:1. getMood("rock", 111) should return "happy".
+Waiting:2. getMood("electronic", 74) should return "focus".
+Waiting:3. getMood("classical", 180) should return "happy".
+Waiting:4. getMood("rock", 155) should return "hype".
+Waiting:5. getMood("electronic", 90) should return "happy".
+Waiting:6. getMood("classical", 67) should return "focus".
+Waiting:7. getMood("pop", 100) should return "happy".
+Waiting:8. getMood("electronic", 135) should return "hype".
+
 */
 
-function getMood(genre, bpm) {
+export function getMood(genre, bpm) {
   const g = genre.toLowerCase();
   if (g === 'classical') {
     if (bpm >= 60 && bpm <= 109) return 'focus';

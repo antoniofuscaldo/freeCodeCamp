@@ -21,9 +21,16 @@ Casting a spell from the same category as the previous resets the multiplier bac
 The score for each spell is its base score multiplied by the current multiplier.
 Return the total score from the sequence of spells.
 
+Tests:
+Waiting:1. cast("fihwl") should return 33.
+Waiting:2. cast("lwswfi") should return 45.
+Waiting:3. cast("wislhfl") should return 37.
+Waiting:4. cast("sihwlih") should return 50.
+Waiting:5. cast("wishlfihwslwifihl") should return 101.
+
 */
 
-function cast(spells) {
+export function cast(spells) {
   if (!spells) return 0;
 
   const spellMap = {

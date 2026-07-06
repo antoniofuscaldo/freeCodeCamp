@@ -11,9 +11,16 @@ The itinerary always includes "breakfast", "lunch", and "dinner", these will not
 At most, one optional stop may appear after "dinner".
 Return the number of valid arrangements.
 
+Tests:
+Waiting:1. getItineraryCount(["library", "park"]) should return 2.
+Waiting:2. getItineraryCount(["library", "park", "arcade"]) should return 18.
+Waiting:3. getItineraryCount(["library", "park", "arcade", "store"]) should return 120.
+Waiting:4. getItineraryCount(["library", "park", "arcade", "store", "cafe"]) should return 840.
+Waiting:5. getItineraryCount(["library", "park", "arcade", "store", "cafe", "market", "museum"]) should return 55440.
+
 */
 
-function getItineraryCount(stops) {
+export function getItineraryCount(stops) {
   const n = stops.length;
 
   function fact(x) {

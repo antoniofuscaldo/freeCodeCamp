@@ -66,6 +66,7 @@
     "test:coverage": "turbo run repo:test:coverage --continue --cache-dir=.turbo",
     "test:daily": "vitest run --config vitest.config.mjs",
     "test:daily:coverage": "vitest run --coverage --config vitest.config.mjs",
+    "test:daily:generate": "node scripts/generate-daily-tests.mjs",
     "test:daily:watch": "vitest --config vitest.config.mjs",
     "turbo:clean": "turbo run clean:all --continue --cache-dir=.turbo",
     "turbo:format": "pnpm run format",

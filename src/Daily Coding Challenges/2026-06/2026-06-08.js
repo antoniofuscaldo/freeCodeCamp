@@ -21,9 +21,23 @@ Determine the direction multiplier. If travelling "east", it's 1.5, otherwise, i
 Get the jet lag hours with the formula: timezone difference + (flight duration * 0.1) * direction multiplier
 Return the jet lag hours rounded to one decimal place.
 
+Tests:
+Waiting:1. getJetLagHours("Istanbul", "Hong Kong", 10, "east") should return 6.5.
+Waiting:2. getJetLagHours("London", "New York", 8, "west") should return 5.8.
+Waiting:3. getJetLagHours("Hong Kong", "Tokyo", 4, "east") should return 1.6.
+Waiting:4. getJetLagHours("Dubai", "London", 7, "west") should return 4.7.
+Waiting:5. getJetLagHours("Los Angeles", "Hong Kong", 15, "west") should return 17.5.
+Waiting:6. getJetLagHours("Tokyo", "Dubai", 9, "west") should return 5.9.
+Waiting:7. getJetLagHours("New York", "Istanbul", 10, "east") should return 9.5.
+
 */
 
-function getJetLagHours(departureCity, arrivalCity, flightDuration, direction) {
+export function getJetLagHours(
+  departureCity,
+  arrivalCity,
+  flightDuration,
+  direction,
+) {
   const offsets = {
     'Los Angeles': -8,
     'New York': -5,

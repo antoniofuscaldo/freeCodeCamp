@@ -156,6 +156,7 @@ pnpm run format:check:javascript
 pnpm run lint:javascript
 pnpm run lint:fix:javascript
 pnpm run test:daily
+pnpm run test:daily:generate
 pnpm run test:daily:watch
 pnpm run test:daily:coverage
 ```
@@ -196,6 +197,7 @@ Comandi disponibili:
 
 ```bash
 pnpm run test:daily
+pnpm run test:daily:generate
 pnpm run test:daily:watch
 pnpm run test:daily:coverage
 ```
@@ -203,6 +205,17 @@ pnpm run test:daily:coverage
 `pnpm run test` resta il comando aggregatore: passa da Turborepo ed esegue il
 task repository-level `repo:test`. In futuro `repo:test` potrà includere anche
 test Python, end-to-end o altri framework.
+
+Per generare i test Vitest mancanti dai casi `Waiting:` presenti nel commento
+iniziale delle challenge:
+
+```bash
+pnpm run test:daily:generate
+```
+
+Lo script controlla tutte le Daily Coding Challenges, crea solo i test mancanti,
+salta i file senza casi `Waiting:` e aggiunge l'export ESM alla funzione
+principale del file quando genera il relativo test.
 
 ## 5) Quality Gates Git (Automatizzati)
 

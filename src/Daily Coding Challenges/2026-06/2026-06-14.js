@@ -9,9 +9,18 @@ If doubling a digit results in a number greater than 9, subtract 9.
 Sum all the digits (doubled and undoubled).
 If the total is divisible by 10, the number is valid.
 
+Tests:
+Waiting:1. isValidCard("4532015112830366") should return true.
+Waiting:2. isValidCard("5425233430109903") should return true.
+Waiting:3. isValidCard("371449635398431") should return true.
+Waiting:4. isValidCard("6011111111111117") should return true.
+Waiting:5. isValidCard("4532015112830367") should return false.
+Waiting:6. isValidCard("1234567890123456") should return false.
+Waiting:7. isValidCard("4532015112830368") should return false.
+
 */
 
-function isValidCard(number) {
+export function isValidCard(number) {
   let sum = 0;
   let dbl = false;
 
