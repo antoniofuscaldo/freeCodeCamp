@@ -6,9 +6,16 @@ Given two strings, return a new string that interleaves their characters one at 
 
 Begin with the first character of the first string.
 
+Tests:
+Waiting:1. zipStrings("abc", "123") should return "a1b2c3".
+Waiting:2. zipStrings("acegikmoqsuwy", "bdfhjlnprtvxz") should return "abcdefghijklmnopqrstuvwxyz".
+Waiting:3. zipStrings("day", "night") should return "dnaiyght".
+Waiting:4. zipStrings("python", "javascript") should return "pjyatvhaosncript".
+Waiting:5. zipStrings("feCdCm", "reoeap") should return "freeCodeCamp".
+
 */
 
-function zipStrings(a, b) {
+export function zipStrings(a, b) {
   let out = '';
   const n = Math.max(a.length, b.length);
   for (let i = 0; i < n; i++) {

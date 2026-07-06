@@ -9,9 +9,16 @@ Given a time string in "HH:MM" format (24-hour clock), return:
 "Good evening" for times 18:00 to 21:59
 "Good night" for times 22:00 to 04:59
 
+Tests:
+Waiting:1. getGreeting("06:30") should return "Good morning".
+Waiting:2. getGreeting("12:00") should return "Good afternoon".
+Waiting:3. getGreeting("21:59") should return "Good evening".
+Waiting:4. getGreeting("00:01") should return "Good night".
+Waiting:5. getGreeting("11:30") should return "Good morning".
+
 */
 
-function getGreeting(time) {
+export function getGreeting(time) {
   const [h, m] = time.split(':').map(Number);
   const t = h * 60 + m;
 
