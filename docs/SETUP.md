@@ -6,10 +6,11 @@ Obiettivo principale: avere un ambiente riproducibile, con qualità del codice u
 
 ## 1) Stack Tecnologico Attuale
 
-- Node.js 22
+- Node.js 24
 - pnpm 10
 - Turborepo 2
 - ESLint + Prettier per JavaScript/TypeScript
+- Vitest per unit test JavaScript
 - Ruff per Python (lint + format)
 - Husky + lint-staged + commitlint per quality gate Git
 
@@ -18,6 +19,7 @@ File di configurazione principali:
 - `package.json`
 - `turbo.json`
 - `pnpm-workspace.yaml`
+- `vitest.config.mjs`
 - `eslint.config.js`
 - `.prettierrc.mjs`
 - `pyproject.toml`
@@ -39,7 +41,7 @@ Assicurati di avere installato:
 
 Versioni richieste dal progetto:
 
-- Node: `>=22.0.0 <23.0.0`
+- Node: `>=24.18.0 <25.0.0`
 - pnpm: `>=10.0.0`
 
 ## 3) Setup Iniziale (Nuova Macchina)
@@ -69,7 +71,7 @@ fnm use
 node -v
 ```
 
-Il comando deve restituire una versione 22.x.
+Il comando deve restituire una versione 24.x.
 
 ### 3.3 Installa dipendenze Node
 
@@ -138,6 +140,12 @@ Pulizia artefatti:
 pnpm run turbo:clean
 ```
 
+Test completi orchestrati da Turborepo:
+
+```bash
+pnpm run test
+```
+
 ### 4.2 Comandi linguaggio-specifici
 
 JavaScript/TypeScript:
@@ -147,6 +155,9 @@ pnpm run format:javascript
 pnpm run format:check:javascript
 pnpm run lint:javascript
 pnpm run lint:fix:javascript
+pnpm run test:daily
+pnpm run test:daily:watch
+pnpm run test:daily:coverage
 ```
 
 Python:
@@ -157,6 +168,41 @@ pnpm run format:check:python
 pnpm run lint:python
 pnpm run lint:fix:python
 ```
+
+### 4.3 Unit test Daily Coding Challenges
+
+I test JavaScript delle Daily Coding Challenges usano Vitest in ambiente Node.
+
+Convenzione per i file:
+
+```text
+src/Daily Coding Challenges/
+  YYYY-MM/
+    YYYY-MM-DD.js
+    test/
+      YYYY-MM-DD.test.js
+```
+
+Ogni challenge testata deve esportare esplicitamente la funzione principale con
+ESM, mantenendo un nome descrittivo:
+
+```js
+export function getLowercaseWords(str) {
+  // ...
+}
+```
+
+Comandi disponibili:
+
+```bash
+pnpm run test:daily
+pnpm run test:daily:watch
+pnpm run test:daily:coverage
+```
+
+`pnpm run test` resta il comando aggregatore: passa da Turborepo ed esegue il
+task repository-level `repo:test`. In futuro `repo:test` potrà includere anche
+test Python, end-to-end o altri framework.
 
 ## 5) Quality Gates Git (Automatizzati)
 
@@ -236,7 +282,8 @@ Workspace dichiarato in `pnpm-workspace.yaml`:
 - root (`.`)
 - `src/**`
 
-Pipeline Turbo dichiarata in `turbo.json` con task repository-level per lint/format/check/clean.
+Pipeline Turbo dichiarata in `turbo.json` con task repository-level per lint,
+format, test e clean.
 
 ## 8) Troubleshooting
 
@@ -322,5 +369,6 @@ python -m pip install ruff
 # uso quotidiano
 pnpm run turbo:format
 pnpm run turbo:lint
+pnpm run test
 pnpm run turbo:pre-push
 ```
