@@ -1556,10 +1556,10 @@ packages:
       }
     engines: { node: '>= 0.4' }
 
-  es-module-lexer@2.3.0:
+  es-module-lexer@2.3.1:
     resolution:
       {
-        integrity: sha512-KLdwQm2NvGLDkQDCGvmiQrhkd0JbMzXthwQAUgWjQuQdBLFa3eiBP5arXZyA+f8x+x7OXgud6bq2rxjGtHV2tw==,
+        integrity: sha512-shc1dbU90Yl/xq1QrC7QRtfcwURZuVRfPhZbDoldJ1cn1gzDvBaBWlv0eFolj5+0znnPJz5TXLxsN77X/12KTA==,
       }
 
   es-object-atoms@1.1.2:
@@ -2657,6 +2657,14 @@ packages:
     engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
     hasBin: true
 
+  nanoid@3.3.16:
+    resolution:
+      {
+        integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==,
+      }
+    engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
+    hasBin: true
+
   napi-postinstall@0.3.4:
     resolution:
       {
@@ -2833,6 +2841,13 @@ packages:
     resolution:
       {
         integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==,
+      }
+    engines: { node: ^10 || ^12 || >=14 }
+
+  postcss@8.5.17:
+    resolution:
+      {
+        integrity: sha512-J7EF+8X+CzRPaJPOv9Ck2wNWJvGnnl3PcNPAdGg6GTLjyVpyQ0yATMSXRFRV01BviT/9Gwuc3rjEyJbDJG9a4w==,
       }
     engines: { node: ^10 || ^12 || >=14 }
 
@@ -4536,7 +4551,7 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  es-module-lexer@2.3.0: {}
+  es-module-lexer@2.3.1: {}
 
   es-object-atoms@1.1.2:
     dependencies:
@@ -4593,7 +4608,7 @@ snapshots:
       eslint: 9.39.5(jiti@2.6.1)
       eslint-compat-utils: 0.6.5(eslint@9.39.5(jiti@2.6.1))
       globals: 16.5.0
-      postcss: 8.5.16
+      postcss: 8.5.17
       postcss-selector-parser: 7.1.4
     transitivePeerDependencies:
       - supports-color
@@ -5187,6 +5202,8 @@ snapshots:
 
   nanoid@3.3.15: {}
 
+  nanoid@3.3.16: {}
+
   napi-postinstall@0.3.4: {}
 
   natural-compare@1.4.0: {}
@@ -5287,6 +5304,12 @@ snapshots:
   postcss@8.5.16:
     dependencies:
       nanoid: 3.3.15
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.17:
+    dependencies:
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -5693,7 +5716,7 @@ snapshots:
       '@vitest/snapshot': 4.1.10
       '@vitest/spy': 4.1.10
       '@vitest/utils': 4.1.10
-      es-module-lexer: 2.3.0
+      es-module-lexer: 2.3.1
       expect-type: 1.4.0
       magic-string: 0.30.21
       obug: 2.1.3
