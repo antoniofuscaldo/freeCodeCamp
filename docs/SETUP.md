@@ -7,7 +7,7 @@ Obiettivo principale: avere un ambiente riproducibile, con qualità del codice u
 ## 1) Stack Tecnologico Attuale
 
 - Node.js 24
-- pnpm 10
+- pnpm 11
 - Turborepo 2
 - ESLint + Prettier per JavaScript/TypeScript
 - Vitest per unit test JavaScript
