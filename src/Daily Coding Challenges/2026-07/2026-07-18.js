@@ -18,7 +18,7 @@ Waiting:6. getOdds(6, 35) should return "1 in 7776".
 
 */
 
-function getOdds(dice, target) {
+export function getOdds(dice, target) {
   const ways = Array.from({ length: dice + 1 }, () =>
     Array(target + 1).fill(0),
   );
