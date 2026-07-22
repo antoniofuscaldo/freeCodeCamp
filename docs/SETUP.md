@@ -41,7 +41,7 @@ Assicurati di avere installato:
 
 Versioni richieste dal progetto:
 
-- Node: `>=24.18.0 <25.0.0`
+- Node: `>=26.5.0 <25.0.0`
 - pnpm: `>=10.0.0`
 
 ## 3) Setup Iniziale (Nuova Macchina)
