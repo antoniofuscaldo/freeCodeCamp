@@ -16,7 +16,7 @@ Waiting:5. bucketFill([["G", "G", "C", "C", "O"], ["B", "Y", "B", "Y", "O"], ["B
 
 */
 
-function bucketFill(grid, targetColor) {
+export function bucketFill(grid, targetColor) {
   const h = grid.length;
   const w = grid[0].length;
 
