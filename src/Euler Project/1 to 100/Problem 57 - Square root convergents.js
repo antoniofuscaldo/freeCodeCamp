@@ -1,11 +1,3 @@
-/**
-
-Problem 57: Square root convergents
-
-https://www.freecodecamp.org/learn/project-euler/project-euler-problems-1-to-100/problem-57-square-root-convergents
-
-*/
-
 function addStr(a, b) {
   let i = a.length - 1,
     j = b.length - 1,
