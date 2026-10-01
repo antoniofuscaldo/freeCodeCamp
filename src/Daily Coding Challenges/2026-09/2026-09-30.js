@@ -10,6 +10,6 @@ Waiting:2. formatNumber("15554354792") should return "+1 (555) 435-4792".
 
 */
 
-function formatNumber(number) {
+export function formatNumber(number) {
   return `+${number[0]} (${number.slice(1, 4)}) ${number.slice(4, 7)}-${number.slice(7)}`;
 }
