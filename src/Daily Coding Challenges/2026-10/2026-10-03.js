@@ -25,7 +25,7 @@ Waiting:9. checkStrength("C0d3&Fun!") should return "strong".
 
 */
 
-function checkStrength(password) {
+export function checkStrength(password) {
   let rules = 0;
 
   if (password.length >= 8) rules++;
