@@ -25,7 +25,7 @@ Waiting:7. battle("We must never surrender", "Our team must win") should return 
 
 */
 
-function battle(ourTeam, opponent) {
+export function battle(ourTeam, opponent) {
   const value = (word) =>
     [...word].reduce(
       (sum, c) =>

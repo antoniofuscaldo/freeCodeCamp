@@ -36,6 +36,6 @@ Waiting:5. hexToDecimal("A3F") should return 2623.
 
 */
 
-function hexToDecimal(hex) {
+export function hexToDecimal(hex) {
   return parseInt(hex, 16);
 }
