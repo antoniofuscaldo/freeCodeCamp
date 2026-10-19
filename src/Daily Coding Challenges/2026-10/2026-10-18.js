@@ -21,7 +21,7 @@ Waiting:5. sockPairs(1, 8) should return 0.
 
 */
 
-function sockPairs(pairs, cycles) {
+export function sockPairs(pairs, cycles) {
   let socks = pairs * 2;
 
   for (let i = 1; i <= cycles; i++) {
