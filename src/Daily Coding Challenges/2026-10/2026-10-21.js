@@ -18,7 +18,7 @@ Waiting:5. adjustThermostat(59, 22) should return "Heat: 12.6 degrees Fahrenheit
 
 */
 
-function adjustThermostat(currentF, targetC) {
+export function adjustThermostat(currentF, targetC) {
   const targetF = targetC * 1.8 + 32;
   const diff = targetF - currentF;
 
