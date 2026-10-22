@@ -24,7 +24,7 @@ Waiting:5. wiseSpeak("You have much to learn.") should return "Much to learn, yo
 
 */
 
-function wiseSpeak(sentence) {
+export function wiseSpeak(sentence) {
   const punctuation = sentence.slice(-1);
   const words = sentence.slice(0, -1).split(' ');
   const keywords = ['have', 'must', 'are', 'will', 'can'];
