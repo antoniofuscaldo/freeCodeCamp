@@ -15,7 +15,7 @@ Waiting:3. favoriteSongs([{"title": "Song A", "plays": 42}, {"title": "Song B", 
 
 */
 
-function favoriteSongs(playlist) {
+export function favoriteSongs(playlist) {
   return [...playlist]
     .sort((a, b) => b.plays - a.plays)
     .slice(0, 2)
