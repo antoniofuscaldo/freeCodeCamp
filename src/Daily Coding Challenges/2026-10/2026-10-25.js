@@ -17,7 +17,7 @@ Waiting:4. complementaryDNA("GATCTAGCTAGGCTAGCTAG") should return "CTAGATCGATCCG
 
 */
 
-function complementaryDNA(strand) {
+export function complementaryDNA(strand) {
   const complements = {
     A: 'T',
     T: 'A',
