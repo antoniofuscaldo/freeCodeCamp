@@ -17,7 +17,7 @@ Waiting:5. format(99999) should return "27:46:39".
 
 */
 
-function format(seconds) {
+export function format(seconds) {
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
