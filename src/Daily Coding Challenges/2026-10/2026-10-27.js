@@ -14,6 +14,6 @@ Waiting:4. sequence(27) should return "12345678910111213141516171819202122232425
 
 */
 
-function sequence(n) {
+export function sequence(n) {
   return Array.from({ length: n }, (_, i) => i + 1).join('');
 }
