@@ -21,7 +21,7 @@ Waiting:5. sort(["simon@beta.com", "sammy@alpha.com", "Sarah@Alpha.com", "SAM@AL
 
 */
 
-function sort(emails) {
+export function sort(emails) {
   return [...emails].sort((a, b) => {
     const [userA, domainA] = a.split('@');
     const [userB, domainB] = b.split('@');
