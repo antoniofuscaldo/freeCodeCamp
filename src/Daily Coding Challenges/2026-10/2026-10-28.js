@@ -24,7 +24,7 @@ Waiting:7. navigate(["Visit About Us", "Visit Visit Us", "Forward", "Visit Conta
 
 */
 
-function navigate(commands) {
+export function navigate(commands) {
   const history = ['Home'];
   let index = 0;
 
