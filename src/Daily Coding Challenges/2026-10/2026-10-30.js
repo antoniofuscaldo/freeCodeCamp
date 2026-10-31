@@ -15,7 +15,7 @@ Waiting:5. nthPrime(1000) should return 7919.
 
 */
 
-function nthPrime(n) {
+export function nthPrime(n) {
   const limit =
     n < 6 ? 15 : Math.ceil(n * (Math.log(n) + Math.log(Math.log(n))) + 10);
   const sieve = new Uint8Array(limit + 1).fill(1);
