@@ -17,7 +17,7 @@ Waiting:5. spookify("thE_hAUntEd-hOUsE-Is-fUll_Of_ghOsts") should return "ThE~hA
 
 */
 
-function spookify(boo) {
+export function spookify(boo) {
   let count = 0;
   return [...boo]
     .map((c) => {
