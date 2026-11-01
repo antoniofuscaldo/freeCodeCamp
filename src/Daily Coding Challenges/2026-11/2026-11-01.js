@@ -26,7 +26,7 @@ Waiting:6. verify("Check out the freeCodeCamp podcast,", "in the mobile app", 51
 
 */
 
-function verify(message, key, signature) {
+export function verify(message, key, signature) {
   const value = (str) =>
     [...str].reduce((sum, c) => {
       const code = c.charCodeAt(0);
