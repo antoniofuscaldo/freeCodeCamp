@@ -26,7 +26,7 @@ Waiting:5. infected(25) should return 5217638.
 
 */
 
-function infected(days) {
+export function infected(days) {
   let infected = 1;
 
   for (let day = 1; day <= days; day++) {
