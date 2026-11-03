@@ -15,6 +15,6 @@ Waiting:5. countWords("The missing semi-colon crashed the entire internet.") sho
 
 */
 
-function countWords(sentence) {
+export function countWords(sentence) {
   return sentence.split(' ').length;
 }
