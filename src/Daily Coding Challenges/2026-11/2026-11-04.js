@@ -17,7 +17,7 @@ Waiting:4. imageSearch(["cat.jpg", "dogToy.jpeg", "kitty-cat.png", "catNip.jpeg"
 
 */
 
-function imageSearch(images, term) {
+export function imageSearch(images, term) {
   const lowerTerm = term.toLowerCase();
   return images.filter((image) => image.toLowerCase().includes(lowerTerm));
 }
