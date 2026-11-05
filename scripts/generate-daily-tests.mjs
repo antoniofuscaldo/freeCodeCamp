@@ -29,13 +29,27 @@ function exitWithUsage(message) {
 function getMissingTestFiles() {
   return fs
     .readdirSync(dailyChallengesDir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory() && /^\d{4}-\d{2}$/.test(entry.name))
-    .flatMap((entry) => getMissingTestFilesForMonth(entry.name));
+    .filter((entry) => entry.isDirectory() && /^\d{4}$/.test(entry.name))
+    .flatMap((yearEntry) => {
+      const yearDir = path.join(dailyChallengesDir, yearEntry.name);
+
+      return fs
+        .readdirSync(yearDir, { withFileTypes: true })
+        .filter(
+          (entry) =>
+            entry.isDirectory() &&
+            new RegExp(`^${yearEntry.name}-\\d{2}$`).test(entry.name),
+        )
+        .flatMap((monthEntry) =>
+          getMissingTestFilesForMonth(
+            path.join(yearDir, monthEntry.name),
+            monthEntry.name,
+          ),
+        );
+    });
 }
 
-function getMissingTestFilesForMonth(month) {
-  const monthDir = path.join(dailyChallengesDir, month);
-
+function getMissingTestFilesForMonth(monthDir, month) {
   return fs
     .readdirSync(monthDir)
     .filter((file) => new RegExp(`^${month}-\\d{2}\\.js$`).test(file))

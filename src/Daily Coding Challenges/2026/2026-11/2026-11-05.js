@@ -19,6 +19,6 @@ Waiting:4. buildMatrix(9, 1) should return [[0], [0], [0], [0], [0], [0], [0], [
 
 */
 
-function buildMatrix(rows, cols) {
+export function buildMatrix(rows, cols) {
   return Array.from({ length: rows }, () => Array(cols).fill(0));
 }
