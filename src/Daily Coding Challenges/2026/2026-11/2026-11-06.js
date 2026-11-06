@@ -24,7 +24,7 @@ Waiting:5. getWeekday("2345-10-01") should return Monday.
 
 */
 
-function getWeekday(dateString) {
+export function getWeekday(dateString) {
   const [y, m, d] = dateString.split('-').map(Number);
   const days = [
     'Sunday',
