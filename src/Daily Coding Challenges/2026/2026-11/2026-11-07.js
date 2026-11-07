@@ -17,7 +17,7 @@ Waiting:6. combinations(50) should return 1326.
 
 */
 
-function combinations(cards) {
+export function combinations(cards) {
   const k = Math.min(cards, 52 - cards);
   let result = 1;
   for (let i = 1; i <= k; i++) {
