@@ -15,7 +15,7 @@ Waiting:3. canPost("This message is too long to fit into either of the character
 
 */
 
-function canPost(message) {
+export function canPost(message) {
   const length = message.length;
   if (length <= 40) return 'short post';
   if (length <= 80) return 'long post';
