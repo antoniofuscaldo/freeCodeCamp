@@ -31,7 +31,7 @@ Waiting:4. findWord([["f", "x", "o", "x"], ["o", "x", "o", "f"], ["f", "o", "f",
 
 */
 
-function findWord(matrix, word) {
+export function findWord(matrix, word) {
   const rows = matrix.length;
   const cols = matrix[0].length;
   const dirs = [
