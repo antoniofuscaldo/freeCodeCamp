@@ -18,7 +18,7 @@ Waiting:6. getExtension("final.draft.") should return "none".
 
 */
 
-function getExtension(filename) {
+export function getExtension(filename) {
   const index = filename.lastIndexOf('.');
   if (index === -1 || index === filename.length - 1) return 'none';
   return filename.slice(index + 1);
