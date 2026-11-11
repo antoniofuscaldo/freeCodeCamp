@@ -19,7 +19,7 @@ Waiting:6. count("The quick brown fox jumps over the lazy dog.") should return [
 
 */
 
-function count(str) {
+export function count(str) {
   const letters = str.match(/[a-z]/gi) || [];
   let vowels = 0;
   for (const c of letters) {
