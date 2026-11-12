@@ -20,3 +20,14 @@ Waiting:4. generateSignature("B. B.", "Product Tester", "AcmeCorp") should retur
 Waiting:5. generateSignature("windstorm", "Cloud Architect", "Atmospheronics") should return "::windstorm, Cloud Architect at Atmospheronics".
 
 */
+
+function generateSignature(name, title, company) {
+  const first = name[0].toUpperCase();
+  let prefix;
+
+  if (first >= 'A' && first <= 'I') prefix = '>>';
+  else if (first >= 'J' && first <= 'R') prefix = '--';
+  else prefix = '::';
+
+  return `${prefix}${name}, ${title} at ${company}`;
+}
