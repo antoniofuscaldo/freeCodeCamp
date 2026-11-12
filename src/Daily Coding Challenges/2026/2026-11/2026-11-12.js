@@ -21,7 +21,7 @@ Waiting:5. generateSignature("windstorm", "Cloud Architect", "Atmospheronics") s
 
 */
 
-function generateSignature(name, title, company) {
+export function generateSignature(name, title, company) {
   const first = name[0].toUpperCase();
   let prefix;
 
