@@ -16,6 +16,6 @@ Waiting:5. countRectangles(11, 19) should return 12540.
 
 */
 
-function countRectangles(width, height) {
+export function countRectangles(width, height) {
   return ((width * (width + 1)) / 2) * ((height * (height + 1)) / 2);
 }
