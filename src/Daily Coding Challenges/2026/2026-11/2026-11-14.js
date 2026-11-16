@@ -20,7 +20,7 @@ Waiting:6. daysUntilWeekend("2026-11-29") should return "It's the weekend!".
 
 */
 
-function daysUntilWeekend(dateString) {
+export function daysUntilWeekend(dateString) {
   const [y, m, d] = dateString.split('-').map(Number);
   const day = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
 
