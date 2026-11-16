@@ -16,7 +16,7 @@ Waiting:5. gcd(3456, 4320) should return 864.
 
 */
 
-function gcd(x, y) {
+export function gcd(x, y) {
   while (y) {
     [x, y] = [y, x % y];
   }
