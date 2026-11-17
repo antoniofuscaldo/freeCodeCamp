@@ -19,7 +19,7 @@ Waiting:6. isMatch("thequickbrownfoxjumpsoverthelazydog", "thequickbrownfoxjumps
 
 */
 
-function isMatch(fingerprintA, fingerprintB) {
+export function isMatch(fingerprintA, fingerprintB) {
   if (fingerprintA.length !== fingerprintB.length) return false;
 
   let diff = 0;
