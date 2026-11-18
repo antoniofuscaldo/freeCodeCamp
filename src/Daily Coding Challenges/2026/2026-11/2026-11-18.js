@@ -14,6 +14,6 @@ Waiting:4. oneHundred("!") should return "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 */
 
-function oneHundred(chars) {
+export function oneHundred(chars) {
   return chars.repeat(Math.ceil(100 / chars.length)).slice(0, 100);
 }
