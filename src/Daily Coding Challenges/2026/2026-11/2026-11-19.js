@@ -29,7 +29,7 @@ Waiting:7. convert("## My #2 heading") should return "<h2>My #2 heading</h2>".
 
 */
 
-function convert(heading) {
+export function convert(heading) {
   const match = heading.match(/^ *(#{1,6}) +(.+)$/);
   if (!match) return 'Invalid format';
   const level = match[1].length;
