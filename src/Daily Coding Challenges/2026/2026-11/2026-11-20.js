@@ -19,7 +19,7 @@ Waiting:6. longestWord("Wouldn't you like to know.") should return "Wouldnt".
 
 */
 
-function longestWord(sentence) {
+export function longestWord(sentence) {
   let best = '';
   let max = 0;
 
