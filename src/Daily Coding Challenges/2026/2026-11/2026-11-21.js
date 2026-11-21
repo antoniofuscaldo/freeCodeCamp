@@ -17,7 +17,7 @@ Waiting:5. lcm(45, 70) should return 630.
 
 */
 
-function lcm(a, b) {
+export function lcm(a, b) {
   const gcd = (x, y) => (y === 0 ? x : gcd(y, x % y));
   return (a / gcd(a, b)) * b;
 }
