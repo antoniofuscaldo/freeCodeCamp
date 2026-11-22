@@ -16,7 +16,7 @@ Waiting:4. scaleRecipe(["2 C All-purpose Flour", "1 t Baking Soda", "1 t Salt", 
 
 */
 
-function scaleRecipe(ingredients, scale) {
+export function scaleRecipe(ingredients, scale) {
   return ingredients.map((item) => {
     const [quantity, ...rest] = item.split(' ');
     const scaled = +(parseFloat(quantity) * scale).toFixed(10);
