@@ -17,7 +17,7 @@ Waiting:3. countCharacters("// TODO: Complete this challenge ASAP!") should retu
 
 */
 
-function countCharacters(sentence) {
+export function countCharacters(sentence) {
   const counts = {};
 
   for (const char of sentence.toLowerCase()) {
