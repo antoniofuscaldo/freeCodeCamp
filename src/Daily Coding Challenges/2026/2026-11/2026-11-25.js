@@ -17,7 +17,7 @@ Waiting:5. fizzBuzz(50) should return [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "F
 
 */
 
-function fizzBuzz(n) {
+export function fizzBuzz(n) {
   return Array.from({ length: n }, (_, i) => {
     const num = i + 1;
     if (num % 15 === 0) return 'FizzBuzz';
