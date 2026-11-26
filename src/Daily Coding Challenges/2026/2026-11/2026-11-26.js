@@ -19,7 +19,7 @@ Waiting:7. isFizzBuzz([1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11
 
 */
 
-function isFizzBuzz(sequence) {
+export function isFizzBuzz(sequence) {
   return sequence.every((value, i) => {
     const n = i + 1;
     const expected =
