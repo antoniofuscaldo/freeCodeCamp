@@ -82,10 +82,10 @@
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
     "@eslint/js": "^10.0.1",
-    "@types/react": "^19.3.1",
+    "@types/react": "^19.3.3",
     "@types/react-dom": "^19.3.0",
     "@typescript-eslint/parser": "^8.74.0",
-    "@vitest/coverage-v8": "^5.1.1",
+    "@vitest/coverage-v8": "^5.1.2",
     "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^3.2.1",
@@ -103,7 +103,7 @@
     "turbo": "^2.11.13",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.74.0",
-    "vitest": "^5.1.1"
+    "vitest": "^5.1.2"
   },
   "overrides": {
     "smol-toml": "^1.6.1",
