@@ -17,7 +17,7 @@ Waiting:5. calculateAge("1994-12-14") should return 30.
 
 */
 
-function calculateAge(birthday) {
+export function calculateAge(birthday) {
   const [year, month, day] = birthday.split('-').map(Number);
   let age = 2025 - year;
   if (month > 11 || (month === 11 && day > 27)) age--;
