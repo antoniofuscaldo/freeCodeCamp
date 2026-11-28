@@ -26,7 +26,7 @@ Waiting:6. compare("WIRELESS", "ETHERNET") should return "10021000".
 
 */
 
-function compare(word, guess) {
+export function compare(word, guess) {
   const result = Array(guess.length).fill('0');
   const counts = {};
 
